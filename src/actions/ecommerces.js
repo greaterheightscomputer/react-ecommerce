@@ -1,7 +1,7 @@
 import uuid from 'uuid';
 
 //Add_Ecommerce
-export const addEcommerce = ({ description='', category='', item='', amount=0, image='', stock=0, createdAt=0 } = {}) => ({
+export const addEcommerce = ({ description='', category='', item='', amount=0, image='', imageUrl='', stock=0, createdAt=0 } = {}) => ({
     type: 'ADD_ECOMMERCE',
     ecommerce: {
         id: uuid(),        
@@ -10,6 +10,7 @@ export const addEcommerce = ({ description='', category='', item='', amount=0, i
         item,
         amount,
         image,
+        imageUrl,
         stock,
         createdAt
     }

@@ -1,8 +1,13 @@
+import moment from "moment";
+
 //Get visible ecommerce -> this function will match the ecommerce array object with the filters object
-const getVisibleEcommerces = (ecommerces, { text, sortBy, itemType,  categoryType, startDate, endDate }) => {
+export default (ecommerces, { text, sortBy, itemType,  categoryType, startDate, endDate }) => {
     return ecommerces.filter((ecommerce) => {  //filter() allow us to return a subset of all of the array expenses.
-        const startDateMatch = typeof startDate !== 'number' || ecommerce.createdAt >= startDate;
-        const endDateMatch = typeof endDate !== 'number' || ecommerce.createdAt <= endDate;
+        // const startDateMatch = typeof startDate !== 'number' || ecommerce.createdAt >= startDate;
+        // const endDateMatch = typeof endDate !== 'number' || ecommerce.createdAt <= endDate;
+        const createdAtMoment = moment(ecommerce.createdAt);
+        const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment, 'day') : true;
+        const endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment, 'day') : true;
         const textMatch = ecommerce.description.toLowerCase().includes(text.toLowerCase());
         const categoryMatch = ecommerce.category.includes(categoryType);
         const itemMatch = ecommerce.item.includes(itemType);
@@ -18,4 +23,3 @@ const getVisibleEcommerces = (ecommerces, { text, sortBy, itemType,  categoryTyp
     });
 };
 
-export default getVisibleEcommerces;

@@ -6,7 +6,7 @@ import * as firebase from 'firebase'; //means select all named export and store 
 //       authDomain: "expensify-d7fd6.firebaseapp.com",
 //       databaseURL: "https://expensify-d7fd6.firebaseio.com",
 //       projectId: "expensify-d7fd6",
-//       storageBucket: "",
+//       storageBucket: "expensify-d7fd6.appspot.com",
 //       messagingSenderId: "557135628237",
 //       appId: "1:557135628237:web:bf18596458823695"
 //   };
@@ -25,9 +25,10 @@ import * as firebase from 'firebase'; //means select all named export and store 
   firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
+const storage = firebase.storage().ref();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();  //creating an instance of googleProvider
 
-export { firebase, googleAuthProvider, database as default } ;
+export { firebase, googleAuthProvider, storage, database as default } ;
 
 
 //test database connection

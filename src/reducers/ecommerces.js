@@ -12,7 +12,7 @@ const ecommerceReducer = (state = ecommerceReducerDefaultState, action) => {
                 }else {
                     return ecommerce;
                 }
-            });                
+            });              
         default: return state;        
     }
 };
