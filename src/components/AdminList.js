@@ -3,13 +3,18 @@ import { connect } from 'react-redux';
 import AdminListItem from './AdminListItem';
 import selectEcommerce from '../selectors/ecommerces';
 
-const AdminList = (props) => (
+export const AdminList = (props) => (
     <div>
         <h1>Admin List</h1>
-        {props.ecommerces.map((ecommerce) =>{
-            return <AdminListItem key={ecommerce.id} {...ecommerce} />
-        })}
-        
+        {
+            props.ecommerces.length === 0 ? (
+                <p> No Products </p>
+            ) : (
+                props.ecommerces.map((ecommerce) =>{
+                    return <AdminListItem key={ecommerce.id} {...ecommerce} />
+                })
+            )
+        }                
     </div>
 );
 

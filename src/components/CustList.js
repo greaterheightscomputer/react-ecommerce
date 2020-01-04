@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import CustListItem from './CustListItem';
 import selectEcommerce from '../selectors/ecommerces';
 
-const CustList = (props) => (
+export const CustList = (props) => (
     <div>
         <h1>Customer List</h1>
         {props.ecommerces.map((ecommerce) =>{

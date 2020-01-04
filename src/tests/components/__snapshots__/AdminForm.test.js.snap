@@ -1,0 +1,3194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render AdminForm with data correctly 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Description"
+      type="text"
+      value="women shoe"
+    />
+    <select
+      onChange={[Function]}
+      value="women"
+    >
+      <option
+        value=""
+      >
+        Select Category
+      </option>
+      <option
+        value="boy"
+      >
+        Boy
+      </option>
+      <option
+        value="girl"
+      >
+        Girl
+      </option>
+      <option
+        value="amen"
+      >
+        Men
+      </option>
+      <option
+        value="women"
+      >
+        Women
+      </option>
+    </select>
+    <select
+      onChange={[Function]}
+      value="women_headwear"
+    >
+      <option
+        value=""
+      >
+        Select Item
+      </option>
+      <option
+        value="boy_bag"
+      >
+        Boy Bag
+      </option>
+      <option
+        value="boy_belt"
+      >
+        Boy Belt
+      </option>
+      <option
+        value="boy_clothe"
+      >
+        Boy Clothe
+      </option>
+      <option
+        value="boy_footwear"
+      >
+        Boy Footwear
+      </option>
+      <option
+        value="boy_headwear"
+      >
+        Boy Headwear
+      </option>
+      <option
+        value="boy_jewellery"
+      >
+        Boy Jewellery
+      </option>
+      <option
+        value="boy_tie"
+      >
+        Boy Tie
+      </option>
+      <option
+        value="boy_underwear"
+      >
+        Boy Underwear
+      </option>
+      <option
+        value="girl_bag"
+      >
+        Girl Bag
+      </option>
+      <option
+        value="girl_belt"
+      >
+        Girl Belt
+      </option>
+      <option
+        value="girl_clothe"
+      >
+        Girl Clothe
+      </option>
+      <option
+        value="girl_footwear"
+      >
+        Girl Footwear
+      </option>
+      <option
+        value="girl_headwear"
+      >
+        Girl Headwear
+      </option>
+      <option
+        value="girl_jewellery"
+      >
+        Girl Jewellery
+      </option>
+      <option
+        value="girl_tie"
+      >
+        Girl Tie
+      </option>
+      <option
+        value="girl_underwear"
+      >
+        Girl Underwear
+      </option>
+      <option
+        value="men_bag"
+      >
+        Men Bag
+      </option>
+      <option
+        value="men_belt"
+      >
+        Men Belt
+      </option>
+      <option
+        value="men_clothe"
+      >
+        Men Clothe
+      </option>
+      <option
+        value="men_footwear"
+      >
+        Men Footwear
+      </option>
+      <option
+        value="men_headwear"
+      >
+        Men Headwear
+      </option>
+      <option
+        value="men_jewellery"
+      >
+        Men Jewellery
+      </option>
+      <option
+        value="men_tie"
+      >
+        Men Tie
+      </option>
+      <option
+        value="men_underwear"
+      >
+        Men Underwear
+      </option>
+      <option
+        value="women_bag"
+      >
+        Women Bag
+      </option>
+      <option
+        value="women_belt"
+      >
+        Women Belt
+      </option>
+      <option
+        value="women_clothe"
+      >
+        Women Clothe
+      </option>
+      <option
+        value="women_footwear"
+      >
+        Women Footwear
+      </option>
+      <option
+        value="women_headwear"
+      >
+        Women Headwear
+      </option>
+      <option
+        value="women_jewellery"
+      >
+        Women Jewellery
+      </option>
+      <option
+        value="women_tie"
+      >
+        Women Tie
+      </option>
+      <option
+        value="women_underwear"
+      >
+        Women Underwear
+      </option>
+    </select>
+    <input
+      onChange={[Function]}
+      placeholder="Amount"
+      type="text"
+      value="45"
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Stock"
+      type="number"
+      value={403}
+    />
+    <SingleDatePicker
+      anchorDirection="left"
+      customCloseIcon={null}
+      customInputIcon={null}
+      date={"1969-12-27T00:00:00.000Z"}
+      daySize={39}
+      disabled={false}
+      displayFormat={[Function]}
+      enableOutsideDays={false}
+      firstDayOfWeek={null}
+      focused={false}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      id="date"
+      initialVisibleMonth={null}
+      isDayBlocked={[Function]}
+      isDayHighlighted={[Function]}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepOpenOnDateSelect={false}
+      monthFormat="MMMM YYYY"
+      navNext={null}
+      navPrev={null}
+      numberOfMonths={1}
+      onClose={[Function]}
+      onDateChange={[Function]}
+      onFocusChange={[Function]}
+      onNextMonthClick={[Function]}
+      onPrevMonthClick={[Function]}
+      orientation="horizontal"
+      phrases={
+        Object {
+          "chooseAvailableDate": [Function],
+          "clearDate": "Clear Date",
+          "closeDatePicker": "Close",
+          "dateIsUnavailable": [Function],
+          "enterKey": "Enter key",
+          "escape": "Escape key",
+          "hideKeyboardShortcutsPanel": "Close the shortcuts panel",
+          "homeEnd": "Home and end keys",
+          "jumpToNextMonth": "Move forward to switch to the next month",
+          "jumpToPrevMonth": "Move backward to switch to the previous month",
+          "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+          select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+          "keyboardShortcuts": "Keyboard Shortcuts",
+          "leftArrowRightArrow": "Right and left arrow keys",
+          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day",
+          "moveFocusByOneMonth": "Switch months",
+          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week",
+          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week",
+          "openThisPanel": "Open this panel",
+          "pageUpPageDown": "page up and page down keys",
+          "questionMark": "Question mark",
+          "returnFocusToInput": "Return to the date input field",
+          "selectFocusedDate": "Select the date in focus",
+          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel",
+          "upArrowDownArrow": "up and down arrow keys",
+        }
+      }
+      placeholder="Date"
+      readOnly={false}
+      renderCalendarInfo={null}
+      renderDay={null}
+      renderMonth={null}
+      reopenPickerOnClearDate={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDate={false}
+      showDefaultInputIcon={false}
+      withFullScreenPortal={false}
+      withPortal={false}
+    />
+    <div>
+      <input
+        onChange={[Function]}
+        type="file"
+      />
+      <button>
+        Upload
+      </button>
+      <div>
+        <img
+          height="200"
+          src=""
+          width="200"
+        />
+      </div>
+    </div>
+    <button>
+      Add Product
+    </button>
+  </form>
+</div>
+`;
+
+exports[`should render AdminForm with default data correctly 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Description"
+      type="text"
+      value=""
+    />
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Category
+      </option>
+      <option
+        value="boy"
+      >
+        Boy
+      </option>
+      <option
+        value="girl"
+      >
+        Girl
+      </option>
+      <option
+        value="amen"
+      >
+        Men
+      </option>
+      <option
+        value="women"
+      >
+        Women
+      </option>
+    </select>
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Item
+      </option>
+      <option
+        value="boy_bag"
+      >
+        Boy Bag
+      </option>
+      <option
+        value="boy_belt"
+      >
+        Boy Belt
+      </option>
+      <option
+        value="boy_clothe"
+      >
+        Boy Clothe
+      </option>
+      <option
+        value="boy_footwear"
+      >
+        Boy Footwear
+      </option>
+      <option
+        value="boy_headwear"
+      >
+        Boy Headwear
+      </option>
+      <option
+        value="boy_jewellery"
+      >
+        Boy Jewellery
+      </option>
+      <option
+        value="boy_tie"
+      >
+        Boy Tie
+      </option>
+      <option
+        value="boy_underwear"
+      >
+        Boy Underwear
+      </option>
+      <option
+        value="girl_bag"
+      >
+        Girl Bag
+      </option>
+      <option
+        value="girl_belt"
+      >
+        Girl Belt
+      </option>
+      <option
+        value="girl_clothe"
+      >
+        Girl Clothe
+      </option>
+      <option
+        value="girl_footwear"
+      >
+        Girl Footwear
+      </option>
+      <option
+        value="girl_headwear"
+      >
+        Girl Headwear
+      </option>
+      <option
+        value="girl_jewellery"
+      >
+        Girl Jewellery
+      </option>
+      <option
+        value="girl_tie"
+      >
+        Girl Tie
+      </option>
+      <option
+        value="girl_underwear"
+      >
+        Girl Underwear
+      </option>
+      <option
+        value="men_bag"
+      >
+        Men Bag
+      </option>
+      <option
+        value="men_belt"
+      >
+        Men Belt
+      </option>
+      <option
+        value="men_clothe"
+      >
+        Men Clothe
+      </option>
+      <option
+        value="men_footwear"
+      >
+        Men Footwear
+      </option>
+      <option
+        value="men_headwear"
+      >
+        Men Headwear
+      </option>
+      <option
+        value="men_jewellery"
+      >
+        Men Jewellery
+      </option>
+      <option
+        value="men_tie"
+      >
+        Men Tie
+      </option>
+      <option
+        value="men_underwear"
+      >
+        Men Underwear
+      </option>
+      <option
+        value="women_bag"
+      >
+        Women Bag
+      </option>
+      <option
+        value="women_belt"
+      >
+        Women Belt
+      </option>
+      <option
+        value="women_clothe"
+      >
+        Women Clothe
+      </option>
+      <option
+        value="women_footwear"
+      >
+        Women Footwear
+      </option>
+      <option
+        value="women_headwear"
+      >
+        Women Headwear
+      </option>
+      <option
+        value="women_jewellery"
+      >
+        Women Jewellery
+      </option>
+      <option
+        value="women_tie"
+      >
+        Women Tie
+      </option>
+      <option
+        value="women_underwear"
+      >
+        Women Underwear
+      </option>
+    </select>
+    <input
+      onChange={[Function]}
+      placeholder="Amount"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Stock"
+      type="number"
+      value=""
+    />
+    <SingleDatePicker
+      anchorDirection="left"
+      customCloseIcon={null}
+      customInputIcon={null}
+      date={"1970-01-01T00:00:00.000Z"}
+      daySize={39}
+      disabled={false}
+      displayFormat={[Function]}
+      enableOutsideDays={false}
+      firstDayOfWeek={null}
+      focused={false}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      id="date"
+      initialVisibleMonth={null}
+      isDayBlocked={[Function]}
+      isDayHighlighted={[Function]}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepOpenOnDateSelect={false}
+      monthFormat="MMMM YYYY"
+      navNext={null}
+      navPrev={null}
+      numberOfMonths={1}
+      onClose={[Function]}
+      onDateChange={[Function]}
+      onFocusChange={[Function]}
+      onNextMonthClick={[Function]}
+      onPrevMonthClick={[Function]}
+      orientation="horizontal"
+      phrases={
+        Object {
+          "chooseAvailableDate": [Function],
+          "clearDate": "Clear Date",
+          "closeDatePicker": "Close",
+          "dateIsUnavailable": [Function],
+          "enterKey": "Enter key",
+          "escape": "Escape key",
+          "hideKeyboardShortcutsPanel": "Close the shortcuts panel",
+          "homeEnd": "Home and end keys",
+          "jumpToNextMonth": "Move forward to switch to the next month",
+          "jumpToPrevMonth": "Move backward to switch to the previous month",
+          "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+          select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+          "keyboardShortcuts": "Keyboard Shortcuts",
+          "leftArrowRightArrow": "Right and left arrow keys",
+          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day",
+          "moveFocusByOneMonth": "Switch months",
+          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week",
+          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week",
+          "openThisPanel": "Open this panel",
+          "pageUpPageDown": "page up and page down keys",
+          "questionMark": "Question mark",
+          "returnFocusToInput": "Return to the date input field",
+          "selectFocusedDate": "Select the date in focus",
+          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel",
+          "upArrowDownArrow": "up and down arrow keys",
+        }
+      }
+      placeholder="Date"
+      readOnly={false}
+      renderCalendarInfo={null}
+      renderDay={null}
+      renderMonth={null}
+      reopenPickerOnClearDate={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDate={false}
+      showDefaultInputIcon={false}
+      withFullScreenPortal={false}
+      withPortal={false}
+    />
+    <div>
+      <input
+        onChange={[Function]}
+        type="file"
+      />
+      <button>
+        Upload
+      </button>
+      <div>
+        <img
+          height="200"
+          src=""
+          width="200"
+        />
+      </div>
+    </div>
+    <button>
+      Add Product
+    </button>
+  </form>
+</div>
+`;
+
+exports[`should render error for invalid form submission 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Description"
+      type="text"
+      value=""
+    />
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Category
+      </option>
+      <option
+        value="boy"
+      >
+        Boy
+      </option>
+      <option
+        value="girl"
+      >
+        Girl
+      </option>
+      <option
+        value="amen"
+      >
+        Men
+      </option>
+      <option
+        value="women"
+      >
+        Women
+      </option>
+    </select>
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Item
+      </option>
+      <option
+        value="boy_bag"
+      >
+        Boy Bag
+      </option>
+      <option
+        value="boy_belt"
+      >
+        Boy Belt
+      </option>
+      <option
+        value="boy_clothe"
+      >
+        Boy Clothe
+      </option>
+      <option
+        value="boy_footwear"
+      >
+        Boy Footwear
+      </option>
+      <option
+        value="boy_headwear"
+      >
+        Boy Headwear
+      </option>
+      <option
+        value="boy_jewellery"
+      >
+        Boy Jewellery
+      </option>
+      <option
+        value="boy_tie"
+      >
+        Boy Tie
+      </option>
+      <option
+        value="boy_underwear"
+      >
+        Boy Underwear
+      </option>
+      <option
+        value="girl_bag"
+      >
+        Girl Bag
+      </option>
+      <option
+        value="girl_belt"
+      >
+        Girl Belt
+      </option>
+      <option
+        value="girl_clothe"
+      >
+        Girl Clothe
+      </option>
+      <option
+        value="girl_footwear"
+      >
+        Girl Footwear
+      </option>
+      <option
+        value="girl_headwear"
+      >
+        Girl Headwear
+      </option>
+      <option
+        value="girl_jewellery"
+      >
+        Girl Jewellery
+      </option>
+      <option
+        value="girl_tie"
+      >
+        Girl Tie
+      </option>
+      <option
+        value="girl_underwear"
+      >
+        Girl Underwear
+      </option>
+      <option
+        value="men_bag"
+      >
+        Men Bag
+      </option>
+      <option
+        value="men_belt"
+      >
+        Men Belt
+      </option>
+      <option
+        value="men_clothe"
+      >
+        Men Clothe
+      </option>
+      <option
+        value="men_footwear"
+      >
+        Men Footwear
+      </option>
+      <option
+        value="men_headwear"
+      >
+        Men Headwear
+      </option>
+      <option
+        value="men_jewellery"
+      >
+        Men Jewellery
+      </option>
+      <option
+        value="men_tie"
+      >
+        Men Tie
+      </option>
+      <option
+        value="men_underwear"
+      >
+        Men Underwear
+      </option>
+      <option
+        value="women_bag"
+      >
+        Women Bag
+      </option>
+      <option
+        value="women_belt"
+      >
+        Women Belt
+      </option>
+      <option
+        value="women_clothe"
+      >
+        Women Clothe
+      </option>
+      <option
+        value="women_footwear"
+      >
+        Women Footwear
+      </option>
+      <option
+        value="women_headwear"
+      >
+        Women Headwear
+      </option>
+      <option
+        value="women_jewellery"
+      >
+        Women Jewellery
+      </option>
+      <option
+        value="women_tie"
+      >
+        Women Tie
+      </option>
+      <option
+        value="women_underwear"
+      >
+        Women Underwear
+      </option>
+    </select>
+    <input
+      onChange={[Function]}
+      placeholder="Amount"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Stock"
+      type="number"
+      value=""
+    />
+    <SingleDatePicker
+      anchorDirection="left"
+      customCloseIcon={null}
+      customInputIcon={null}
+      date={"1970-01-01T00:00:00.000Z"}
+      daySize={39}
+      disabled={false}
+      displayFormat={[Function]}
+      enableOutsideDays={false}
+      firstDayOfWeek={null}
+      focused={false}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      id="date"
+      initialVisibleMonth={null}
+      isDayBlocked={[Function]}
+      isDayHighlighted={[Function]}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepOpenOnDateSelect={false}
+      monthFormat="MMMM YYYY"
+      navNext={null}
+      navPrev={null}
+      numberOfMonths={1}
+      onClose={[Function]}
+      onDateChange={[Function]}
+      onFocusChange={[Function]}
+      onNextMonthClick={[Function]}
+      onPrevMonthClick={[Function]}
+      orientation="horizontal"
+      phrases={
+        Object {
+          "chooseAvailableDate": [Function],
+          "clearDate": "Clear Date",
+          "closeDatePicker": "Close",
+          "dateIsUnavailable": [Function],
+          "enterKey": "Enter key",
+          "escape": "Escape key",
+          "hideKeyboardShortcutsPanel": "Close the shortcuts panel",
+          "homeEnd": "Home and end keys",
+          "jumpToNextMonth": "Move forward to switch to the next month",
+          "jumpToPrevMonth": "Move backward to switch to the previous month",
+          "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+          select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+          "keyboardShortcuts": "Keyboard Shortcuts",
+          "leftArrowRightArrow": "Right and left arrow keys",
+          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day",
+          "moveFocusByOneMonth": "Switch months",
+          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week",
+          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week",
+          "openThisPanel": "Open this panel",
+          "pageUpPageDown": "page up and page down keys",
+          "questionMark": "Question mark",
+          "returnFocusToInput": "Return to the date input field",
+          "selectFocusedDate": "Select the date in focus",
+          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel",
+          "upArrowDownArrow": "up and down arrow keys",
+        }
+      }
+      placeholder="Date"
+      readOnly={false}
+      renderCalendarInfo={null}
+      renderDay={null}
+      renderMonth={null}
+      reopenPickerOnClearDate={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDate={false}
+      showDefaultInputIcon={false}
+      withFullScreenPortal={false}
+      withPortal={false}
+    />
+    <div>
+      <input
+        onChange={[Function]}
+        type="file"
+      />
+      <button>
+        Upload
+      </button>
+      <div>
+        <img
+          height="200"
+          src=""
+          width="200"
+        />
+      </div>
+    </div>
+    <button>
+      Add Product
+    </button>
+  </form>
+</div>
+`;
+
+exports[`should render error for invalid form submission 2`] = `
+<div>
+  <p>
+    Please provide value for the empty field
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Description"
+      type="text"
+      value=""
+    />
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Category
+      </option>
+      <option
+        value="boy"
+      >
+        Boy
+      </option>
+      <option
+        value="girl"
+      >
+        Girl
+      </option>
+      <option
+        value="amen"
+      >
+        Men
+      </option>
+      <option
+        value="women"
+      >
+        Women
+      </option>
+    </select>
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Item
+      </option>
+      <option
+        value="boy_bag"
+      >
+        Boy Bag
+      </option>
+      <option
+        value="boy_belt"
+      >
+        Boy Belt
+      </option>
+      <option
+        value="boy_clothe"
+      >
+        Boy Clothe
+      </option>
+      <option
+        value="boy_footwear"
+      >
+        Boy Footwear
+      </option>
+      <option
+        value="boy_headwear"
+      >
+        Boy Headwear
+      </option>
+      <option
+        value="boy_jewellery"
+      >
+        Boy Jewellery
+      </option>
+      <option
+        value="boy_tie"
+      >
+        Boy Tie
+      </option>
+      <option
+        value="boy_underwear"
+      >
+        Boy Underwear
+      </option>
+      <option
+        value="girl_bag"
+      >
+        Girl Bag
+      </option>
+      <option
+        value="girl_belt"
+      >
+        Girl Belt
+      </option>
+      <option
+        value="girl_clothe"
+      >
+        Girl Clothe
+      </option>
+      <option
+        value="girl_footwear"
+      >
+        Girl Footwear
+      </option>
+      <option
+        value="girl_headwear"
+      >
+        Girl Headwear
+      </option>
+      <option
+        value="girl_jewellery"
+      >
+        Girl Jewellery
+      </option>
+      <option
+        value="girl_tie"
+      >
+        Girl Tie
+      </option>
+      <option
+        value="girl_underwear"
+      >
+        Girl Underwear
+      </option>
+      <option
+        value="men_bag"
+      >
+        Men Bag
+      </option>
+      <option
+        value="men_belt"
+      >
+        Men Belt
+      </option>
+      <option
+        value="men_clothe"
+      >
+        Men Clothe
+      </option>
+      <option
+        value="men_footwear"
+      >
+        Men Footwear
+      </option>
+      <option
+        value="men_headwear"
+      >
+        Men Headwear
+      </option>
+      <option
+        value="men_jewellery"
+      >
+        Men Jewellery
+      </option>
+      <option
+        value="men_tie"
+      >
+        Men Tie
+      </option>
+      <option
+        value="men_underwear"
+      >
+        Men Underwear
+      </option>
+      <option
+        value="women_bag"
+      >
+        Women Bag
+      </option>
+      <option
+        value="women_belt"
+      >
+        Women Belt
+      </option>
+      <option
+        value="women_clothe"
+      >
+        Women Clothe
+      </option>
+      <option
+        value="women_footwear"
+      >
+        Women Footwear
+      </option>
+      <option
+        value="women_headwear"
+      >
+        Women Headwear
+      </option>
+      <option
+        value="women_jewellery"
+      >
+        Women Jewellery
+      </option>
+      <option
+        value="women_tie"
+      >
+        Women Tie
+      </option>
+      <option
+        value="women_underwear"
+      >
+        Women Underwear
+      </option>
+    </select>
+    <input
+      onChange={[Function]}
+      placeholder="Amount"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Stock"
+      type="number"
+      value=""
+    />
+    <SingleDatePicker
+      anchorDirection="left"
+      customCloseIcon={null}
+      customInputIcon={null}
+      date={"1970-01-01T00:00:00.000Z"}
+      daySize={39}
+      disabled={false}
+      displayFormat={[Function]}
+      enableOutsideDays={false}
+      firstDayOfWeek={null}
+      focused={false}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      id="date"
+      initialVisibleMonth={null}
+      isDayBlocked={[Function]}
+      isDayHighlighted={[Function]}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepOpenOnDateSelect={false}
+      monthFormat="MMMM YYYY"
+      navNext={null}
+      navPrev={null}
+      numberOfMonths={1}
+      onClose={[Function]}
+      onDateChange={[Function]}
+      onFocusChange={[Function]}
+      onNextMonthClick={[Function]}
+      onPrevMonthClick={[Function]}
+      orientation="horizontal"
+      phrases={
+        Object {
+          "chooseAvailableDate": [Function],
+          "clearDate": "Clear Date",
+          "closeDatePicker": "Close",
+          "dateIsUnavailable": [Function],
+          "enterKey": "Enter key",
+          "escape": "Escape key",
+          "hideKeyboardShortcutsPanel": "Close the shortcuts panel",
+          "homeEnd": "Home and end keys",
+          "jumpToNextMonth": "Move forward to switch to the next month",
+          "jumpToPrevMonth": "Move backward to switch to the previous month",
+          "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+          select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+          "keyboardShortcuts": "Keyboard Shortcuts",
+          "leftArrowRightArrow": "Right and left arrow keys",
+          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day",
+          "moveFocusByOneMonth": "Switch months",
+          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week",
+          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week",
+          "openThisPanel": "Open this panel",
+          "pageUpPageDown": "page up and page down keys",
+          "questionMark": "Question mark",
+          "returnFocusToInput": "Return to the date input field",
+          "selectFocusedDate": "Select the date in focus",
+          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel",
+          "upArrowDownArrow": "up and down arrow keys",
+        }
+      }
+      placeholder="Date"
+      readOnly={false}
+      renderCalendarInfo={null}
+      renderDay={null}
+      renderMonth={null}
+      reopenPickerOnClearDate={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDate={false}
+      showDefaultInputIcon={false}
+      withFullScreenPortal={false}
+      withPortal={false}
+    />
+    <div>
+      <input
+        onChange={[Function]}
+        type="file"
+      />
+      <button>
+        Upload
+      </button>
+      <div>
+        <img
+          height="200"
+          src=""
+          width="200"
+        />
+      </div>
+    </div>
+    <button>
+      Add Product
+    </button>
+  </form>
+</div>
+`;
+
+exports[`should set amount if invalid input 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Description"
+      type="text"
+      value=""
+    />
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Category
+      </option>
+      <option
+        value="boy"
+      >
+        Boy
+      </option>
+      <option
+        value="girl"
+      >
+        Girl
+      </option>
+      <option
+        value="amen"
+      >
+        Men
+      </option>
+      <option
+        value="women"
+      >
+        Women
+      </option>
+    </select>
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Item
+      </option>
+      <option
+        value="boy_bag"
+      >
+        Boy Bag
+      </option>
+      <option
+        value="boy_belt"
+      >
+        Boy Belt
+      </option>
+      <option
+        value="boy_clothe"
+      >
+        Boy Clothe
+      </option>
+      <option
+        value="boy_footwear"
+      >
+        Boy Footwear
+      </option>
+      <option
+        value="boy_headwear"
+      >
+        Boy Headwear
+      </option>
+      <option
+        value="boy_jewellery"
+      >
+        Boy Jewellery
+      </option>
+      <option
+        value="boy_tie"
+      >
+        Boy Tie
+      </option>
+      <option
+        value="boy_underwear"
+      >
+        Boy Underwear
+      </option>
+      <option
+        value="girl_bag"
+      >
+        Girl Bag
+      </option>
+      <option
+        value="girl_belt"
+      >
+        Girl Belt
+      </option>
+      <option
+        value="girl_clothe"
+      >
+        Girl Clothe
+      </option>
+      <option
+        value="girl_footwear"
+      >
+        Girl Footwear
+      </option>
+      <option
+        value="girl_headwear"
+      >
+        Girl Headwear
+      </option>
+      <option
+        value="girl_jewellery"
+      >
+        Girl Jewellery
+      </option>
+      <option
+        value="girl_tie"
+      >
+        Girl Tie
+      </option>
+      <option
+        value="girl_underwear"
+      >
+        Girl Underwear
+      </option>
+      <option
+        value="men_bag"
+      >
+        Men Bag
+      </option>
+      <option
+        value="men_belt"
+      >
+        Men Belt
+      </option>
+      <option
+        value="men_clothe"
+      >
+        Men Clothe
+      </option>
+      <option
+        value="men_footwear"
+      >
+        Men Footwear
+      </option>
+      <option
+        value="men_headwear"
+      >
+        Men Headwear
+      </option>
+      <option
+        value="men_jewellery"
+      >
+        Men Jewellery
+      </option>
+      <option
+        value="men_tie"
+      >
+        Men Tie
+      </option>
+      <option
+        value="men_underwear"
+      >
+        Men Underwear
+      </option>
+      <option
+        value="women_bag"
+      >
+        Women Bag
+      </option>
+      <option
+        value="women_belt"
+      >
+        Women Belt
+      </option>
+      <option
+        value="women_clothe"
+      >
+        Women Clothe
+      </option>
+      <option
+        value="women_footwear"
+      >
+        Women Footwear
+      </option>
+      <option
+        value="women_headwear"
+      >
+        Women Headwear
+      </option>
+      <option
+        value="women_jewellery"
+      >
+        Women Jewellery
+      </option>
+      <option
+        value="women_tie"
+      >
+        Women Tie
+      </option>
+      <option
+        value="women_underwear"
+      >
+        Women Underwear
+      </option>
+    </select>
+    <input
+      onChange={[Function]}
+      placeholder="Amount"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Stock"
+      type="number"
+      value=""
+    />
+    <SingleDatePicker
+      anchorDirection="left"
+      customCloseIcon={null}
+      customInputIcon={null}
+      date={"1970-01-01T00:00:00.000Z"}
+      daySize={39}
+      disabled={false}
+      displayFormat={[Function]}
+      enableOutsideDays={false}
+      firstDayOfWeek={null}
+      focused={false}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      id="date"
+      initialVisibleMonth={null}
+      isDayBlocked={[Function]}
+      isDayHighlighted={[Function]}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepOpenOnDateSelect={false}
+      monthFormat="MMMM YYYY"
+      navNext={null}
+      navPrev={null}
+      numberOfMonths={1}
+      onClose={[Function]}
+      onDateChange={[Function]}
+      onFocusChange={[Function]}
+      onNextMonthClick={[Function]}
+      onPrevMonthClick={[Function]}
+      orientation="horizontal"
+      phrases={
+        Object {
+          "chooseAvailableDate": [Function],
+          "clearDate": "Clear Date",
+          "closeDatePicker": "Close",
+          "dateIsUnavailable": [Function],
+          "enterKey": "Enter key",
+          "escape": "Escape key",
+          "hideKeyboardShortcutsPanel": "Close the shortcuts panel",
+          "homeEnd": "Home and end keys",
+          "jumpToNextMonth": "Move forward to switch to the next month",
+          "jumpToPrevMonth": "Move backward to switch to the previous month",
+          "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+          select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+          "keyboardShortcuts": "Keyboard Shortcuts",
+          "leftArrowRightArrow": "Right and left arrow keys",
+          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day",
+          "moveFocusByOneMonth": "Switch months",
+          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week",
+          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week",
+          "openThisPanel": "Open this panel",
+          "pageUpPageDown": "page up and page down keys",
+          "questionMark": "Question mark",
+          "returnFocusToInput": "Return to the date input field",
+          "selectFocusedDate": "Select the date in focus",
+          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel",
+          "upArrowDownArrow": "up and down arrow keys",
+        }
+      }
+      placeholder="Date"
+      readOnly={false}
+      renderCalendarInfo={null}
+      renderDay={null}
+      renderMonth={null}
+      reopenPickerOnClearDate={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDate={false}
+      showDefaultInputIcon={false}
+      withFullScreenPortal={false}
+      withPortal={false}
+    />
+    <div>
+      <input
+        onChange={[Function]}
+        type="file"
+      />
+      <button>
+        Upload
+      </button>
+      <div>
+        <img
+          height="200"
+          src=""
+          width="200"
+        />
+      </div>
+    </div>
+    <button>
+      Add Product
+    </button>
+  </form>
+</div>
+`;
+
+exports[`should set amount if valid input 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Description"
+      type="text"
+      value=""
+    />
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Category
+      </option>
+      <option
+        value="boy"
+      >
+        Boy
+      </option>
+      <option
+        value="girl"
+      >
+        Girl
+      </option>
+      <option
+        value="amen"
+      >
+        Men
+      </option>
+      <option
+        value="women"
+      >
+        Women
+      </option>
+    </select>
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Item
+      </option>
+      <option
+        value="boy_bag"
+      >
+        Boy Bag
+      </option>
+      <option
+        value="boy_belt"
+      >
+        Boy Belt
+      </option>
+      <option
+        value="boy_clothe"
+      >
+        Boy Clothe
+      </option>
+      <option
+        value="boy_footwear"
+      >
+        Boy Footwear
+      </option>
+      <option
+        value="boy_headwear"
+      >
+        Boy Headwear
+      </option>
+      <option
+        value="boy_jewellery"
+      >
+        Boy Jewellery
+      </option>
+      <option
+        value="boy_tie"
+      >
+        Boy Tie
+      </option>
+      <option
+        value="boy_underwear"
+      >
+        Boy Underwear
+      </option>
+      <option
+        value="girl_bag"
+      >
+        Girl Bag
+      </option>
+      <option
+        value="girl_belt"
+      >
+        Girl Belt
+      </option>
+      <option
+        value="girl_clothe"
+      >
+        Girl Clothe
+      </option>
+      <option
+        value="girl_footwear"
+      >
+        Girl Footwear
+      </option>
+      <option
+        value="girl_headwear"
+      >
+        Girl Headwear
+      </option>
+      <option
+        value="girl_jewellery"
+      >
+        Girl Jewellery
+      </option>
+      <option
+        value="girl_tie"
+      >
+        Girl Tie
+      </option>
+      <option
+        value="girl_underwear"
+      >
+        Girl Underwear
+      </option>
+      <option
+        value="men_bag"
+      >
+        Men Bag
+      </option>
+      <option
+        value="men_belt"
+      >
+        Men Belt
+      </option>
+      <option
+        value="men_clothe"
+      >
+        Men Clothe
+      </option>
+      <option
+        value="men_footwear"
+      >
+        Men Footwear
+      </option>
+      <option
+        value="men_headwear"
+      >
+        Men Headwear
+      </option>
+      <option
+        value="men_jewellery"
+      >
+        Men Jewellery
+      </option>
+      <option
+        value="men_tie"
+      >
+        Men Tie
+      </option>
+      <option
+        value="men_underwear"
+      >
+        Men Underwear
+      </option>
+      <option
+        value="women_bag"
+      >
+        Women Bag
+      </option>
+      <option
+        value="women_belt"
+      >
+        Women Belt
+      </option>
+      <option
+        value="women_clothe"
+      >
+        Women Clothe
+      </option>
+      <option
+        value="women_footwear"
+      >
+        Women Footwear
+      </option>
+      <option
+        value="women_headwear"
+      >
+        Women Headwear
+      </option>
+      <option
+        value="women_jewellery"
+      >
+        Women Jewellery
+      </option>
+      <option
+        value="women_tie"
+      >
+        Women Tie
+      </option>
+      <option
+        value="women_underwear"
+      >
+        Women Underwear
+      </option>
+    </select>
+    <input
+      onChange={[Function]}
+      placeholder="Amount"
+      type="text"
+      value="122.34"
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Stock"
+      type="number"
+      value=""
+    />
+    <SingleDatePicker
+      anchorDirection="left"
+      customCloseIcon={null}
+      customInputIcon={null}
+      date={"1970-01-01T00:00:00.000Z"}
+      daySize={39}
+      disabled={false}
+      displayFormat={[Function]}
+      enableOutsideDays={false}
+      firstDayOfWeek={null}
+      focused={false}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      id="date"
+      initialVisibleMonth={null}
+      isDayBlocked={[Function]}
+      isDayHighlighted={[Function]}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepOpenOnDateSelect={false}
+      monthFormat="MMMM YYYY"
+      navNext={null}
+      navPrev={null}
+      numberOfMonths={1}
+      onClose={[Function]}
+      onDateChange={[Function]}
+      onFocusChange={[Function]}
+      onNextMonthClick={[Function]}
+      onPrevMonthClick={[Function]}
+      orientation="horizontal"
+      phrases={
+        Object {
+          "chooseAvailableDate": [Function],
+          "clearDate": "Clear Date",
+          "closeDatePicker": "Close",
+          "dateIsUnavailable": [Function],
+          "enterKey": "Enter key",
+          "escape": "Escape key",
+          "hideKeyboardShortcutsPanel": "Close the shortcuts panel",
+          "homeEnd": "Home and end keys",
+          "jumpToNextMonth": "Move forward to switch to the next month",
+          "jumpToPrevMonth": "Move backward to switch to the previous month",
+          "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+          select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+          "keyboardShortcuts": "Keyboard Shortcuts",
+          "leftArrowRightArrow": "Right and left arrow keys",
+          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day",
+          "moveFocusByOneMonth": "Switch months",
+          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week",
+          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week",
+          "openThisPanel": "Open this panel",
+          "pageUpPageDown": "page up and page down keys",
+          "questionMark": "Question mark",
+          "returnFocusToInput": "Return to the date input field",
+          "selectFocusedDate": "Select the date in focus",
+          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel",
+          "upArrowDownArrow": "up and down arrow keys",
+        }
+      }
+      placeholder="Date"
+      readOnly={false}
+      renderCalendarInfo={null}
+      renderDay={null}
+      renderMonth={null}
+      reopenPickerOnClearDate={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDate={false}
+      showDefaultInputIcon={false}
+      withFullScreenPortal={false}
+      withPortal={false}
+    />
+    <div>
+      <input
+        onChange={[Function]}
+        type="file"
+      />
+      <button>
+        Upload
+      </button>
+      <div>
+        <img
+          height="200"
+          src=""
+          width="200"
+        />
+      </div>
+    </div>
+    <button>
+      Add Product
+    </button>
+  </form>
+</div>
+`;
+
+exports[`should set category with valid select 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Description"
+      type="text"
+      value=""
+    />
+    <select
+      onChange={[Function]}
+      value="girl"
+    >
+      <option
+        value=""
+      >
+        Select Category
+      </option>
+      <option
+        value="boy"
+      >
+        Boy
+      </option>
+      <option
+        value="girl"
+      >
+        Girl
+      </option>
+      <option
+        value="amen"
+      >
+        Men
+      </option>
+      <option
+        value="women"
+      >
+        Women
+      </option>
+    </select>
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Item
+      </option>
+      <option
+        value="boy_bag"
+      >
+        Boy Bag
+      </option>
+      <option
+        value="boy_belt"
+      >
+        Boy Belt
+      </option>
+      <option
+        value="boy_clothe"
+      >
+        Boy Clothe
+      </option>
+      <option
+        value="boy_footwear"
+      >
+        Boy Footwear
+      </option>
+      <option
+        value="boy_headwear"
+      >
+        Boy Headwear
+      </option>
+      <option
+        value="boy_jewellery"
+      >
+        Boy Jewellery
+      </option>
+      <option
+        value="boy_tie"
+      >
+        Boy Tie
+      </option>
+      <option
+        value="boy_underwear"
+      >
+        Boy Underwear
+      </option>
+      <option
+        value="girl_bag"
+      >
+        Girl Bag
+      </option>
+      <option
+        value="girl_belt"
+      >
+        Girl Belt
+      </option>
+      <option
+        value="girl_clothe"
+      >
+        Girl Clothe
+      </option>
+      <option
+        value="girl_footwear"
+      >
+        Girl Footwear
+      </option>
+      <option
+        value="girl_headwear"
+      >
+        Girl Headwear
+      </option>
+      <option
+        value="girl_jewellery"
+      >
+        Girl Jewellery
+      </option>
+      <option
+        value="girl_tie"
+      >
+        Girl Tie
+      </option>
+      <option
+        value="girl_underwear"
+      >
+        Girl Underwear
+      </option>
+      <option
+        value="men_bag"
+      >
+        Men Bag
+      </option>
+      <option
+        value="men_belt"
+      >
+        Men Belt
+      </option>
+      <option
+        value="men_clothe"
+      >
+        Men Clothe
+      </option>
+      <option
+        value="men_footwear"
+      >
+        Men Footwear
+      </option>
+      <option
+        value="men_headwear"
+      >
+        Men Headwear
+      </option>
+      <option
+        value="men_jewellery"
+      >
+        Men Jewellery
+      </option>
+      <option
+        value="men_tie"
+      >
+        Men Tie
+      </option>
+      <option
+        value="men_underwear"
+      >
+        Men Underwear
+      </option>
+      <option
+        value="women_bag"
+      >
+        Women Bag
+      </option>
+      <option
+        value="women_belt"
+      >
+        Women Belt
+      </option>
+      <option
+        value="women_clothe"
+      >
+        Women Clothe
+      </option>
+      <option
+        value="women_footwear"
+      >
+        Women Footwear
+      </option>
+      <option
+        value="women_headwear"
+      >
+        Women Headwear
+      </option>
+      <option
+        value="women_jewellery"
+      >
+        Women Jewellery
+      </option>
+      <option
+        value="women_tie"
+      >
+        Women Tie
+      </option>
+      <option
+        value="women_underwear"
+      >
+        Women Underwear
+      </option>
+    </select>
+    <input
+      onChange={[Function]}
+      placeholder="Amount"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Stock"
+      type="number"
+      value=""
+    />
+    <SingleDatePicker
+      anchorDirection="left"
+      customCloseIcon={null}
+      customInputIcon={null}
+      date={"1970-01-01T00:00:00.000Z"}
+      daySize={39}
+      disabled={false}
+      displayFormat={[Function]}
+      enableOutsideDays={false}
+      firstDayOfWeek={null}
+      focused={false}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      id="date"
+      initialVisibleMonth={null}
+      isDayBlocked={[Function]}
+      isDayHighlighted={[Function]}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepOpenOnDateSelect={false}
+      monthFormat="MMMM YYYY"
+      navNext={null}
+      navPrev={null}
+      numberOfMonths={1}
+      onClose={[Function]}
+      onDateChange={[Function]}
+      onFocusChange={[Function]}
+      onNextMonthClick={[Function]}
+      onPrevMonthClick={[Function]}
+      orientation="horizontal"
+      phrases={
+        Object {
+          "chooseAvailableDate": [Function],
+          "clearDate": "Clear Date",
+          "closeDatePicker": "Close",
+          "dateIsUnavailable": [Function],
+          "enterKey": "Enter key",
+          "escape": "Escape key",
+          "hideKeyboardShortcutsPanel": "Close the shortcuts panel",
+          "homeEnd": "Home and end keys",
+          "jumpToNextMonth": "Move forward to switch to the next month",
+          "jumpToPrevMonth": "Move backward to switch to the previous month",
+          "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+          select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+          "keyboardShortcuts": "Keyboard Shortcuts",
+          "leftArrowRightArrow": "Right and left arrow keys",
+          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day",
+          "moveFocusByOneMonth": "Switch months",
+          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week",
+          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week",
+          "openThisPanel": "Open this panel",
+          "pageUpPageDown": "page up and page down keys",
+          "questionMark": "Question mark",
+          "returnFocusToInput": "Return to the date input field",
+          "selectFocusedDate": "Select the date in focus",
+          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel",
+          "upArrowDownArrow": "up and down arrow keys",
+        }
+      }
+      placeholder="Date"
+      readOnly={false}
+      renderCalendarInfo={null}
+      renderDay={null}
+      renderMonth={null}
+      reopenPickerOnClearDate={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDate={false}
+      showDefaultInputIcon={false}
+      withFullScreenPortal={false}
+      withPortal={false}
+    />
+    <div>
+      <input
+        onChange={[Function]}
+        type="file"
+      />
+      <button>
+        Upload
+      </button>
+      <div>
+        <img
+          height="200"
+          src=""
+          width="200"
+        />
+      </div>
+    </div>
+    <button>
+      Add Product
+    </button>
+  </form>
+</div>
+`;
+
+exports[`should set description on input change 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Description"
+      type="text"
+      value="Shirt for boy"
+    />
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Category
+      </option>
+      <option
+        value="boy"
+      >
+        Boy
+      </option>
+      <option
+        value="girl"
+      >
+        Girl
+      </option>
+      <option
+        value="amen"
+      >
+        Men
+      </option>
+      <option
+        value="women"
+      >
+        Women
+      </option>
+    </select>
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Item
+      </option>
+      <option
+        value="boy_bag"
+      >
+        Boy Bag
+      </option>
+      <option
+        value="boy_belt"
+      >
+        Boy Belt
+      </option>
+      <option
+        value="boy_clothe"
+      >
+        Boy Clothe
+      </option>
+      <option
+        value="boy_footwear"
+      >
+        Boy Footwear
+      </option>
+      <option
+        value="boy_headwear"
+      >
+        Boy Headwear
+      </option>
+      <option
+        value="boy_jewellery"
+      >
+        Boy Jewellery
+      </option>
+      <option
+        value="boy_tie"
+      >
+        Boy Tie
+      </option>
+      <option
+        value="boy_underwear"
+      >
+        Boy Underwear
+      </option>
+      <option
+        value="girl_bag"
+      >
+        Girl Bag
+      </option>
+      <option
+        value="girl_belt"
+      >
+        Girl Belt
+      </option>
+      <option
+        value="girl_clothe"
+      >
+        Girl Clothe
+      </option>
+      <option
+        value="girl_footwear"
+      >
+        Girl Footwear
+      </option>
+      <option
+        value="girl_headwear"
+      >
+        Girl Headwear
+      </option>
+      <option
+        value="girl_jewellery"
+      >
+        Girl Jewellery
+      </option>
+      <option
+        value="girl_tie"
+      >
+        Girl Tie
+      </option>
+      <option
+        value="girl_underwear"
+      >
+        Girl Underwear
+      </option>
+      <option
+        value="men_bag"
+      >
+        Men Bag
+      </option>
+      <option
+        value="men_belt"
+      >
+        Men Belt
+      </option>
+      <option
+        value="men_clothe"
+      >
+        Men Clothe
+      </option>
+      <option
+        value="men_footwear"
+      >
+        Men Footwear
+      </option>
+      <option
+        value="men_headwear"
+      >
+        Men Headwear
+      </option>
+      <option
+        value="men_jewellery"
+      >
+        Men Jewellery
+      </option>
+      <option
+        value="men_tie"
+      >
+        Men Tie
+      </option>
+      <option
+        value="men_underwear"
+      >
+        Men Underwear
+      </option>
+      <option
+        value="women_bag"
+      >
+        Women Bag
+      </option>
+      <option
+        value="women_belt"
+      >
+        Women Belt
+      </option>
+      <option
+        value="women_clothe"
+      >
+        Women Clothe
+      </option>
+      <option
+        value="women_footwear"
+      >
+        Women Footwear
+      </option>
+      <option
+        value="women_headwear"
+      >
+        Women Headwear
+      </option>
+      <option
+        value="women_jewellery"
+      >
+        Women Jewellery
+      </option>
+      <option
+        value="women_tie"
+      >
+        Women Tie
+      </option>
+      <option
+        value="women_underwear"
+      >
+        Women Underwear
+      </option>
+    </select>
+    <input
+      onChange={[Function]}
+      placeholder="Amount"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Stock"
+      type="number"
+      value=""
+    />
+    <SingleDatePicker
+      anchorDirection="left"
+      customCloseIcon={null}
+      customInputIcon={null}
+      date={"1970-01-01T00:00:00.000Z"}
+      daySize={39}
+      disabled={false}
+      displayFormat={[Function]}
+      enableOutsideDays={false}
+      firstDayOfWeek={null}
+      focused={false}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      id="date"
+      initialVisibleMonth={null}
+      isDayBlocked={[Function]}
+      isDayHighlighted={[Function]}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepOpenOnDateSelect={false}
+      monthFormat="MMMM YYYY"
+      navNext={null}
+      navPrev={null}
+      numberOfMonths={1}
+      onClose={[Function]}
+      onDateChange={[Function]}
+      onFocusChange={[Function]}
+      onNextMonthClick={[Function]}
+      onPrevMonthClick={[Function]}
+      orientation="horizontal"
+      phrases={
+        Object {
+          "chooseAvailableDate": [Function],
+          "clearDate": "Clear Date",
+          "closeDatePicker": "Close",
+          "dateIsUnavailable": [Function],
+          "enterKey": "Enter key",
+          "escape": "Escape key",
+          "hideKeyboardShortcutsPanel": "Close the shortcuts panel",
+          "homeEnd": "Home and end keys",
+          "jumpToNextMonth": "Move forward to switch to the next month",
+          "jumpToPrevMonth": "Move backward to switch to the previous month",
+          "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+          select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+          "keyboardShortcuts": "Keyboard Shortcuts",
+          "leftArrowRightArrow": "Right and left arrow keys",
+          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day",
+          "moveFocusByOneMonth": "Switch months",
+          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week",
+          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week",
+          "openThisPanel": "Open this panel",
+          "pageUpPageDown": "page up and page down keys",
+          "questionMark": "Question mark",
+          "returnFocusToInput": "Return to the date input field",
+          "selectFocusedDate": "Select the date in focus",
+          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel",
+          "upArrowDownArrow": "up and down arrow keys",
+        }
+      }
+      placeholder="Date"
+      readOnly={false}
+      renderCalendarInfo={null}
+      renderDay={null}
+      renderMonth={null}
+      reopenPickerOnClearDate={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDate={false}
+      showDefaultInputIcon={false}
+      withFullScreenPortal={false}
+      withPortal={false}
+    />
+    <div>
+      <input
+        onChange={[Function]}
+        type="file"
+      />
+      <button>
+        Upload
+      </button>
+      <div>
+        <img
+          height="200"
+          src=""
+          width="200"
+        />
+      </div>
+    </div>
+    <button>
+      Add Product
+    </button>
+  </form>
+</div>
+`;
+
+exports[`should set item with valid select 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Description"
+      type="text"
+      value=""
+    />
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Category
+      </option>
+      <option
+        value="boy"
+      >
+        Boy
+      </option>
+      <option
+        value="girl"
+      >
+        Girl
+      </option>
+      <option
+        value="amen"
+      >
+        Men
+      </option>
+      <option
+        value="women"
+      >
+        Women
+      </option>
+    </select>
+    <select
+      onChange={[Function]}
+      value="men_headwear"
+    >
+      <option
+        value=""
+      >
+        Select Item
+      </option>
+      <option
+        value="boy_bag"
+      >
+        Boy Bag
+      </option>
+      <option
+        value="boy_belt"
+      >
+        Boy Belt
+      </option>
+      <option
+        value="boy_clothe"
+      >
+        Boy Clothe
+      </option>
+      <option
+        value="boy_footwear"
+      >
+        Boy Footwear
+      </option>
+      <option
+        value="boy_headwear"
+      >
+        Boy Headwear
+      </option>
+      <option
+        value="boy_jewellery"
+      >
+        Boy Jewellery
+      </option>
+      <option
+        value="boy_tie"
+      >
+        Boy Tie
+      </option>
+      <option
+        value="boy_underwear"
+      >
+        Boy Underwear
+      </option>
+      <option
+        value="girl_bag"
+      >
+        Girl Bag
+      </option>
+      <option
+        value="girl_belt"
+      >
+        Girl Belt
+      </option>
+      <option
+        value="girl_clothe"
+      >
+        Girl Clothe
+      </option>
+      <option
+        value="girl_footwear"
+      >
+        Girl Footwear
+      </option>
+      <option
+        value="girl_headwear"
+      >
+        Girl Headwear
+      </option>
+      <option
+        value="girl_jewellery"
+      >
+        Girl Jewellery
+      </option>
+      <option
+        value="girl_tie"
+      >
+        Girl Tie
+      </option>
+      <option
+        value="girl_underwear"
+      >
+        Girl Underwear
+      </option>
+      <option
+        value="men_bag"
+      >
+        Men Bag
+      </option>
+      <option
+        value="men_belt"
+      >
+        Men Belt
+      </option>
+      <option
+        value="men_clothe"
+      >
+        Men Clothe
+      </option>
+      <option
+        value="men_footwear"
+      >
+        Men Footwear
+      </option>
+      <option
+        value="men_headwear"
+      >
+        Men Headwear
+      </option>
+      <option
+        value="men_jewellery"
+      >
+        Men Jewellery
+      </option>
+      <option
+        value="men_tie"
+      >
+        Men Tie
+      </option>
+      <option
+        value="men_underwear"
+      >
+        Men Underwear
+      </option>
+      <option
+        value="women_bag"
+      >
+        Women Bag
+      </option>
+      <option
+        value="women_belt"
+      >
+        Women Belt
+      </option>
+      <option
+        value="women_clothe"
+      >
+        Women Clothe
+      </option>
+      <option
+        value="women_footwear"
+      >
+        Women Footwear
+      </option>
+      <option
+        value="women_headwear"
+      >
+        Women Headwear
+      </option>
+      <option
+        value="women_jewellery"
+      >
+        Women Jewellery
+      </option>
+      <option
+        value="women_tie"
+      >
+        Women Tie
+      </option>
+      <option
+        value="women_underwear"
+      >
+        Women Underwear
+      </option>
+    </select>
+    <input
+      onChange={[Function]}
+      placeholder="Amount"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Stock"
+      type="number"
+      value=""
+    />
+    <SingleDatePicker
+      anchorDirection="left"
+      customCloseIcon={null}
+      customInputIcon={null}
+      date={"1970-01-01T00:00:00.000Z"}
+      daySize={39}
+      disabled={false}
+      displayFormat={[Function]}
+      enableOutsideDays={false}
+      firstDayOfWeek={null}
+      focused={false}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      id="date"
+      initialVisibleMonth={null}
+      isDayBlocked={[Function]}
+      isDayHighlighted={[Function]}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepOpenOnDateSelect={false}
+      monthFormat="MMMM YYYY"
+      navNext={null}
+      navPrev={null}
+      numberOfMonths={1}
+      onClose={[Function]}
+      onDateChange={[Function]}
+      onFocusChange={[Function]}
+      onNextMonthClick={[Function]}
+      onPrevMonthClick={[Function]}
+      orientation="horizontal"
+      phrases={
+        Object {
+          "chooseAvailableDate": [Function],
+          "clearDate": "Clear Date",
+          "closeDatePicker": "Close",
+          "dateIsUnavailable": [Function],
+          "enterKey": "Enter key",
+          "escape": "Escape key",
+          "hideKeyboardShortcutsPanel": "Close the shortcuts panel",
+          "homeEnd": "Home and end keys",
+          "jumpToNextMonth": "Move forward to switch to the next month",
+          "jumpToPrevMonth": "Move backward to switch to the previous month",
+          "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+          select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+          "keyboardShortcuts": "Keyboard Shortcuts",
+          "leftArrowRightArrow": "Right and left arrow keys",
+          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day",
+          "moveFocusByOneMonth": "Switch months",
+          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week",
+          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week",
+          "openThisPanel": "Open this panel",
+          "pageUpPageDown": "page up and page down keys",
+          "questionMark": "Question mark",
+          "returnFocusToInput": "Return to the date input field",
+          "selectFocusedDate": "Select the date in focus",
+          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel",
+          "upArrowDownArrow": "up and down arrow keys",
+        }
+      }
+      placeholder="Date"
+      readOnly={false}
+      renderCalendarInfo={null}
+      renderDay={null}
+      renderMonth={null}
+      reopenPickerOnClearDate={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDate={false}
+      showDefaultInputIcon={false}
+      withFullScreenPortal={false}
+      withPortal={false}
+    />
+    <div>
+      <input
+        onChange={[Function]}
+        type="file"
+      />
+      <button>
+        Upload
+      </button>
+      <div>
+        <img
+          height="200"
+          src=""
+          width="200"
+        />
+      </div>
+    </div>
+    <button>
+      Add Product
+    </button>
+  </form>
+</div>
+`;
+
+exports[`should set stock with valid input 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Description"
+      type="text"
+      value=""
+    />
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Category
+      </option>
+      <option
+        value="boy"
+      >
+        Boy
+      </option>
+      <option
+        value="girl"
+      >
+        Girl
+      </option>
+      <option
+        value="amen"
+      >
+        Men
+      </option>
+      <option
+        value="women"
+      >
+        Women
+      </option>
+    </select>
+    <select
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Item
+      </option>
+      <option
+        value="boy_bag"
+      >
+        Boy Bag
+      </option>
+      <option
+        value="boy_belt"
+      >
+        Boy Belt
+      </option>
+      <option
+        value="boy_clothe"
+      >
+        Boy Clothe
+      </option>
+      <option
+        value="boy_footwear"
+      >
+        Boy Footwear
+      </option>
+      <option
+        value="boy_headwear"
+      >
+        Boy Headwear
+      </option>
+      <option
+        value="boy_jewellery"
+      >
+        Boy Jewellery
+      </option>
+      <option
+        value="boy_tie"
+      >
+        Boy Tie
+      </option>
+      <option
+        value="boy_underwear"
+      >
+        Boy Underwear
+      </option>
+      <option
+        value="girl_bag"
+      >
+        Girl Bag
+      </option>
+      <option
+        value="girl_belt"
+      >
+        Girl Belt
+      </option>
+      <option
+        value="girl_clothe"
+      >
+        Girl Clothe
+      </option>
+      <option
+        value="girl_footwear"
+      >
+        Girl Footwear
+      </option>
+      <option
+        value="girl_headwear"
+      >
+        Girl Headwear
+      </option>
+      <option
+        value="girl_jewellery"
+      >
+        Girl Jewellery
+      </option>
+      <option
+        value="girl_tie"
+      >
+        Girl Tie
+      </option>
+      <option
+        value="girl_underwear"
+      >
+        Girl Underwear
+      </option>
+      <option
+        value="men_bag"
+      >
+        Men Bag
+      </option>
+      <option
+        value="men_belt"
+      >
+        Men Belt
+      </option>
+      <option
+        value="men_clothe"
+      >
+        Men Clothe
+      </option>
+      <option
+        value="men_footwear"
+      >
+        Men Footwear
+      </option>
+      <option
+        value="men_headwear"
+      >
+        Men Headwear
+      </option>
+      <option
+        value="men_jewellery"
+      >
+        Men Jewellery
+      </option>
+      <option
+        value="men_tie"
+      >
+        Men Tie
+      </option>
+      <option
+        value="men_underwear"
+      >
+        Men Underwear
+      </option>
+      <option
+        value="women_bag"
+      >
+        Women Bag
+      </option>
+      <option
+        value="women_belt"
+      >
+        Women Belt
+      </option>
+      <option
+        value="women_clothe"
+      >
+        Women Clothe
+      </option>
+      <option
+        value="women_footwear"
+      >
+        Women Footwear
+      </option>
+      <option
+        value="women_headwear"
+      >
+        Women Headwear
+      </option>
+      <option
+        value="women_jewellery"
+      >
+        Women Jewellery
+      </option>
+      <option
+        value="women_tie"
+      >
+        Women Tie
+      </option>
+      <option
+        value="women_underwear"
+      >
+        Women Underwear
+      </option>
+    </select>
+    <input
+      onChange={[Function]}
+      placeholder="Amount"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Stock"
+      type="number"
+      value="2500"
+    />
+    <SingleDatePicker
+      anchorDirection="left"
+      customCloseIcon={null}
+      customInputIcon={null}
+      date={"1970-01-01T00:00:00.000Z"}
+      daySize={39}
+      disabled={false}
+      displayFormat={[Function]}
+      enableOutsideDays={false}
+      firstDayOfWeek={null}
+      focused={false}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      id="date"
+      initialVisibleMonth={null}
+      isDayBlocked={[Function]}
+      isDayHighlighted={[Function]}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepOpenOnDateSelect={false}
+      monthFormat="MMMM YYYY"
+      navNext={null}
+      navPrev={null}
+      numberOfMonths={1}
+      onClose={[Function]}
+      onDateChange={[Function]}
+      onFocusChange={[Function]}
+      onNextMonthClick={[Function]}
+      onPrevMonthClick={[Function]}
+      orientation="horizontal"
+      phrases={
+        Object {
+          "chooseAvailableDate": [Function],
+          "clearDate": "Clear Date",
+          "closeDatePicker": "Close",
+          "dateIsUnavailable": [Function],
+          "enterKey": "Enter key",
+          "escape": "Escape key",
+          "hideKeyboardShortcutsPanel": "Close the shortcuts panel",
+          "homeEnd": "Home and end keys",
+          "jumpToNextMonth": "Move forward to switch to the next month",
+          "jumpToPrevMonth": "Move backward to switch to the previous month",
+          "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+          select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+          "keyboardShortcuts": "Keyboard Shortcuts",
+          "leftArrowRightArrow": "Right and left arrow keys",
+          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day",
+          "moveFocusByOneMonth": "Switch months",
+          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week",
+          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week",
+          "openThisPanel": "Open this panel",
+          "pageUpPageDown": "page up and page down keys",
+          "questionMark": "Question mark",
+          "returnFocusToInput": "Return to the date input field",
+          "selectFocusedDate": "Select the date in focus",
+          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel",
+          "upArrowDownArrow": "up and down arrow keys",
+        }
+      }
+      placeholder="Date"
+      readOnly={false}
+      renderCalendarInfo={null}
+      renderDay={null}
+      renderMonth={null}
+      reopenPickerOnClearDate={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDate={false}
+      showDefaultInputIcon={false}
+      withFullScreenPortal={false}
+      withPortal={false}
+    />
+    <div>
+      <input
+        onChange={[Function]}
+        type="file"
+      />
+      <button>
+        Upload
+      </button>
+      <div>
+        <img
+          height="200"
+          src=""
+          width="200"
+        />
+      </div>
+    </div>
+    <button>
+      Add Product
+    </button>
+  </form>
+</div>
+`;

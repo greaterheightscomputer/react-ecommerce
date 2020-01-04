@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EcommerceListItem correctly 1`] = `
+<div>
+  <Link
+    replace={false}
+    to="/edit/3"
+  >
+    <img
+      height="200"
+      src=""
+      width="150"
+    />
+    <h3>
+      boy shirt
+    </h3>
+    <p>
+      350
+       - 
+      3200
+       pieces
+    </p>
+  </Link>
+</div>
+`;

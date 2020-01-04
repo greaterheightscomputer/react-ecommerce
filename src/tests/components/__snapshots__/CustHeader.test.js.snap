@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CustHeader correctly 1`] = `
+<header>
+  <h1>
+    OyinMark
+  </h1>
+  <NavLink
+    activeClassName="is-active"
+    ariaCurrent="true"
+    exact={true}
+    to="/"
+  >
+    Dashboard
+  </NavLink>
+</header>
+`;

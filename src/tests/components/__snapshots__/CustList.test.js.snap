@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CustList with ecommerces 1`] = `
+<div>
+  <h1>
+    Customer List
+  </h1>
+  <CustListItem
+    amount={12500}
+    category="amen"
+    createdAt={0}
+    description="men shoe"
+    id="1"
+    image="shoe.jpeg"
+    imageUrl=""
+    item="men_footwear"
+    key="1"
+    stock={100}
+  />
+  <CustListItem
+    amount={4500}
+    category="women"
+    createdAt={-432000000}
+    description="women shoe"
+    id="2"
+    image="women_shoe.jpeg"
+    imageUrl=""
+    item="women_headwear"
+    key="2"
+    stock={403}
+  />
+  <CustListItem
+    amount={350}
+    category="boy"
+    createdAt={432000000}
+    description="boy shirt"
+    id="3"
+    image="shirt_boy.jpeg"
+    imageUrl=""
+    item="boy_clothe"
+    key="3"
+    stock={3200}
+  />
+  <CustListItem
+    amount={2500}
+    category="girl"
+    createdAt={172800000}
+    description="girl head tie"
+    id="4"
+    image="girl_headtie.jpeg"
+    imageUrl=""
+    item="girl_headwear"
+    key="4"
+    stock={17850}
+  />
+</div>
+`;
+
+exports[`should render CustList with empty message 1`] = `
+<div>
+  <h1>
+    Customer List
+  </h1>
+</div>
+`;
