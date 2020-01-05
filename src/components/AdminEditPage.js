@@ -3,30 +3,36 @@ import { connect } from 'react-redux';
 import AdminForm from './AdminForm';
 import { editEcommerce, removeEcommerce } from '../actions/ecommerces';
 
-export const AdminEditPage = (props) => {
-    // console.log(props)
-    return(
-    <div>
-        <AdminForm 
-            ecommerce={props.ecommerce}
-            onSubmit={(ecommerce) => {
-                props.dispatch(editEcommerce(props.ecommerce.id, ecommerce));
-                props.history.push('/admin_dashboard');
-                // console.log('updated', ecommerce);
-            }}
-        />
-        <button onClick={() => {
-            props.dispatch(removeEcommerce({ id: props.ecommerce.id }));            
-            props.history.push('/admin_dashboard');
-        }}>Remove</button>
-    </div>
-    );
-};
-
-const mapStateToProps = (state, props) => {
-    return {
-        ecommerce: state.ecommerces.find((ecommerce) => ecommerce.id === props.match.params.id)
+export class AdminEditPage extends React.Component {
+    onSubmit = (ecommerce) => {
+        // console.log('updated', ecommerce);
+        this.props.editEcommerce(this.props.ecommerce.id, ecommerce);
+        this.props.history.push('/admin_dashboard');        
+    };
+    onRemove = () => {
+        this.props.removeEcommerce({ id: this.props.ecommerce.id });            
+        this.props.history.push('/admin_dashboard');
+    };
+    render(){
+        return(
+            <div>
+                <AdminForm 
+                    ecommerce={this.props.ecommerce}
+                    onSubmit={this.onSubmit}
+                />
+                <button onClick={this.onRemove}>Remove</button>
+            </div>
+        );        
     };
 };
 
-export default connect(mapStateToProps)(AdminEditPage);
+const mapStateToProps = (state, props) => ({
+    ecommerce: state.ecommerces.find((ecommerce) => ecommerce.id === props.match.params.id)
+});
+
+const mapDispatchToProps = (dispatch, props) => ({
+    editEcommerce: (id, ecommerce) => dispatch(editEcommerce(id, ecommerce)),
+    removeEcommerce: (data) => dispatch(removeEcommerce(data)) 
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(AdminEditPage);

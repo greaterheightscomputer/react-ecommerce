@@ -3,17 +3,27 @@ import { connect } from 'react-redux';
 import AdminForm from './AdminForm';
 import { addEcommerce } from '../actions/ecommerces';
 
-const AdminAddPage = (props) => (
-    <div>
-        <h1> Add Product</h1>
-        <AdminForm
-            onSubmit={(ecommerce) => {
-                // console.log(ecommerce)
-                props.dispatch(addEcommerce(ecommerce));
-                props.history.push('/admin_dashboard');
-            }}
-        />
-    </div>
-);
+export class AdminAddPage extends React.Component {
+    onSubmit = (ecommerce) => {
+        // console.log(ecommerce)
+        // props.dispatch(addEcommerce(ecommerce));
+        this.props.addEcommerce(ecommerce);
+        this.props.history.push('/admin_dashboard');
+    };
+    render() {
+        return (
+            <div>
+                <h1> Add Product</h1>
+                <AdminForm
+                    onSubmit={this.onSubmit}
+                />
+            </div>
+        );
+    };
+};
 
-export default connect()(AdminAddPage);
+const mapDispatchToProps = (dispatch) => ({
+    addEcommerce: (ecommerce) => dispatch(addEcommerce(ecommerce))
+});
+
+export default connect(undefined, mapDispatchToProps)(AdminAddPage);

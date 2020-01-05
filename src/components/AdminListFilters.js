@@ -9,16 +9,111 @@ import { setTextFilter, sortByDate, sortByAmount, categoryTypeMen, categoryTypeW
          setStartDate, setEndDate         
         } from '../actions/filters';
 
-class AdminListFilters extends React.Component {
+export class AdminListFilters extends React.Component {
     state = {
         focused: null 
     };
     onDatesChange=({ startDate, endDate }) => {
-        this.props.dispatch(setStartDate(startDate));
-        this.props.dispatch(setEndDate(endDate));
+        this.props.setStartDate(startDate);
+        this.props.setEndDate(endDate);
     };
     onFocusChange=(focused) => {
         this.setState(() => ({ focused }));
+    };
+    onTextChange = (e) => {
+        this.props.setTextFilter(e.target.value);
+    };
+    onSortChange = (e) => {
+        if (e.target.value === 'date') {
+            this.props.sortByDate();
+        } else if (e.target.value === 'amount') {
+            this.props.sortByAmount();
+        }
+    };
+    onCategorTypeChange = (e) => {
+        if (e.target.value === 'amen') {
+            this.props.categoryTypeMen();  
+        } else if (e.target.value === 'women') {
+            this.props.categoryTypeWomen();
+        } else if (e.target.value === 'boy') {
+            this.props.categoryTypeBoy();
+        } else if (e.target.value === 'girl') {
+            this.props.categoryTypeGirl();
+        }
+    };
+    onItemTypeChange = (e) => {
+        //boy_item
+        if (e.target.value === 'boy_footwear') { 
+            this.props.itemTypeBoyFootWear();  
+        } else if (e.target.value === 'boy_clothe') { 
+            this.props.itemTypeBoyClothe();
+        } else if (e.target.value === 'boy_headwear') { 
+            this.props.itemTypeBoyHeadWear();
+        } else if (e.target.value === 'boy_underwear') {   
+            this.props.itemTypeBoyUnderWear();
+        } else if (e.target.value === 'boy_bag') { 
+            this.props.itemTypeBoyBag();
+        } else if (e.target.value === 'boy_tie') { 
+            this.props.itemTypeBoyTie();
+        } else if (e.target.value === 'boy_belt') { 
+            this.props.itemTypeBoyBelt();
+        } else if (e.target.value === 'boy_jewellery') { 
+            this.props.itemTypeBoyJewellery();
+        }
+        //girl_item
+        else if (e.target.value === 'girl_footwear'){
+            this.props.itemTypeGirlFootWear();
+        }else if (e.target.value === 'girl_clothe') { 
+            this.props.itemTypeGirlClothe();
+        } else if (e.target.value === 'girl_headwear') { 
+            this.props.itemTypeGirlHeadWear();
+        } else if (e.target.value === 'girl_underwear') {   
+            this.props.itemTypeGirlUnderWear();
+        } else if (e.target.value === 'girl_bag') { 
+            this.props.itemTypeGirlBag();
+        } else if (e.target.value === 'girl_tie') { 
+            this.props.itemTypeGirlTie();
+        } else if (e.target.value === 'girl_belt') { 
+            this.props.itemTypeGirlBelt();
+        } else if (e.target.value === 'girl_jewellery') { 
+            this.props.itemTypeGirlJewellery();
+        }
+        //men_item
+        else if (e.target.value === 'men_footwear'){
+            this.props.itemTypeMenFootWear();
+        }else if (e.target.value === 'men_clothe') { 
+            this.props.itemTypeMenClothe();
+        } else if (e.target.value === 'men_headwear') { 
+            this.props.itemTypeMenHeadWear();
+        } else if (e.target.value === 'men_underwear') {   
+            this.props.itemTypeMenUnderWear();
+        } else if (e.target.value === 'men_bag') { 
+            this.props.itemTypeMenBag();
+        } else if (e.target.value === 'men_tie') { 
+            this.props.itemTypeMenTie();
+        } else if (e.target.value === 'men_belt') { 
+            this.props.itemTypeMenBelt();
+        } else if (e.target.value === 'men_jewellery') { 
+            this.props.itemTypeMenJewellery();
+        }
+        //women_item
+        else if (e.target.value === 'women_footwear'){
+            this.props.itemTypeWomenFootWear();
+        }else if (e.target.value === 'women_clothe') { 
+            this.props.itemTypeWomenClothe();
+        } else if (e.target.value === 'women_headwear') { 
+            this.props.itemTypeWomenHeadWear();
+        } else if (e.target.value === 'women_underwear') {   
+            this.props.itemTypeWomenUnderWear();
+        } else if (e.target.value === 'women_bag') { 
+            this.props.itemTypeWomenBag();
+        } else if (e.target.value === 'women_tie') { 
+            this.props.itemTypeWomenTie();
+        } else if (e.target.value === 'women_belt') { 
+            this.props.itemTypeWomenBelt();
+        } else if (e.target.value === 'women_jewellery') { 
+            this.props.itemTypeWomenJewellery();
+        }
     };
     render(){
         return (
@@ -27,35 +122,17 @@ class AdminListFilters extends React.Component {
                     type="text" 
                     placeholder="Search"
                     value={this.props.filters.text} 
-                    onChange={(e) => {
-                        this.props.dispatch(setTextFilter(e.target.value));
-                    }}
+                    onChange={this.onTextChange}
                 />
                 <select
                     value={this.props.filters.sortBy}
-                    onChange={(e) => {
-                        if (e.target.value === 'date') {
-                            this.props.dispatch(sortByDate());
-                        } else if (e.target.value === 'amount') {
-                            this.props.dispatch(sortByAmount());
-                        }
-                    }}>
+                    onChange={this.onSortChange}>
                     <option value="date">Date</option>
                     <option value="amount">Amount</option>
                 </select>
                 <select
                     value={this.props.filters.categoryType}
-                    onChange={(e) => {
-                        if (e.target.value === 'amen') {
-                            this.props.dispatch(categoryTypeMen());  
-                        } else if (e.target.value === 'women') {
-                            this.props.dispatch(categoryTypeWomen());
-                        } else if (e.target.value === 'boy') {
-                            this.props.dispatch(categoryTypeBoy());
-                        } else if (e.target.value === 'girl') {
-                            this.props.dispatch(categoryTypeGirl());
-                        }
-                    }}>
+                    onChange={this.onCategorTypeChange}>
                     <option value="">Select Category</option>
                     <option value="boy">Boy</option>
                     <option value="girl">Girl</option>
@@ -64,80 +141,7 @@ class AdminListFilters extends React.Component {
                 </select>          
                 <select
                     value={this.props.filters.itemType}
-                    onChange={(e) => {
-                        //boy_item
-                        if (e.target.value === 'boy_footwear') { 
-                            this.props.dispatch(itemTypeBoyFootWear());  
-                        } else if (e.target.value === 'boy_clothe') { 
-                            this.props.dispatch(itemTypeBoyClothe());
-                        } else if (e.target.value === 'boy_headwear') { 
-                            this.props.dispatch(itemTypeBoyHeadWear());
-                        } else if (e.target.value === 'boy_underwear') {   
-                            this.props.dispatch(itemTypeBoyUnderWear());
-                        } else if (e.target.value === 'boy_bag') { 
-                            this.props.dispatch(itemTypeBoyBag());
-                        } else if (e.target.value === 'boy_tie') { 
-                            this.props.dispatch(itemTypeBoyTie());
-                        } else if (e.target.value === 'boy_belt') { 
-                            this.props.dispatch(itemTypeBoyBelt());
-                        } else if (e.target.value === 'boy_jewellery') { 
-                            this.props.dispatch(itemTypeBoyJewellery());
-                        }
-                        //girl_item
-                        else if (e.target.value === 'girl_footwear'){
-                            this.props.dispatch(itemTypeGirlFootWear());
-                        }else if (e.target.value === 'girl_clothe') { 
-                            this.props.dispatch(itemTypeGirlClothe());
-                        } else if (e.target.value === 'girl_headwear') { 
-                            this.props.dispatch(itemTypeGirlHeadWear());
-                        } else if (e.target.value === 'girl_underwear') {   
-                            this.props.dispatch(itemTypeGirlUnderWear());
-                        } else if (e.target.value === 'girl_bag') { 
-                            this.props.dispatch(itemTypeGirlBag());
-                        } else if (e.target.value === 'girl_tie') { 
-                            this.props.dispatch(itemTypeGirlTie());
-                        } else if (e.target.value === 'girl_belt') { 
-                            this.props.dispatch(itemTypeGirlBelt());
-                        } else if (e.target.value === 'girl_jewellery') { 
-                            this.props.dispatch(itemTypeGirlJewellery());
-                        }
-                        //men_item
-                        else if (e.target.value === 'men_footwear'){
-                            this.props.dispatch(itemTypeMenFootWear());
-                        }else if (e.target.value === 'men_clothe') { 
-                            this.props.dispatch(itemTypeMenClothe());
-                        } else if (e.target.value === 'men_headwear') { 
-                            this.props.dispatch(itemTypeMenHeadWear());
-                        } else if (e.target.value === 'men_underwear') {   
-                            this.props.dispatch(itemTypeMenUnderWear());
-                        } else if (e.target.value === 'men_bag') { 
-                            this.props.dispatch(itemTypeMenBag());
-                        } else if (e.target.value === 'men_tie') { 
-                            this.props.dispatch(itemTypeMenTie());
-                        } else if (e.target.value === 'men_belt') { 
-                            this.props.dispatch(itemTypeMenBelt());
-                        } else if (e.target.value === 'men_jewellery') { 
-                            this.props.dispatch(itemTypeMenJewellery());
-                        }
-                        //women_item
-                        else if (e.target.value === 'women_footwear'){
-                            this.props.dispatch(itemTypeWomenFootWear());
-                        }else if (e.target.value === 'women_clothe') { 
-                            this.props.dispatch(itemTypeWomenClothe());
-                        } else if (e.target.value === 'women_headwear') { 
-                            this.props.dispatch(itemTypeWomenHeadWear());
-                        } else if (e.target.value === 'women_underwear') {   
-                            this.props.dispatch(itemTypeWomenUnderWear());
-                        } else if (e.target.value === 'women_bag') { 
-                            this.props.dispatch(itemTypeWomenBag());
-                        } else if (e.target.value === 'women_tie') { 
-                            this.props.dispatch(itemTypeWomenTie());
-                        } else if (e.target.value === 'women_belt') { 
-                            this.props.dispatch(itemTypeWomenBelt());
-                        } else if (e.target.value === 'women_jewellery') { 
-                            this.props.dispatch(itemTypeWomenJewellery());
-                        }
-                    }}>
+                    onChange={this.onItemTypeChange}>
                     <option value="">Select Item</option>
                     {/*boy*/}
                     <option value="boy_bag">Boy Bag</option>
@@ -195,4 +199,53 @@ const mapStateToProps = (state) => ({
     filters: state.filters
 });
 
-export default connect(mapStateToProps)(AdminListFilters);
+const mapDispatchToProps = (dispatch) => ({
+    setTextFilter: (text) => dispatch(setTextFilter(text)),
+    sortByDate: () => dispatch(sortByDate()),
+    sortByAmount: () => dispatch(sortByAmount()),
+    setStartDate: (startDate) => dispatch(setStartDate(startDate)),
+    setEndDate: (endDate) => dispatch(setEndDate(endDate)),
+    //category
+    categoryTypeMen: () => dispatch(categoryTypeMen()),
+    categoryTypeWomen: () => dispatch(categoryTypeWomen()),
+    categoryTypeBoy: () => dispatch(categoryTypeBoy()),
+    categoryTypeGirl: () => dispatch(categoryTypeGirl()),
+    //item - Boy
+    itemTypeBoyFootWear: () => dispatch(itemTypeBoyFootWear()),  
+    itemTypeBoyClothe: () => dispatch(itemTypeBoyClothe()),
+    itemTypeBoyHeadWear: () => dispatch(itemTypeBoyHeadWear()),
+    itemTypeBoyUnderWear: () => dispatch(itemTypeBoyUnderWear()),
+    itemTypeBoyBag: () => dispatch(itemTypeBoyBag()),
+    itemTypeBoyTie: () => dispatch(itemTypeBoyTie()),
+    itemTypeBoyBoyBelt: () => dispatch(itemTypeBoyBelt()),
+    itemTypeBoyJewellery: () => dispatch(itemTypeBoyJewellery()),
+    //item - Girl
+    itemTypeGirlFootWear: () => dispatch(itemTypeGirlFootWear()),  
+    itemTypeGirlClothe: () => dispatch(itemTypeGirlClothe()),
+    itemTypeGirlHeadWear: () => dispatch(itemTypeGirlHeadWear()),
+    itemTypeGirlUnderWear: () => dispatch(itemTypeGirlUnderWear()),
+    itemTypeGirlBag: () => dispatch(itemTypeGirlBag()),
+    itemTypeGirlTie: () => dispatch(itemTypeGirlTie()),
+    itemTypeGirlBoyBelt: () => dispatch(itemTypeGirlBelt()),
+    itemTypeGirlJewellery: () => dispatch(itemTypeGirlJewellery()),
+    //item - Men
+    itemTypeMenFootWear: () => dispatch(itemTypeMenFootWear()),  
+    itemTypeMenClothe: () => dispatch(itemTypeMenClothe()),
+    itemTypeMenHeadWear: () => dispatch(itemTypeMenHeadWear()),
+    itemTypeMenUnderWear: () => dispatch(itemTypeMenUnderWear()),
+    itemTypeMenBag: () => dispatch(itemTypeMenBag()),
+    itemTypeMenTie: () => dispatch(itemTypeMenTie()),
+    itemTypeMenBoyBelt: () => dispatch(itemTypeMenBelt()),
+    itemTypeMenJewellery: () => dispatch(itemTypeMenJewellery()),
+    //item - Women
+    itemTypeWomenFootWear: () => dispatch(itemTypeWomenFootWear()),  
+    itemTypeWomenClothe: () => dispatch(itemTypeWomenClothe()),
+    itemTypeWomenHeadWear: () => dispatch(itemTypeWomenHeadWear()),
+    itemTypeWomenUnderWear: () => dispatch(itemTypeWomenUnderWear()),
+    itemTypeWomenBag: () => dispatch(itemTypeWomenBag()),
+    itemTypeWomenTie: () => dispatch(itemTypeWomenTie()),
+    itemTypeWomenBoyBelt: () => dispatch(itemTypeWomenBelt()),
+    itemTypeWomenJewellery: () => dispatch(itemTypeWomenJewellery())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(AdminListFilters);
