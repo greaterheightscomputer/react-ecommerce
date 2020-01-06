@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EcommerceSummary with 1 product 1`] = `
+<h1>
+  Displaying 
+  1
+   
+  product
+   totalling 
+  ₦34.50
+</h1>
+`;
+
+exports[`should render EcommerceSummary with multiple products 1`] = `
+<h1>
+  Displaying 
+  10
+   
+  products
+   totalling 
+  ₦786.54
+</h1>
+`;

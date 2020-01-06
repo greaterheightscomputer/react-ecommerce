@@ -2,6 +2,7 @@
 
 exports[`should render AdminDashboardPage correctly 1`] = `
 <div>
+  <Connect(EcommerceSummary) />
   <Connect(AdminListFilters) />
   <Connect(AdminList) />
 </div>
