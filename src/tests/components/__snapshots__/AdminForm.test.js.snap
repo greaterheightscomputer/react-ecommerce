@@ -221,8 +221,8 @@ exports[`should render AdminForm with data correctly 1`] = `
     <input
       onChange={[Function]}
       placeholder="Stock"
-      type="number"
-      value={403}
+      type="text"
+      value="403"
     />
     <SingleDatePicker
       anchorDirection="left"
@@ -540,7 +540,7 @@ exports[`should render AdminForm with default data correctly 1`] = `
     <input
       onChange={[Function]}
       placeholder="Stock"
-      type="number"
+      type="text"
       value=""
     />
     <SingleDatePicker
@@ -859,7 +859,7 @@ exports[`should render error for invalid form submission 1`] = `
     <input
       onChange={[Function]}
       placeholder="Stock"
-      type="number"
+      type="text"
       value=""
     />
     <SingleDatePicker
@@ -1181,7 +1181,7 @@ exports[`should render error for invalid form submission 2`] = `
     <input
       onChange={[Function]}
       placeholder="Stock"
-      type="number"
+      type="text"
       value=""
     />
     <SingleDatePicker
@@ -1500,7 +1500,7 @@ exports[`should set amount if invalid input 1`] = `
     <input
       onChange={[Function]}
       placeholder="Stock"
-      type="number"
+      type="text"
       value=""
     />
     <SingleDatePicker
@@ -1819,7 +1819,7 @@ exports[`should set amount if valid input 1`] = `
     <input
       onChange={[Function]}
       placeholder="Stock"
-      type="number"
+      type="text"
       value=""
     />
     <SingleDatePicker
@@ -2138,7 +2138,7 @@ exports[`should set category with valid select 1`] = `
     <input
       onChange={[Function]}
       placeholder="Stock"
-      type="number"
+      type="text"
       value=""
     />
     <SingleDatePicker
@@ -2457,7 +2457,7 @@ exports[`should set description on input change 1`] = `
     <input
       onChange={[Function]}
       placeholder="Stock"
-      type="number"
+      type="text"
       value=""
     />
     <SingleDatePicker
@@ -2776,7 +2776,7 @@ exports[`should set item with valid select 1`] = `
     <input
       onChange={[Function]}
       placeholder="Stock"
-      type="number"
+      type="text"
       value=""
     />
     <SingleDatePicker
@@ -3095,7 +3095,7 @@ exports[`should set stock with valid input 1`] = `
     <input
       onChange={[Function]}
       placeholder="Stock"
-      type="number"
+      type="text"
       value="2500"
     />
     <SingleDatePicker

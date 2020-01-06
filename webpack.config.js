@@ -21,7 +21,7 @@ module.exports = (env) => {
                     test: /\.s?css$/,
                     use: CSSExtract.extract({
                         use: [
-                            // 'style-loader',
+                            // 'style-loader', //this loader it is an inline loader which run after bundle.js as being excuted first 
                             {
                                 loader: 'css-loader',
                                 options: {
@@ -41,8 +41,8 @@ module.exports = (env) => {
             plugins: [
                 CSSExtract
             ],
-            // devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
-            devtool: isProduction ? 'source-map' : 'inline-source-map',
+            // devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',  //source-map is good for production and is very slow in rebuilding  while cheap-module-eval-source-map is good for development and the rebuild is very fast
+            devtool: isProduction ? 'source-map' : 'inline-source-map',  //we change the source map from cheap-module-eval-source-map to inline-source-map and the first is faster than the later beco's be we need to source-map our css as well for easy debug
             devServer: {
                 contentBase: path.join(__dirname, 'public'),
                 historyApiFallback: true,

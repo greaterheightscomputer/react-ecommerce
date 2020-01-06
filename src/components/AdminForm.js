@@ -11,7 +11,7 @@ export default class AdminForm extends React.Component{
             category: props.ecommerce ? props.ecommerce.category : '',
             item: props.ecommerce ? props.ecommerce.item : '',
             amount: props.ecommerce ? (props.ecommerce.amount / 100).toString() : '',
-            stock: props.ecommerce ? props.ecommerce.stock :'',       
+            stock: props.ecommerce ? (props.ecommerce.stock.toString()) :'',       
             image: props.ecommerce ? props.ecommerce.image.name : '',
             imageUrl: props.ecommerce ? props.ecommerce.imageUrl : '',
             createdAt: props.ecommerce ? moment(props.ecommerce.createdAt) : moment(),
@@ -45,6 +45,7 @@ export default class AdminForm extends React.Component{
     };
     onStockChange = (e) => {
         const stock = e.target.value;
+        if(stock.match(/^\d*$/))
         this.setState(() => ({ stock }));
     };
     onAmountChange = (e) => {
@@ -163,7 +164,7 @@ export default class AdminForm extends React.Component{
                         onChange={this.onAmountChange}
                     />
                     <input
-                        type="number"
+                        type="text"
                         placeholder="Stock"                        
                         value={this.state.stock}
                         onChange={this.onStockChange}

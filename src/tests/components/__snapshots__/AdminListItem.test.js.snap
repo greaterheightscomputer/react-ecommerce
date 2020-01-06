@@ -14,12 +14,12 @@ exports[`should render EcommerceListItem correctly 1`] = `
     <h3>
       boy shirt
     </h3>
-    <p>
-      350
-       - 
-      3200
-       pieces
-    </p>
+    <div>
+      ₦3.50
+      <p>
+        3200 piece(s) available
+      </p>
+    </div>
   </Link>
 </div>
 `;
