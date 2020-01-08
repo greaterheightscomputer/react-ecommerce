@@ -3,12 +3,12 @@ import { shallow } from 'enzyme';
 import { AdminAddPage } from '../../components/AdminAddPage';
 import ecommerces from '../fixtures/ecommerces';
 
-let addEcommerce, history, wrapper;
+let startAddEcommerce, history, wrapper;
 
 beforeEach(() => {
-    addEcommerce = jest.fn();
+    startAddEcommerce = jest.fn();
     history = { push: jest.fn() };
-    wrapper = shallow(<AdminAddPage addEcommerce={addEcommerce} history={history} />);
+    wrapper = shallow(<AdminAddPage startAddEcommerce={startAddEcommerce} history={history} />);
 });
 
 test('should render AdminAddPage correctly', () => {    
@@ -18,5 +18,5 @@ test('should render AdminAddPage correctly', () => {
 test('should handle onSubmit', () => {    
     wrapper.find('AdminForm').prop('onSubmit')(ecommerces[1]);
     expect(history.push).toHaveBeenLastCalledWith('/admin_dashboard');
-    expect(addEcommerce).toHaveBeenLastCalledWith(ecommerces[1]);
+    expect(startAddEcommerce).toHaveBeenLastCalledWith(ecommerces[1]);
 });

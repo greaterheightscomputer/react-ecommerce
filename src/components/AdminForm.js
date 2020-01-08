@@ -12,7 +12,7 @@ export default class AdminForm extends React.Component{
             item: props.ecommerce ? props.ecommerce.item : '',
             amount: props.ecommerce ? (props.ecommerce.amount / 100).toString() : '',
             stock: props.ecommerce ? props.ecommerce.stock :'',       
-            image: props.ecommerce ? props.ecommerce.image.name : '',
+            image: props.ecommerce ? props.ecommerce.image : '',
             imageUrl: props.ecommerce ? props.ecommerce.imageUrl : '',
             createdAt: props.ecommerce ? moment(props.ecommerce.createdAt) : moment(),
             focused: false,
@@ -62,16 +62,15 @@ export default class AdminForm extends React.Component{
         this.setState(() => ({ focused }));
     };
     onImageChange = (e) => {        
-        const reader = new FileReader();
-        const file = e.target.files[0];
-        
+        let reader = new FileReader();
+        let file = e.target.files[0];        
         reader.onloadend = () => {
             this.setState({
                 image: file,
                 imageUrl: reader.result
             });
         };
-        reader.readAsDataURL(file);
+        reader.readAsDataURL(file); 
     };
     onSubmitClick = (e) => {
         e.preventDefault();
@@ -87,7 +86,7 @@ export default class AdminForm extends React.Component{
                 item: this.state.item,
                 amount: parseFloat(this.state.amount, 10) * 100,
                 stock: this.state.stock,
-                image: this.state.image.name,
+                image: this.state.image,
                 imageUrl: this.state.imageUrl,
                 createdAt: this.state.createdAt.valueOf()
             });            
@@ -178,12 +177,11 @@ export default class AdminForm extends React.Component{
                     />
                     <div>
                         <input 
-                            type="file"
+                            type="file"                            
                             onChange={this.onImageChange}
-                        />                        
-                        <button>Upload</button>
+                        />
                         <div>                            
-                            <img src={this.state.imageUrl} height="200" width="200"/>
+                            <img src={this.state.imageUrl} height="200" width="200"/>                            
                         </div>                        
                     </div>
                     <button>Add Product</button>                    

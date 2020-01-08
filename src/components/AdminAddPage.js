@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import AdminForm from './AdminForm';
-import { addEcommerce } from '../actions/ecommerces';
+import { startAddEcommerce } from '../actions/ecommerces';
 
 export class AdminAddPage extends React.Component {
     onSubmit = (ecommerce) => {
         // console.log(ecommerce)
         // props.dispatch(addEcommerce(ecommerce));
-        this.props.addEcommerce(ecommerce);
+        this.props.startAddEcommerce(ecommerce);
         this.props.history.push('/admin_dashboard');
     };
     render() {
@@ -23,7 +23,7 @@ export class AdminAddPage extends React.Component {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    addEcommerce: (ecommerce) => dispatch(addEcommerce(ecommerce))
+    startAddEcommerce: (ecommerce) => dispatch(startAddEcommerce(ecommerce))
 });
 
 export default connect(undefined, mapDispatchToProps)(AdminAddPage);

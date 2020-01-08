@@ -301,9 +301,6 @@ exports[`should render AdminForm with data correctly 1`] = `
         onChange={[Function]}
         type="file"
       />
-      <button>
-        Upload
-      </button>
       <div>
         <img
           height="200"
@@ -620,9 +617,6 @@ exports[`should render AdminForm with default data correctly 1`] = `
         onChange={[Function]}
         type="file"
       />
-      <button>
-        Upload
-      </button>
       <div>
         <img
           height="200"
@@ -939,9 +933,6 @@ exports[`should render error for invalid form submission 1`] = `
         onChange={[Function]}
         type="file"
       />
-      <button>
-        Upload
-      </button>
       <div>
         <img
           height="200"
@@ -1261,9 +1252,6 @@ exports[`should render error for invalid form submission 2`] = `
         onChange={[Function]}
         type="file"
       />
-      <button>
-        Upload
-      </button>
       <div>
         <img
           height="200"
@@ -1580,9 +1568,6 @@ exports[`should set amount if invalid input 1`] = `
         onChange={[Function]}
         type="file"
       />
-      <button>
-        Upload
-      </button>
       <div>
         <img
           height="200"
@@ -1899,9 +1884,6 @@ exports[`should set amount if valid input 1`] = `
         onChange={[Function]}
         type="file"
       />
-      <button>
-        Upload
-      </button>
       <div>
         <img
           height="200"
@@ -2218,9 +2200,6 @@ exports[`should set category with valid select 1`] = `
         onChange={[Function]}
         type="file"
       />
-      <button>
-        Upload
-      </button>
       <div>
         <img
           height="200"
@@ -2537,9 +2516,6 @@ exports[`should set description on input change 1`] = `
         onChange={[Function]}
         type="file"
       />
-      <button>
-        Upload
-      </button>
       <div>
         <img
           height="200"
@@ -2856,9 +2832,6 @@ exports[`should set item with valid select 1`] = `
         onChange={[Function]}
         type="file"
       />
-      <button>
-        Upload
-      </button>
       <div>
         <img
           height="200"
@@ -3175,9 +3148,6 @@ exports[`should set stock with valid input 1`] = `
         onChange={[Function]}
         type="file"
       />
-      <button>
-        Upload
-      </button>
       <div>
         <img
           height="200"
