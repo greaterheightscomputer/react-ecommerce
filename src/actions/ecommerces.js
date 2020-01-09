@@ -48,3 +48,24 @@ export const editEcommerce = (id, updates) => ({
     id,
     updates
 });
+//SET_Ecommerce
+export const setEcommerce = (ecommerces) => ({ 
+    type: 'SET_ECOMMERCE',
+    ecommerces
+});
+
+export const startSetEcommerce = () => {
+    return (dispatch) => {
+        return database.ref('ecommerces').once('value').then((snapshot) => {
+            const ecommerces = [];
+
+            snapshot.forEach((childSnapshot) => {
+                ecommerces.push({
+                    id: childSnapshot.key,
+                    ...childSnapshot.val()
+                });
+            });            
+            dispatch(setEcommerce(ecommerces));            
+        });
+    };
+};

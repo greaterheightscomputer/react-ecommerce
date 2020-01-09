@@ -1,5 +1,6 @@
 import ecommercesReducer from '../../reducers/ecommerces';
 import ecommerces from '../fixtures/ecommerces';
+import ecommerceReducer from '../../reducers/ecommerces';
 
 test('should set default state', () => {
     const state = ecommercesReducer(undefined, { type: '@@INIT' });
@@ -69,3 +70,15 @@ test('should edit an ecommerce if id not found', () => {
     const state = ecommercesReducer(ecommerces, action);
     expect(state).toEqual(ecommerces);
 });
+
+test('should set ecommerce', () => {
+    const action = {
+        type: 'SET_ECOMMERCE',
+        ecommerces: [ecommerces[2]]
+    };
+    const state = ecommerceReducer(ecommerces, action);
+    expect(state).toEqual([ecommerces[2]]);
+});
+
+
+

@@ -1,10 +1,18 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { startAddEcommerce, addEcommerce, removeEcommerce, editEcommerce } from '../../actions/ecommerces';
+import { startAddEcommerce, addEcommerce, removeEcommerce, editEcommerce, setEcommerce, startSetEcommerce } from '../../actions/ecommerces';
 import ecommerces from '../fixtures/ecommerces';
 import database from '../../firebase/firebase';
 
 const createMockStore = configureMockStore([thunk]);
+
+beforeEach((done) => { //storing the dummy data in firebase
+    const ecommerceData = {};
+    ecommerces.forEach(({ id, description, category, item, amount, image, imageUrl, stock, createdAt }) => {
+        ecommerceData[id] = { description, category, item, amount, image, imageUrl, stock, createdAt };
+    }); 
+    database.ref('ecommerces').set(ecommerceData).then(() => done());
+});
 
 test('should setup remove ecommerce action object', () => {
     const action = removeEcommerce({ id: 'abc123' });
@@ -97,20 +105,22 @@ test('should add ecommerce with default to database and store', (done) => {
     }); 
 });
 
-// test('should setup add ecommerce action object with default values', () => {    
-//     const action = addEcommerce();
-//     expect(action).toEqual({
-//         type: 'ADD_ECOMMERCE',        
-//         ecommerce: {
-//             id: expect.any(String),
-//             description: '',
-//             category: '',
-//             item: '',
-//             amount: 0,
-//             image: '',
-//             imageUrl: '',
-//             stock: 0, 
-//             createdAt: 0
-//         }
-//     });
-// });
+test('should setup set ecommerce action object with data', () => {
+    const action = setEcommerce(ecommerces);
+    expect(action).toEqual({
+        type: 'SET_ECOMMERCE',
+        ecommerces
+    });
+});
+
+test('should fetch the ecommerces from firebase', (done) => { //fetch data from the dummy data
+    const store = createMockStore({});
+    store.dispatch(startSetEcommerce()).then(() => {
+        const actions = store.getActions();
+        expect(actions[0]).toEqual({
+            type: 'SET_ECOMMERCE',
+            ecommerces
+        });
+        done();
+    });
+});

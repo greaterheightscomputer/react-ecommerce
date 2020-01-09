@@ -11,7 +11,6 @@ exports[`should render EcommerceListItem correctly 1`] = `
       src=""
       width="150"
     />
-     }
     <h3>
       boy shirt
     </h3>

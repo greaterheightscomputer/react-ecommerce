@@ -74,7 +74,7 @@ export default class AdminForm extends React.Component{
     };
     onSubmitClick = (e) => {
         e.preventDefault();
-        if (!this.state.description || !this.state.category || !this.state.item || !this.state.amount || !this.state.image || !this.state.stock) {
+        if (!this.state.description || !this.state.category || !this.state.item || !this.state.amount || !this.state.image || !this.state.stock) {        
             this.setState(() => ({
                 error: 'Please provide value for the empty field'
             }));    
@@ -86,7 +86,7 @@ export default class AdminForm extends React.Component{
                 item: this.state.item,
                 amount: parseFloat(this.state.amount, 10) * 100,
                 stock: this.state.stock,
-                image: this.state.image,
+                image: this.state.image.name,
                 imageUrl: this.state.imageUrl,
                 createdAt: this.state.createdAt.valueOf()
             });            
@@ -175,7 +175,7 @@ export default class AdminForm extends React.Component{
                         numberOfMonths={1}
                         isOutsideRange={() => false}
                     />
-                    <div>
+                   <div>
                         <input 
                             type="file"                            
                             onChange={this.onImageChange}
