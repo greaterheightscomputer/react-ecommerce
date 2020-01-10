@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import AdminForm from './AdminForm';
-import { editEcommerce, removeEcommerce } from '../actions/ecommerces';
+import { editEcommerce, startRemoveEcommerce } from '../actions/ecommerces';
 
 export class AdminEditPage extends React.Component {
     onSubmit = (ecommerce) => {
@@ -10,7 +10,7 @@ export class AdminEditPage extends React.Component {
         this.props.history.push('/admin_dashboard');        
     };
     onRemove = () => {
-        this.props.removeEcommerce({ id: this.props.ecommerce.id });            
+        this.props.startRemoveEcommerce({ id: this.props.ecommerce.id });            
         this.props.history.push('/admin_dashboard');
     };
     render(){
@@ -32,7 +32,7 @@ const mapStateToProps = (state, props) => ({
 
 const mapDispatchToProps = (dispatch, props) => ({
     editEcommerce: (id, ecommerce) => dispatch(editEcommerce(id, ecommerce)),
-    removeEcommerce: (data) => dispatch(removeEcommerce(data)) 
+    startRemoveEcommerce: (data) => dispatch(startRemoveEcommerce(data)) 
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AdminEditPage);

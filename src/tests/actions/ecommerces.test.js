@@ -1,6 +1,7 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { startAddEcommerce, addEcommerce, removeEcommerce, editEcommerce, setEcommerce, startSetEcommerce } from '../../actions/ecommerces';
+import { startAddEcommerce, addEcommerce, removeEcommerce, startRemoveEcommerce, 
+         editEcommerce, setEcommerce, startSetEcommerce } from '../../actions/ecommerces';
 import ecommerces from '../fixtures/ecommerces';
 import database from '../../firebase/firebase';
 
@@ -19,6 +20,22 @@ test('should setup remove ecommerce action object', () => {
     expect(action).toEqual({
         type: 'REMOVE_ECOMMERCE',
         id: 'abc123'
+    });
+});
+
+test('should remove ecommerce from firebase', (done) => {
+    const store = createMockStore({});
+    const id = ecommerces[3].id;
+    store.dispatch(startRemoveEcommerce({ id })).then(() => {
+        const actions = store.getActions();
+        expect(actions[0]).toEqual({
+            type: 'REMOVE_ECOMMERCE',
+            id
+        });
+        return database.ref(`ecommerces/${id}`).once('value');
+    }).then((snapshot) => {
+        expect(snapshot.val()).toBeFalsy();
+        done();
     });
 });
 

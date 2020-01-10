@@ -42,6 +42,14 @@ export const removeEcommerce = ( { id } = {}) => ({
     type: 'REMOVE_ECOMMERCE',
     id
 });
+
+export const startRemoveEcommerce = ({ id } = {}) => {
+    return (dispatch) => {
+        return database.ref(`ecommerces/${id}`).remove().then(() => {
+            dispatch(removeEcommerce({ id }));
+        });
+    };
+};
 // EDIT_Ecommerce  
 export const editEcommerce = (id, updates) => ({
     type: 'EDIT_ECOMMERCE',
