@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import AdminForm from './AdminForm';
-import { editEcommerce, startRemoveEcommerce } from '../actions/ecommerces';
+import { startEditEcommerce, startRemoveEcommerce } from '../actions/ecommerces';
 
 export class AdminEditPage extends React.Component {
     onSubmit = (ecommerce) => {
         // console.log('updated', ecommerce);
-        this.props.editEcommerce(this.props.ecommerce.id, ecommerce);
+        this.props.startEditEcommerce(this.props.ecommerce.id, ecommerce);
         this.props.history.push('/admin_dashboard');        
     };
     onRemove = () => {
@@ -31,7 +31,7 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
-    editEcommerce: (id, ecommerce) => dispatch(editEcommerce(id, ecommerce)),
+    startEditEcommerce: (id, ecommerce) => dispatch(startEditEcommerce(id, ecommerce)),
     startRemoveEcommerce: (data) => dispatch(startRemoveEcommerce(data)) 
 });
 

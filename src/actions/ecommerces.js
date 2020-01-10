@@ -56,6 +56,14 @@ export const editEcommerce = (id, updates) => ({
     id,
     updates
 });
+export const startEditEcommerce = (id, updates) => {
+    return (dispatch) => {
+        return database.ref(`ecommerces/${id}`).update(updates).then(() => {
+            dispatch(editEcommerce(id, updates));
+        });
+    };
+};
+
 //SET_Ecommerce
 export const setEcommerce = (ecommerces) => ({ 
     type: 'SET_ECOMMERCE',

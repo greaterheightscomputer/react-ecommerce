@@ -3,15 +3,15 @@ import { shallow } from 'enzyme';
 import { AdminEditPage } from '../../components/AdminEditPage';
 import ecommerces from '../fixtures/ecommerces';
 
-let editEcommerce, startRemoveEcommerce, history, wrapper;
+let startEditEcommerce, startRemoveEcommerce, history, wrapper;
 
 beforeEach(() => {
-    editEcommerce = jest.fn();
+    startEditEcommerce = jest.fn();
     startRemoveEcommerce = jest.fn();
     history = { push: jest.fn() };
     wrapper = shallow(
         <AdminEditPage
-            editEcommerce={editEcommerce} 
+        startEditEcommerce={startEditEcommerce} 
             startRemoveEcommerce={startRemoveEcommerce}
             history={history} 
             ecommerce={ecommerces[1]} 
@@ -23,10 +23,10 @@ test('should render AdminEditPage correctly', () => {
     expect(wrapper).toMatchSnapshot();
 });
 
-test('should handle editEcommerce', () => {    
+test('should handle startEditEcommerce', () => {    
     wrapper.find('AdminForm').prop('onSubmit')(ecommerces[1]);
     expect(history.push).toHaveBeenLastCalledWith('/admin_dashboard');
-    expect(editEcommerce).toHaveBeenLastCalledWith(ecommerces[1].id, ecommerces[1]);
+    expect(startEditEcommerce).toHaveBeenLastCalledWith(ecommerces[1].id, ecommerces[1]);
 });
 
 test('should handle startRemoveEcommerce', () => {    

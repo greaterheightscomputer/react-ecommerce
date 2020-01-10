@@ -1,7 +1,7 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { startAddEcommerce, addEcommerce, removeEcommerce, startRemoveEcommerce, 
-         editEcommerce, setEcommerce, startSetEcommerce } from '../../actions/ecommerces';
+         editEcommerce, startEditEcommerce, setEcommerce, startSetEcommerce } from '../../actions/ecommerces';
 import ecommerces from '../fixtures/ecommerces';
 import database from '../../firebase/firebase';
 
@@ -49,6 +49,24 @@ test('should setup edit ecommerce action object', () => {
             description: value
         }
     });    
+});
+
+test('should edit ecommerce from firebase', (done) => {
+    const store = createMockStore({});
+    const id = ecommerces[0].id;
+    const updates = { stock: 300 };
+    store.dispatch(startEditEcommerce(id, updates)).then(() => {
+        const actions = store.getActions();
+        expect(actions[0]).toEqual({
+            type: 'EDIT_ECOMMERCE',
+            id,
+            updates
+        });
+        return database.ref(`ecommerces/${id}`).once('value');
+    }).then((snapshot) => {
+        expect(snapshot.val().stock).toBe(updates.stock);
+        done();
+    });
 });
 
 test('should setup add ecommerce action object with provided values', () => {    
