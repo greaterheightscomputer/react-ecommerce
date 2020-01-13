@@ -29,7 +29,7 @@ import * as firebase from 'firebase'; //means select all named export and store 
 const database = firebase.database();
 // const storage = firebase.storage().ref();
 // const googleAuthProvider = new firebase.auth.GoogleAuthProvider();  //creating an instance of googleProvider
-
+// const emailAuthProvider = firebase.auth.EmailAuthProvider.credential(credential);
 export { firebase, database as default } ;
 
 

@@ -1,0 +1,473 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render SignUp with default values 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <h1>
+       Sign Up
+    </h1>
+    <div>
+      <label>
+        Email
+      </label>
+      <input
+        onChange={[Function]}
+        type="email"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Password
+      </label>
+      <input
+        onChange={[Function]}
+        type="password"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        First Name
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Last Name
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Phone N0
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value={0}
+      />
+    </div>
+    <div>
+      <button>
+        Sign Up
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`should render error for invalid form submission 1`] = `
+<div>
+  <p>
+    Please provide value for empty field(s)
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <h1>
+       Sign Up
+    </h1>
+    <div>
+      <label>
+        Email
+      </label>
+      <input
+        onChange={[Function]}
+        type="email"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Password
+      </label>
+      <input
+        onChange={[Function]}
+        type="password"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        First Name
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Last Name
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Phone N0
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value={0}
+      />
+    </div>
+    <div>
+      <button>
+        Sign Up
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`should set email on input change 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <h1>
+       Sign Up
+    </h1>
+    <div>
+      <label>
+        Email
+      </label>
+      <input
+        onChange={[Function]}
+        type="email"
+        value="khadijat@g.com"
+      />
+    </div>
+    <div>
+      <label>
+        Password
+      </label>
+      <input
+        onChange={[Function]}
+        type="password"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        First Name
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Last Name
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Phone N0
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value={0}
+      />
+    </div>
+    <div>
+      <button>
+        Sign Up
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`should set firstName on input change 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <h1>
+       Sign Up
+    </h1>
+    <div>
+      <label>
+        Email
+      </label>
+      <input
+        onChange={[Function]}
+        type="email"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Password
+      </label>
+      <input
+        onChange={[Function]}
+        type="password"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        First Name
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value="Khadijat"
+      />
+    </div>
+    <div>
+      <label>
+        Last Name
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Phone N0
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value={0}
+      />
+    </div>
+    <div>
+      <button>
+        Sign Up
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`should set lastName on input change 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <h1>
+       Sign Up
+    </h1>
+    <div>
+      <label>
+        Email
+      </label>
+      <input
+        onChange={[Function]}
+        type="email"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Password
+      </label>
+      <input
+        onChange={[Function]}
+        type="password"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        First Name
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Last Name
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value="Abimbola"
+      />
+    </div>
+    <div>
+      <label>
+        Phone N0
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value={0}
+      />
+    </div>
+    <div>
+      <button>
+        Sign Up
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`should set password on input change 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <h1>
+       Sign Up
+    </h1>
+    <div>
+      <label>
+        Email
+      </label>
+      <input
+        onChange={[Function]}
+        type="email"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Password
+      </label>
+      <input
+        onChange={[Function]}
+        type="password"
+        value="123abce"
+      />
+    </div>
+    <div>
+      <label>
+        First Name
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Last Name
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Phone N0
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value={0}
+      />
+    </div>
+    <div>
+      <button>
+        Sign Up
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`should set phone on input change 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <h1>
+       Sign Up
+    </h1>
+    <div>
+      <label>
+        Email
+      </label>
+      <input
+        onChange={[Function]}
+        type="email"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Password
+      </label>
+      <input
+        onChange={[Function]}
+        type="password"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        First Name
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Last Name
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Phone N0
+      </label>
+      <input
+        onChange={[Function]}
+        type="text"
+        value="08037899550"
+      />
+    </div>
+    <div>
+      <button>
+        Sign Up
+      </button>
+    </div>
+  </form>
+</div>
+`;

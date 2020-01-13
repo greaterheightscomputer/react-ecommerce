@@ -35,5 +35,10 @@ exports[`should render AdminHeader correctly 1`] = `
   >
     Edit Product
   </NavLink>
+  <button
+    onClick={[Function]}
+  >
+    Logout
+  </button>
 </header>
 `;

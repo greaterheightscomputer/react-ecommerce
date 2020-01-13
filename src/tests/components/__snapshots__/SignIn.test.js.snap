@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render SignIn with default data correctly 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <h1>
+       Sign In
+    </h1>
+    <div>
+      <label>
+        Email
+      </label>
+      <input
+        autoFocus={true}
+        onChange={[Function]}
+        type="email"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Password
+      </label>
+      <input
+        onChange={[Function]}
+        type="password"
+        value=""
+      />
+    </div>
+    <div>
+      <button>
+        Login
+      </button>
+      <div />
+    </div>
+  </form>
+</div>
+`;
+
+exports[`should set email on input change 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <h1>
+       Sign In
+    </h1>
+    <div>
+      <label>
+        Email
+      </label>
+      <input
+        autoFocus={true}
+        onChange={[Function]}
+        type="email"
+        value="adebarakhadijat@gmail.com"
+      />
+    </div>
+    <div>
+      <label>
+        Password
+      </label>
+      <input
+        onChange={[Function]}
+        type="password"
+        value=""
+      />
+    </div>
+    <div>
+      <button>
+        Login
+      </button>
+      <div />
+    </div>
+  </form>
+</div>
+`;
+
+exports[`should set password on input change 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <h1>
+       Sign In
+    </h1>
+    <div>
+      <label>
+        Email
+      </label>
+      <input
+        autoFocus={true}
+        onChange={[Function]}
+        type="email"
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Password
+      </label>
+      <input
+        onChange={[Function]}
+        type="password"
+        value="123abc"
+      />
+    </div>
+    <div>
+      <button>
+        Login
+      </button>
+      <div />
+    </div>
+  </form>
+</div>
+`;
