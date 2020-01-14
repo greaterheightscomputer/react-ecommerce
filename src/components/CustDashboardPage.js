@@ -3,9 +3,9 @@ import CustList from './CustList';
 import CustListFilters from './CustListFilters';
 
 const CustDashboardPage = () => (    
-    <div>       
+    <div>        
         <CustListFilters/>
-        <CustList />
+        <CustList />        
     </div>
 );
 

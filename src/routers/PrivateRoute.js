@@ -8,10 +8,10 @@ export const PrivateRoute = ({ isAuthenticated, component: Component, ...rest })
         isAuthenticated ? (
             <div>
                 <AdminHeader/>
-                <Component {...props} />
+                <Component {...props} />   {/*it will rendering the real component */}            
             </div>            
         ) : (
-            <Redirect to="/signin" />
+            <Redirect to="/" />
             )
     )} />
 );

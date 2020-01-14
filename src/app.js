@@ -21,10 +21,6 @@ const jsx = (
 
 ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
 
-// // store.dispatch(startSetEcommerce()).then(() => {
-// //     ReactDOM.render(jsx, document.getElementById('app'));
-// });
-
 // firebase.auth().onAuthStateChanged((user) => {
 //     if (user) {
 //         console.log('log in');
@@ -35,7 +31,11 @@ ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
 //     }
 // });
 
-let hasRendered = false;
+store.dispatch(startSetEcommerce()).then(() => {    //this will render for customers to view products
+    ReactDOM.render(jsx, document.getElementById('app'));
+});
+
+let hasRendered = false;    //employee authentication
 const renderApp = () => {
     if (!hasRendered) {
         ReactDOM.render(jsx, document.getElementById('app'));
@@ -55,6 +55,7 @@ firebase.auth().onAuthStateChanged((user) => {
     }else {
         store.dispatch(logout());
         renderApp();
-        history.push('/signin')
+        history.push('/')
     }
 });
+
