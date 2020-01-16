@@ -1,0 +1,14 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    > * {  //select all direct descent of form and add margin-bottom to it
+        margin-bottom: $m-size;
+    }
+}
+
+.form__error {
+    color: red;
+    font-style: italic;   
+    margin: 0 0 $m-size 0;
+    text-align: right;
+}

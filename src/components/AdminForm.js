@@ -12,7 +12,7 @@ export default class AdminForm extends React.Component{
             item: props.ecommerce ? props.ecommerce.item : '',
             amount: props.ecommerce ? (props.ecommerce.amount / 100).toString() : '',
             stock: props.ecommerce ? props.ecommerce.stock :'',       
-            image: props.ecommerce ? props.ecommerce.image : '',
+            image: props.ecommerce ? props.ecommerce.image.name : '',
             imageUrl: props.ecommerce ? props.ecommerce.imageUrl : '',
             createdAt: props.ecommerce ? moment(props.ecommerce.createdAt) : moment(),
             focused: false,
@@ -76,7 +76,7 @@ export default class AdminForm extends React.Component{
         e.preventDefault();
         if (!this.state.description || !this.state.category || !this.state.item || !this.state.amount || !this.state.image || !this.state.stock) {        
             this.setState(() => ({
-                error: 'Please provide value for the empty field'
+                error: 'Please provide value for the empty field(s)'
             }));    
         } else {
             this.setState(() => ({ error: '' }));            
@@ -94,10 +94,9 @@ export default class AdminForm extends React.Component{
     };
     render() {
         return (
-            <div>
-                {this.state.error && <p>{this.state.error}</p>}
-                <form onSubmit={this.onSubmitClick}>
+            <form className="form" onSubmit={this.onSubmitClick}>                
                     <input
+                        className= "text-input"
                         type="text"
                         placeholder="Description"
                         autoFocus
@@ -105,6 +104,7 @@ export default class AdminForm extends React.Component{
                         onChange={this.onDescriptionChange}
                     />
                     <select
+                        className= "select"
                         value={this.state.category}
                         onChange={this.onCategoryChange}                        
                     >
@@ -115,6 +115,7 @@ export default class AdminForm extends React.Component{
                         <option value="women">Women</option>
                     </select>      
                     <select
+                        className= "select"
                         value={this.state.item}
                         onChange={this.onItemChange}>
                         <option value="">Select Item</option>
@@ -156,12 +157,14 @@ export default class AdminForm extends React.Component{
                         <option value="women_underwear">Women Underwear</option>
                     </select>    
                     <input
+                        className= "text-input"
                         type="text"
                         placeholder="Amount"                        
                         value={this.state.amount}
                         onChange={this.onAmountChange}
                     />
                     <input
+                        className= "text-input"
                         type="number"
                         placeholder="Stock"                        
                         value={this.state.stock}
@@ -177,16 +180,21 @@ export default class AdminForm extends React.Component{
                     />
                    <div>
                         <input 
+                            className= "text-input"
                             type="file"                            
                             onChange={this.onImageChange}
                         />
-                        <div>                            
+                        <div className="image-input">                            
                             <img src={this.state.imageUrl} height="200" width="200"/>                            
                         </div>                        
                     </div>
-                    <button>Add Product</button>                    
-                </form>                
-            </div>
+                <div>
+                    {this.state.error && <p className="form__error">{this.state.error}</p>}
+                </div>
+                <div>
+                    <button className="button">Save Product</button>                         
+                </div>                   
+            </form>                            
         );
     };
 }

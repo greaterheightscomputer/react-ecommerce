@@ -1,11 +1,16 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
  
 const CustHeader = () => (
-    <header>
-        <h1>OyinMark</h1>
-        <NavLink to="/" activeClassName="is-active" exact={true}>Products</NavLink>
-        <NavLink to="/signin" activeClassName="is-active">SignIn</NavLink> 
+    <header className="admin-header">
+        <div className="content-container">
+            <div className="admin-header__container">                
+                <Link className="admin-header__title" to="/">
+                    <h1>E-Market</h1>
+                </Link>
+                <Link className="button button--link" to="/signin">SignIn</Link> 
+            </div>
+        </div>
     </header>
 );
 

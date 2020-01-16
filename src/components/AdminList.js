@@ -4,17 +4,26 @@ import AdminListItem from './AdminListItem';
 import selectEcommerce from '../selectors/ecommerces';
 
 export const AdminList = (props) => (
-    <div>
-        <h1>Admin List</h1>
-        {
-            props.ecommerces.length === 0 ? (
-                <p> No Products </p>
-            ) : (
-                props.ecommerces.map((ecommerce) =>{
-                    return <AdminListItem key={ecommerce.id} {...ecommerce} />
-                })
-            )
-        }                
+    
+    <div className="content-container">
+        <div className="list-header">
+            <div>Admin Products List</div>
+        </div>             
+        <div className="list-body">
+            <div className="list-items" >
+                {
+                    props.ecommerces.length === 0 ? (
+                        <div className="list-item list-item--message">
+                            <span>No Products</span>
+                        </div>
+                    ) : (
+                        props.ecommerces.map((ecommerce) =>{
+                            return <AdminListItem key={ecommerce.id} {...ecommerce} />
+                        })
+                    )
+                }                        
+            </div>        
+        </div>           
     </div>
 );
 

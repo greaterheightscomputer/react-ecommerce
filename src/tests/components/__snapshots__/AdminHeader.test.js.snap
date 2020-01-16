@@ -1,44 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render AdminHeader correctly 1`] = `
-<header>
-  <h1>
-    OyinMark
-  </h1>
-  <NavLink
-    activeClassName="is-active"
-    ariaCurrent="true"
-    exact={true}
-    to="/"
+<header
+  className="admin-header"
+>
+  <div
+    className="content-container"
   >
-    Customer
-  </NavLink>
-  <NavLink
-    activeClassName="is-active"
-    ariaCurrent="true"
-    exact={true}
-    to="/admin_dashboard"
-  >
-    Dashboard
-  </NavLink>
-  <NavLink
-    activeClassName="is-active"
-    ariaCurrent="true"
-    to="/create"
-  >
-    Create Product
-  </NavLink>
-  <NavLink
-    activeClassName="is-active"
-    ariaCurrent="true"
-    to="/edit"
-  >
-    Edit Product
-  </NavLink>
-  <button
-    onClick={[Function]}
-  >
-    Logout
-  </button>
+    <div
+      className="admin-header__container"
+    >
+      <Link
+        className="admin-header__title"
+        replace={false}
+        to="/admin_dashboard"
+      >
+        <h1>
+          E-Market
+        </h1>
+      </Link>
+      <button
+        className="button button--link"
+        onClick={[Function]}
+      >
+        Logout
+      </button>
+    </div>
+  </div>
 </header>
 `;

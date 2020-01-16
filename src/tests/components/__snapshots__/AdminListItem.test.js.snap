@@ -1,25 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render EcommerceListItem correctly 1`] = `
-<div>
-  <Link
-    replace={false}
-    to="/edit/3"
-  >
+<Link
+  className="list-item"
+  replace={false}
+  to="/edit/3"
+>
+  <div>
     <img
       height="200"
       src=""
       width="150"
     />
-    <h3>
+    <h3
+      className="list-item__title"
+    >
+       
       boy shirt
+       
+      <br />
+       
     </h3>
-    <div>
+    <h3
+      className="list-item__title"
+    >
+       
       ₦3.50
-      <p>
-        3200 piece(s) available
-      </p>
-    </div>
-  </Link>
-</div>
+    </h3>
+    <p
+      className="list-item__stock"
+    >
+      3200 piece(s) available
+    </p>
+  </div>
+</Link>
 `;

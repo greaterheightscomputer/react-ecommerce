@@ -2,26 +2,44 @@
 
 exports[`should render AdminEditPage correctly 1`] = `
 <div>
-  <AdminForm
-    ecommerce={
-      Object {
-        "amount": 4500,
-        "category": "women",
-        "createdAt": -432000000,
-        "description": "women shoe",
-        "id": "2",
-        "image": "women_shoe.jpeg",
-        "imageUrl": "",
-        "item": "women_headwear",
-        "stock": 403,
-      }
-    }
-    onSubmit={[Function]}
-  />
-  <button
-    onClick={[Function]}
+  <div
+    className="page-admin-header"
   >
-    Remove
-  </button>
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-admin-header__title"
+      >
+        Edit Product
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <AdminForm
+      ecommerce={
+        Object {
+          "amount": 4500,
+          "category": "women",
+          "createdAt": -432000000,
+          "description": "women shoe",
+          "id": "2",
+          "image": "women_shoe.jpeg",
+          "imageUrl": "",
+          "item": "women_headwear",
+          "stock": 403,
+        }
+      }
+      onSubmit={[Function]}
+    />
+    <button
+      className="button button--secondary"
+      onClick={[Function]}
+    >
+      Remove Product
+    </button>
+  </div>
 </div>
 `;

@@ -1,11 +1,11 @@
 import React from 'react';
 import AdminList from './AdminList';
 import AdminListFilters from './AdminListFilters';
-import EcommerceSummary from './EcommerceSummary';
+import AdminSummary from './AdminSummary';
 
 const AdminDashboardPage = () => (
     <div>        
-        <EcommerceSummary />
+        <AdminSummary />
         <AdminListFilters />
         <AdminList />        
     </div>

@@ -16,11 +16,18 @@ export class AdminEditPage extends React.Component {
     render(){
         return(
             <div>
-                <AdminForm 
+                <div className="page-admin-header">
+                    <div className="content-container">
+                        <h1 className="page-admin-header__title">Edit Product</h1>
+                    </div>
+                </div>
+                <div className="content-container">
+                    <AdminForm 
                     ecommerce={this.props.ecommerce}
                     onSubmit={this.onSubmit}
-                />
-                <button onClick={this.onRemove}>Remove</button>
+                    />
+                    <button className="button button--secondary" onClick={this.onRemove}>Remove Product</button>
+                </div>
             </div>
         );        
     };

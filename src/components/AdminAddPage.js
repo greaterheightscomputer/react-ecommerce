@@ -13,10 +13,16 @@ export class AdminAddPage extends React.Component {
     render() {
         return (
             <div>
-                <h1> Add Product</h1>
-                <AdminForm
-                    onSubmit={this.onSubmit}
-                />
+                <div className="page-admin-header">
+                    <div className="content-container">
+                        <h1 className="page-admin-header__title"> Add Product</h1>
+                    </div>
+                </div>                
+                <div className="content-container">
+                    <AdminForm
+                        onSubmit={this.onSubmit}
+                    />
+                </div>
             </div>
         );
     };

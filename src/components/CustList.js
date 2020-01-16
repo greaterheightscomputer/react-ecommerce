@@ -4,12 +4,18 @@ import CustListItem from './CustListItem';
 import selectEcommerce from '../selectors/ecommerces';
 
 export const CustList = (props) => (
-    <div>
-        <h1>Customer List</h1>
-        {props.ecommerces.map((ecommerce) =>{
-            return <CustListItem key={ecommerce.id} {...ecommerce} />                             
-        })}      
-       
+    <div className="list-body">        
+        {
+            props.ecommerces.length === 0 ? (
+                <div className="list-item list-item--message">
+                        <span>No Products</span>
+                    </div>
+            ) : 
+                (
+                props.ecommerces.map((ecommerce) =>{
+                    return <CustListItem key={ecommerce.id} {...ecommerce} />                             
+            }))
+        }      
     </div>
 );
 

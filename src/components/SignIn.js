@@ -23,33 +23,39 @@ export class SignIn extends React.Component {
     render() {
         const { authError } = this.props;
         return (
-            <div>                
-                <form onSubmit={this.onSubmitClick} >
-                    <h1> Sign In</h1>
-                    <div>
-                        <label>Email</label>
-                        <input 
-                            type="email"                             
-                            autoFocus
-                            value={this.state.email} 
-                            onChange={this.onEmailChange}
-                        />
-                    </div>
-                    <div>
-                        <label>Password</label>
-                        <input 
-                            type="password"                             
-                            value={this.state.password} 
-                            onChange={this.onPasswordChange} 
-                        />
-                    </div>
-                    <div>
-                        <button>Login</button>
+            <div className="box-layout">                
+                <div className="box-layout__box">
+                    <form onSubmit={this.onSubmitClick} >
+                        <h1 className="box-layout__title"> Sign In</h1>
                         <div>
-                            { authError ? <p>{authError}</p> : null }
+        {/*<label>Email</label>*/}
+                            <input 
+                                className="text-input text-input__extend"
+                                type="email"                             
+                                autoFocus
+                                value={this.state.email} 
+                                onChange={this.onEmailChange}
+                                placeholder="Enter Email"
+                            />
                         </div>
-                    </div>
-                </form>
+                        <div>
+        {/*<label>Password</label>*/}
+                            <input 
+                                className="text-input text-input__extend"
+                                type="password"                             
+                                value={this.state.password} 
+                                onChange={this.onPasswordChange} 
+                                placeholder="Enter Password"
+                            />
+                        </div>
+                        <div>
+                            <button className="button button__space">Login with Credential</button>
+                            <div className="box-layout__error">
+                                { authError ? <p>{authError}</p> : null }
+                            </div>
+                        </div>
+                    </form>
+                </div>                
             </div>
         );
     };

@@ -117,79 +117,97 @@ export class AdminListFilters extends React.Component {
     };
     render(){
         return (
-            <div>
-                <input 
-                    type="text" 
-                    placeholder="Search"
-                    value={this.props.filters.text} 
-                    onChange={this.onTextChange}
-                />
-                <select
-                    value={this.props.filters.sortBy}
-                    onChange={this.onSortChange}>
-                    <option value="date">Date</option>
-                    <option value="amount">Amount</option>
-                </select>
-                <select
-                    value={this.props.filters.categoryType}
-                    onChange={this.onCategorTypeChange}>
-                    <option value="">Select Category</option>
-                    <option value="boy">Boy</option>
-                    <option value="girl">Girl</option>
-                    <option value="amen">Men</option>
-                    <option value="women">Women</option>
-                </select>          
-                <select
-                    value={this.props.filters.itemType}
-                    onChange={this.onItemTypeChange}>
-                    <option value="">Select Item</option>
-                    {/*boy*/}
-                    <option value="boy_bag">Boy Bag</option>
-                    <option value="boy_belt">Boy Belt</option>
-                    <option value="boy_clothe">Boy Clothe</option>
-                    <option value="boy_footwear">Boy Footwear</option>
-                    <option value="boy_headwear">Boy Headwear</option>
-                    <option value="boy_jewellery">Boy Jewellery</option>
-                    <option value="boy_tie">Boy Tie</option>
-                    <option value="boy_underwear">Boy Underwear</option>
-                    {/*girl*/}
-                    <option value="girl_bag">Girl Bag</option>
-                    <option value="girl_belt">Girl Belt</option>
-                    <option value="girl_clothe">Girl Clothe</option>
-                    <option value="girl_footwear">Girl Footwear</option>
-                    <option value="girl_headwear">Girl Headwear</option>
-                    <option value="girl_jewellery">Girl Jewellery</option>
-                    <option value="girl_tie">Girl Tie</option>
-                    <option value="girl_underwear">Girl Underwear</option>
-                    {/*men*/}
-                    <option value="men_bag">Men Bag</option>
-                    <option value="men_belt">Men Belt</option>
-                    <option value="men_clothe">Men Clothe</option>
-                    <option value="men_footwear">Men Footwear</option>
-                    <option value="men_headwear">Men Headwear</option>
-                    <option value="men_jewellery">Men Jewellery</option>
-                    <option value="men_tie">Men Tie</option>
-                    <option value="men_underwear">Men Underwear</option>
-                    {/*women*/}
-                    <option value="wommen_bag">Women Bag</option>
-                    <option value="wommen_belt">Women Belt</option>
-                    <option value="wommen_clothe">Women Clothe</option>
-                    <option value="wommen_footwear">Women Footwear</option>
-                    <option value="wommen_headwear">Women Headwear</option>
-                    <option value="wommen_jewellery">Women Jewellery</option>
-                    <option value="wommen_tie">Women Tie</option>
-                    <option value="wommen_underwear">Women Underwear</option>
-                </select>
-                <DateRangePicker 
-                    startDate={this.props.filters.startDate}
-                    endDate={this.props.filters.endDate}
-                    onDatesChange={this.onDatesChange}
-                    focusedInput={this.state.focused}
-                    onFocusChange={this.onFocusChange}
-                    showClearDates={true}
-                    numberOfMonths={1}
-                    isOutsideRange={() => false}
-                />
+            <div className="content-container">
+                <div className="input-group">
+                    <div className="input-group__item">
+                        <input 
+                            type="text" 
+                            className= "text-input"
+                            placeholder="Search products"
+                            value={this.props.filters.text} 
+                            onChange={this.onTextChange}
+                        />
+                    </div>
+                    <div className="input-group__item">
+                        <select
+                            className= "select"
+                            value={this.props.filters.sortBy}
+                            onChange={this.onSortChange}>
+                            <option value="date">Date</option>
+                            <option value="amount">Amount</option>
+                        </select>    
+                    </div>
+                    <div className="input-group__item">
+                        <select
+                            className= "select"
+                            value={this.props.filters.categoryType}
+                            onChange={this.onCategorTypeChange}>
+                            <option value="">Select Category</option>
+                            <option value="boy">Boy</option>
+                            <option value="girl">Girl</option>
+                            <option value="amen">Men</option>
+                            <option value="women">Women</option>
+                        </select>                              
+                    </div>
+                    <div className="input-group__item">
+                        <select
+                            className= "select"
+                            value={this.props.filters.itemType}
+                            onChange={this.onItemTypeChange}>
+                            <option value="">Select Item</option>
+                            {/*boy*/}
+                            <option value="boy_bag">Boy Bag</option>
+                            <option value="boy_belt">Boy Belt</option>
+                            <option value="boy_clothe">Boy Clothe</option>
+                            <option value="boy_footwear">Boy Footwear</option>
+                            <option value="boy_headwear">Boy Headwear</option>
+                            <option value="boy_jewellery">Boy Jewellery</option>
+                            <option value="boy_tie">Boy Tie</option>
+                            <option value="boy_underwear">Boy Underwear</option>
+                            {/*girl*/}
+                            <option value="girl_bag">Girl Bag</option>
+                            <option value="girl_belt">Girl Belt</option>
+                            <option value="girl_clothe">Girl Clothe</option>
+                            <option value="girl_footwear">Girl Footwear</option>
+                            <option value="girl_headwear">Girl Headwear</option>
+                            <option value="girl_jewellery">Girl Jewellery</option>
+                            <option value="girl_tie">Girl Tie</option>
+                            <option value="girl_underwear">Girl Underwear</option>
+                            {/*men*/}
+                            <option value="men_bag">Men Bag</option>
+                            <option value="men_belt">Men Belt</option>
+                            <option value="men_clothe">Men Clothe</option>
+                            <option value="men_footwear">Men Footwear</option>
+                            <option value="men_headwear">Men Headwear</option>
+                            <option value="men_jewellery">Men Jewellery</option>
+                            <option value="men_tie">Men Tie</option>
+                            <option value="men_underwear">Men Underwear</option>
+                            {/*women*/}
+                            <option value="wommen_bag">Women Bag</option>
+                            <option value="wommen_belt">Women Belt</option>
+                            <option value="wommen_clothe">Women Clothe</option>
+                            <option value="wommen_footwear">Women Footwear</option>
+                            <option value="wommen_headwear">Women Headwear</option>
+                            <option value="wommen_jewellery">Women Jewellery</option>
+                            <option value="wommen_tie">Women Tie</option>
+                            <option value="wommen_underwear">Women Underwear</option>
+                        </select>                    
+                    </div>                    
+                </div>    
+                <div className="input-group">
+                    <div className="input-group__item">
+                        <DateRangePicker 
+                            startDate={this.props.filters.startDate}
+                            endDate={this.props.filters.endDate}
+                            onDatesChange={this.onDatesChange}
+                            focusedInput={this.state.focused}
+                            onFocusChange={this.onFocusChange}
+                            showClearDates={true}
+                            numberOfMonths={1}
+                            isOutsideRange={() => false}
+                        />
+                    </div>
+                </div>                            
             </div>
         );
     };
