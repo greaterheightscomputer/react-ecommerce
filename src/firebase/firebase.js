@@ -27,6 +27,7 @@ import * as firebase from 'firebase'; //means select all named export and store 
   firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
+// const firestore = firebase.firestore();
 // const storage = firebase.storage().ref();
 // const googleAuthProvider = new firebase.auth.GoogleAuthProvider();  //creating an instance of googleProvider
 // const emailAuthProvider = firebase.auth.EmailAuthProvider.credential(credential);

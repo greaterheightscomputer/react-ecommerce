@@ -14,7 +14,7 @@ export const AdminSummary = ({ ecommerceCount, ecommerceTotal }) => {
             <div className="content-container">
                 <h1 className="page-admin-header__title">Displaying <span>{ecommerceCount}</span> {ecommerceWord} totalling <span>{formatedEcommerceTotal}</span> </h1>
                 <div className="page-admin-header__actions">
-                    <Link className="button" to="/create">Add Product</Link>
+                    <Link className="button admin-header__title" to="/create">Add Product</Link>
                 </div>
             </div>            
         </div>        

@@ -40,7 +40,7 @@ export class SignIn extends React.Component {
                         </div>
                         <div>
         {/*<label>Password</label>*/}
-                            <input 
+                            <input
                                 className="text-input text-input__extend"
                                 type="password"                             
                                 value={this.state.password} 

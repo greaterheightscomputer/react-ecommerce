@@ -6,6 +6,15 @@
     }
 }
 
+.form__signup {
+    display: flex;
+    flex-direction: column;
+    > * {  
+        margin-bottom: 2rem;
+        max-width: 75rem;
+    }
+}
+
 .form__error {
     color: red;
     font-style: italic;   

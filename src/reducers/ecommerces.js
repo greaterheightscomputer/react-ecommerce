@@ -4,7 +4,7 @@ const ecommerceReducer = (state = ecommerceReducerDefaultState, action) => {
         case 'ADD_ECOMMERCE':            
             return [...state, action.ecommerce];   
         case 'REMOVE_ECOMMERCE':            
-            return state.filter(({ id }) => id !== action.id); 
+            return state.filter(({ id }) => id !== action.id);         
         case 'EDIT_ECOMMERCE':
             return state.map((ecommerce) => {
                 if (ecommerce.id === action.id){
@@ -12,7 +12,7 @@ const ecommerceReducer = (state = ecommerceReducerDefaultState, action) => {
                 }else {
                     return ecommerce;
                 }
-            });  
+            });        
         case 'SET_ECOMMERCE':
             return action.ecommerces;            
         default: return state;        

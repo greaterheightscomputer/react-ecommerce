@@ -1,0 +1,39 @@
+.cust-list-item {
+    font-family: 'Oswald', sans-serif;
+    background: $white;
+    color: $navy-blue;
+}
+.cust-list-product {
+    font-family: 'Permanent Marker', cursive;  
+    letter-spacing: 0.3rem;  
+    text-transform: uppercase;    
+}
+.text-blue {
+    color: $navy-blue;
+}
+.text-size {
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+}
+.text-bright {
+    color: $light-blue;
+}
+
+.text--fontP {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.text--fontO {
+    font-family: 'Oswald', sans-serif;
+}
+
+.txt-size--one {
+    font-size: 2.6rem;
+}
+.txt-size--two {
+    font-size: 2.3rem;
+}
+.txt-size--three {
+    font-size: $m-size;
+}

@@ -16,7 +16,7 @@ const store = configureStore();
 
 const jsx = (
     <Provider store={store}>
-        <AppRouter />    
+        <AppRouter />            
     </Provider>
     );
 
@@ -51,9 +51,10 @@ firebase.auth().onAuthStateChanged((user) => {
             renderApp();
             if(history.location.pathname === '/signin') {
                 history.push('/admin_dashboard');
-            }
+            }            
         });
-    }else {
+    }        
+    else {
         store.dispatch(logout());
         renderApp();
         history.push('/')

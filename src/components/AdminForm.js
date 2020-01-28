@@ -14,23 +14,13 @@ export default class AdminForm extends React.Component{
             stock: props.ecommerce ? props.ecommerce.stock :'',       
             image: props.ecommerce ? props.ecommerce.image.name : '',
             imageUrl: props.ecommerce ? props.ecommerce.imageUrl : '',
+            company: props.ecommerce ? props.ecommerce.company : '',
+            info: props.ecommerce ? props.ecommerce.info: '',
             createdAt: props.ecommerce ? moment(props.ecommerce.createdAt) : moment(),
             focused: false,
-            error: ''    
+            error: ''               
         }
     };
-    // state = {
-    //     description:'',
-    //     category: '',
-    //     item: '',
-    //     amount: '',
-    //     stock: '',       
-    //     image: null,
-    //     imageUrl: null,
-    //     createdAt: moment(),
-    //     focused: false,
-    //     error: ''
-    // };
     onDescriptionChange = (e) => {
         const description = e.target.value;
         this.setState(() => ({ description }));
@@ -53,6 +43,14 @@ export default class AdminForm extends React.Component{
             this.setState(() => ({ amount }));        
         }        
     };
+    onCompanyChange = (e) => {
+        const company = e.target.value;
+        this.setState(() => ({ company }));
+    };
+    onInfoChange = (e) => {
+        const info = e.target.value;
+        this.setState(() => ({ info }));
+    };
     onDateChange = (createdAt) => {
         if (createdAt) {
             this.setState(() => ({ createdAt }));            
@@ -74,7 +72,7 @@ export default class AdminForm extends React.Component{
     };
     onSubmitClick = (e) => {
         e.preventDefault();
-        if (!this.state.description || !this.state.category || !this.state.item || !this.state.amount || !this.state.image || !this.state.stock) {        
+        if (!this.state.description || !this.state.category || !this.state.item || !this.state.amount || !this.state.image || !this.state.stock || !this.state.company || !this.state.info) {        
             this.setState(() => ({
                 error: 'Please provide value for the empty field(s)'
             }));    
@@ -88,6 +86,8 @@ export default class AdminForm extends React.Component{
                 stock: this.state.stock,
                 image: this.state.image.name,
                 imageUrl: this.state.imageUrl,
+                company: this.state.company,
+                info: this.state.info,
                 createdAt: this.state.createdAt.valueOf()
             });            
         } 
@@ -169,6 +169,20 @@ export default class AdminForm extends React.Component{
                         placeholder="Stock"                        
                         value={this.state.stock}
                         onChange={this.onStockChange}
+                    />
+                    <input
+                        className= "text-input"
+                        type="text"
+                        placeholder="Company Name"                        
+                        value={this.state.company}
+                        onChange={this.onCompanyChange}
+                    />
+                    <input
+                        className= "text-input"
+                        type="text"
+                        placeholder="Product Information"                        
+                        value={this.state.info}
+                        onChange={this.onInfoChange}
                     />
                     <SingleDatePicker
                         date={this.state.createdAt}

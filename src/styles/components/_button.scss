@@ -11,7 +11,10 @@
 }
 
 .button--link {
-    background: none;
+    background: none;    
+    &:hover{
+        color:white;
+    }
 }
 
 .button--secondary {
@@ -19,5 +22,43 @@
 }
 
 .button__space {
-    margin-top: $s-size;
+    margin-top: $m-size;
+    &:active {       //&:hover & means take all properties for the parent select  and change the background
+        box-shadow: 2px 2px 2px #888888;
+        // box-shadow: inset 0 0 20px 0 orange;
+        border: 2px solid #888;
+    }
+}
+
+.button__custheader {
+    text-transform: capitalize;
+    font-size: 2.2rem;    
+    font-family: 'Oswald', sans-serif;
+    background: transparent;
+    border: 0.05rem solid $white;
+    color: $white;
+    border-radius: 0.5rem;
+    padding: 0.7rem 0.7rem;
+    margin: 0.2rem 0.5rem 0.2rem 0;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        background: $light-blue;
+        color: $white;
+        border: 0;
+    }    
+}
+
+.button--cart {
+    border: 0.05rem solid $yellow;
+    color: $yellow;
+    &:hover {
+        background: $yellow;
+        color: $white;
+        border: 0;
+    } 
+}
+.button--detail {
+    border: 0.05rem solid $light-blue;
+    line-height: 1;
+    color: $light-blue;
 }

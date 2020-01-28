@@ -11,7 +11,7 @@ import { setTextFilter, sortByDate, sortByAmount, categoryTypeMen, categoryTypeW
 class CustListFilters extends React.Component {    
     render(){
         return (
-            <div className="page-admin-header" >
+            <div className="page-admin-header page-admin-header--customer" >
                 <div className="content-container">
                 <div className="input-group">
                     <div className="input-group__item">

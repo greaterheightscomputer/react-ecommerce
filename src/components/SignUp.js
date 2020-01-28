@@ -1,13 +1,16 @@
 import React from 'react';
 import moment from 'moment';
+import { signUp } from '../actions/auth';
+import { connect } from 'react-redux';
+import Redirect from 'react-router-dom';
 
-export default class SignUp extends React.Component {
+export class SignUp extends React.Component {
     state = {
         email: '',
         password: '',
         firstName:'',
         lastName:'',
-        phone: 0,
+        phone: '',
         createdAt: moment().toDate().valueOf()
     };
     onEmailChange = (e) => {      
@@ -34,73 +37,85 @@ export default class SignUp extends React.Component {
     };       
     onSubmitClick = (e) => {
         e.preventDefault();
-        if(!this.state.email || !this.state.password || !this.state.firstName || !this.state.lastName || !this.state.phone) {
-            this.setState(() => ({
-                error: 'Please provide value for empty field(s)'
-            }));
-        } else {
-            this.setState(() => ({ 
-                error: '',
-                email: this.state.email,
-                password: this.state.password,
-                firstName: this.state.firstName,
-                lastName: this.state.lastName,
-                phone: this.state.phone                                
-             }));
-            console.log(this.state)
-        }
+        this.props.signUp(this.state);  
+        this.setState({
+            email: '',
+            password: '',
+            firstName:'',
+            lastName:'',
+            phone: '',
+        });
     }; 
     render() {
-        return (
-            <div>
+        const { authError, auth } = this.props;                  
+        if(!auth) return <Redirect to="/signin"/>
+        return (            
+            <form  onSubmit={this.onSubmitClick} >
                 {this.state.error && <p>{this.state.error}</p>}
-                <form onSubmit={this.onSubmitClick} >
-                    <h1> Sign Up</h1>
-                    <div>
-                        <label>Email</label>
-                        <input 
-                            type="email"                             
-                            value={this.state.email}
-                            onChange={this.onEmailChange} 
-                        />
+                <div className="page-admin-header">
+                    <div className="content-container">
+                        <h1>Sign Up</h1>    
                     </div>
+                </div>
+                <div className="content-container">                                          
+                    <div className="form__signup">
+                    <input 
+                        className="text-input"
+                        placeholder="Email"
+                        type="email"                             
+                        value={this.state.email}
+                        onChange={this.onEmailChange} 
+                    />
+                    <input 
+                        className="text-input"
+                        placeholder="Password"
+                        type="password"                            
+                        value={this.state.password}
+                        onChange={this.onPasswordChange} 
+                    />
+                    <input 
+                        className="text-input"
+                        placeholder="First Name"
+                        type="text"                             
+                        value={this.state.firstName}
+                        onChange={this.onFirstNameChange} 
+                    />
+                    <input 
+                        className="text-input"
+                        placeholder="Last Name"
+                        type="text"                             
+                        value={this.state.lastName}
+                        onChange={this.onLastNameChange} 
+                    />
+                    <input 
+                        className="text-input"
+                        placeholder="Phone Number"
+                        type="text"                            
+                        value={this.state.phone}
+                        onChange={this.onPhoneChange} 
+                    />     
                     <div>
-                        <label>Password</label>
-                        <input 
-                            type="password"                            
-                            value={this.state.password}
-                            onChange={this.onPasswordChange} 
-                        />
+                        { authError ? <p className="form__error">{ authError }</p> : null }                                
+                        <button className="button button__space">Sign Up</button>                                                                             
+                    </div>                    
                     </div>
-                    <div>
-                        <label>First Name</label>
-                        <input 
-                            type="text"                             
-                            value={this.state.firstName}
-                            onChange={this.onFirstNameChange} 
-                        />
-                    </div>
-                    <div>
-                        <label>Last Name</label>
-                        <input 
-                            type="text"                             
-                            value={this.state.lastName}
-                            onChange={this.onLastNameChange} 
-                        />
-                    </div>
-                    <div>
-                        <label>Phone N0</label>
-                        <input 
-                            type="text"                            
-                            value={this.state.phone}
-                            onChange={this.onPhoneChange} 
-                        />
-                    </div>
-                    <div>
-                        <button>Sign Up</button>
-                    </div>
-                </form>
-            </div>
+                </div>
+            </form>            
         );
     };
 };
+
+const mapStateToProps = (state) => {
+    return {
+        authError: state.auth.authError,  
+        auth: state.auth.uid      
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signUp: (newUser) => dispatch(signUp(newUser))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

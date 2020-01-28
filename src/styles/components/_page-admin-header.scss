@@ -4,6 +4,10 @@
     padding: $l-size 0;
 }
 
+.page-admin-header--customer {    
+    margin-bottom: 0;    
+}
+
 .page-admin-header__actions {
     margin-top: $m-size;
 }
@@ -13,5 +17,5 @@
     margin: 0;
     span {
         font-weight: 700;
-    }
+    }   
 }

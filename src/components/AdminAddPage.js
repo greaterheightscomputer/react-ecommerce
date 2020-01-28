@@ -12,7 +12,7 @@ export class AdminAddPage extends React.Component {
     };
     render() {
         return (
-            <div>
+            <div className="list-body">
                 <div className="page-admin-header">
                     <div className="content-container">
                         <h1 className="page-admin-header__title"> Add Product</h1>

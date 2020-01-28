@@ -30,6 +30,17 @@ export default (state = defaultState, action ) => {
         case 'LOGOUT':
             console.log('logout Success');
             return {};
+        case 'SIGNUP_SUCCESS':
+            console.log('signup success');
+            return {
+                ...state, authError: null,
+                uid: null
+            };
+        case 'SIGNUP_ERROR':
+            console.log('signup error');
+            return {
+                ...state, authError: action.error.message   //message will email not valid or password not long enough
+            };
         default:
             return state;        
     }

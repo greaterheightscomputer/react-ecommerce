@@ -25,18 +25,30 @@ export const startAddEcommerce = (ecommerceData = {}) => {
             image= '', 
             imageUrl='', 
             stock=0, 
+            company='',
+            info='',
+            inCart=false,
+            count=0,
+            total=0,
             createdAt=0
         } = ecommerceData;
-        const ecommerce={description, category, item, amount, image, imageUrl, stock, createdAt }
-        
+        const ecommerce={description, category, item, amount, image, imageUrl, stock, company, info, inCart, count, total, createdAt }
+                 
             return database.ref('ecommerces').push(ecommerce).then((ref) => {
                 dispatch(addEcommerce({
-                    id: ref.key,                    
-                    ...ecommerce                                                    
+                    id: ref.key,                                                           
+                    ecommerce: {
+                        inCart,
+                        count,
+                        total
+                    },
+                    ...ecommerce
+
                 })); 
             });            
     };
 };
+
 // REMOVE_Ecommerce    
 export const removeEcommerce = ( { id } = {}) => ({
     type: 'REMOVE_ECOMMERCE',
