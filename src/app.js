@@ -10,7 +10,7 @@ import 'normalize.css/normalize.css'
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import { firebase } from './firebase/firebase';
-import LoadingPage from './components/LoadingPage'
+import LoadingPage from './components/LoadingPage';
 
 const store = configureStore();
 
@@ -32,7 +32,7 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 //     }
 // });
 
-store.dispatch(startSetEcommerce()).then(() => {    //this will render for customers to view products
+store.dispatch(startSetEcommerce()).then(() => {    //this will render the product to customers to view products
     ReactDOM.render(jsx, document.getElementById('app'));
 });
 
@@ -47,11 +47,11 @@ const renderApp = () => {
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {        
         store.dispatch(loginSucess(user.uid));
-        store.dispatch(startSetEcommerce()).then(() => {
+        store.dispatch(startSetEcommerce()).then(() => { //fetch data from firebase and set or drop it on the redux store
             renderApp();
             if(history.location.pathname === '/signin') {
                 history.push('/admin_dashboard');
-            }            
+            }          
         });
     }        
     else {

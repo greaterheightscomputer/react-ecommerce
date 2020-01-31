@@ -1,6 +1,6 @@
 import React from 'react';
-import CustList from './CustList';
-import CustListFilters from './CustListFilters';
+import CustList from '../../components/clientcomponent/CustList';
+import CustListFilters from '../../components/clientcomponent/CustListFilters';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const CustDashboardPage = () => (    

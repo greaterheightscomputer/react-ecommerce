@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import numeral from 'numeral';
 
-
 export class CustListItem extends Component {
     
     render() {                
-        const {id, description, amount, imageUrl, inCart, stock } = this.props;            
-
+        const {id, description, amount, imageUrl, inCart, stock } = this.props;  
+        
         return (                       
             <div className="col-9 mx-auto col-md-6 col-lg-3 my-3">
                 <div className="card card-footer">
@@ -22,9 +21,9 @@ export class CustListItem extends Component {
                         </Link>                        
                         <button
                             className="cart-btn"                                                                                 
-                            onClick={() => {                                
+                            onClick={() => {                                                         
                                 this.props.openModal(id);
-                                this.props.addToCart(id);                                
+                                this.props.addToCart(id); 
                             }}                            
                             disabled = { inCart? true : false}
                         >

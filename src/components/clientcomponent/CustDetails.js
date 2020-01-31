@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import numeral from 'numeral';
-import detailProduct from './data';
-import CustProductModal  from './CustProductModal';
+import detailProduct, {ecommerces} from './data';
 
 export class CustDetails extends Component {    
     state = {                        
         products: [],
         detailProduct: detailProduct,
-        cart: []    
+        cart: []  
     }; 
     getItem = (id) => { //utility function
         const product = this.props.ecommerces.find((item) => item.id === id);
@@ -91,7 +90,8 @@ export class CustDetails extends Component {
 
 const mapStateToProps = (state, props) => {    
     return {
-        ecommerces: state.ecommerces
+        // ecommerces: state.ecommerces,
+        ecommerces: ecommerces        
     }
 }
 

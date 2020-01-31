@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import CustHeader from '../components/CustHeader';
+import CustHeader from '../components/clientcomponent/CustHeader';
 
 const PublicRoute = ({ component: Component, ...rest }) => (
     <Route {...rest} component={(props) => (
