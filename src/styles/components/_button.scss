@@ -51,6 +51,7 @@
 .button--cart {
     border: 0.05rem solid $yellow;
     color: $yellow;
+    border-color: $yellow;
     &:hover {
         background: $yellow;
         color: $white;

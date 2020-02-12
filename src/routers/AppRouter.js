@@ -10,9 +10,10 @@ import SignIn from '../components/SignIn';
 import SignUp from '../components/SignUp';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
+import ProductProvider from '../components/clientcomponent/context';
 import CustDetails from '../components/clientcomponent/CustDetails';
 import CustCart from '../components/cart/CustCart';
-
+import CartItem from '../components/cart/CartItem';
 
 export const history = createHistory();
 
@@ -20,17 +21,16 @@ const AppRouter = () => (
     <Router history={history}>  
         <div>   
             <Switch>
-                <PublicRoute path="/" component={CustDashboardPage} exact />  
-                <PublicRoute path="/signin" component={SignIn} />
-                <PublicRoute path="/details/:id" component={CustDetails} />                
-                <PublicRoute path="/cart" component={CustCart} />                                                              
+                <PublicRoute path="/" component={CustDashboardPage} exact />                
+                <PublicRoute path="/signin" component={SignIn} />                                                                                                        
+                <PublicRoute path="/details/:id" component={CustDetails} />                  
+                <PublicRoute path="/cart" component={CustCart}  />                    
                 <PrivateRoute path="/admin_dashboard" component={AdminDashboardPage} />    
                 <PrivateRoute path="/signup" component={SignUp} />    
                 <PrivateRoute path="/create" component={AdminAddPage}/>    
-                <PrivateRoute path="/edit/:id" component={AdminEditPage}/>                    
-                <Route component={NotFoundPage}/>    
-           </Switch>
-{/*<CustProductModal />*/}
+                <PrivateRoute path="/edit/:id" component={AdminEditPage}/>            
+                <Route component={NotFoundPage}/>
+           </Switch>           
         </div>        
     </Router>
 );

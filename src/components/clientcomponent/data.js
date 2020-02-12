@@ -167,4 +167,3 @@ export const detailProduct = [{
     createdAt:1000
 }];
 
-export default detailProduct;
