@@ -183,14 +183,14 @@ export class AdminListFilters extends React.Component {
                             <option value="men_tie">Men Tie</option>
                             <option value="men_underwear">Men Underwear</option>
                             {/*women*/}
-                            <option value="wommen_bag">Women Bag</option>
-                            <option value="wommen_belt">Women Belt</option>
-                            <option value="wommen_clothe">Women Clothe</option>
-                            <option value="wommen_footwear">Women Footwear</option>
-                            <option value="wommen_headwear">Women Headwear</option>
-                            <option value="wommen_jewellery">Women Jewellery</option>
-                            <option value="wommen_tie">Women Tie</option>
-                            <option value="wommen_underwear">Women Underwear</option>
+                            <option value="women_bag">Women Bag</option>
+                            <option value="women_belt">Women Belt</option>
+                            <option value="women_clothe">Women Clothe</option>
+                            <option value="women_footwear">Women Footwear</option>
+                            <option value="women_headwear">Women Headwear</option>
+                            <option value="women_jewellery">Women Jewellery</option>
+                            <option value="women_tie">Women Tie</option>
+                            <option value="women_underwear">Women Underwear</option>
                         </select>                    
                     </div>                    
                 </div>    
@@ -235,7 +235,7 @@ const mapDispatchToProps = (dispatch) => ({
     itemTypeBoyUnderWear: () => dispatch(itemTypeBoyUnderWear()),
     itemTypeBoyBag: () => dispatch(itemTypeBoyBag()),
     itemTypeBoyTie: () => dispatch(itemTypeBoyTie()),
-    itemTypeBoyBoyBelt: () => dispatch(itemTypeBoyBelt()),
+    itemTypeBoyBelt: () => dispatch(itemTypeBoyBelt()),
     itemTypeBoyJewellery: () => dispatch(itemTypeBoyJewellery()),
     //item - Girl
     itemTypeGirlFootWear: () => dispatch(itemTypeGirlFootWear()),  
@@ -244,7 +244,7 @@ const mapDispatchToProps = (dispatch) => ({
     itemTypeGirlUnderWear: () => dispatch(itemTypeGirlUnderWear()),
     itemTypeGirlBag: () => dispatch(itemTypeGirlBag()),
     itemTypeGirlTie: () => dispatch(itemTypeGirlTie()),
-    itemTypeGirlBoyBelt: () => dispatch(itemTypeGirlBelt()),
+    itemTypeGirlBelt: () => dispatch(itemTypeGirlBelt()),
     itemTypeGirlJewellery: () => dispatch(itemTypeGirlJewellery()),
     //item - Men
     itemTypeMenFootWear: () => dispatch(itemTypeMenFootWear()),  
@@ -253,7 +253,7 @@ const mapDispatchToProps = (dispatch) => ({
     itemTypeMenUnderWear: () => dispatch(itemTypeMenUnderWear()),
     itemTypeMenBag: () => dispatch(itemTypeMenBag()),
     itemTypeMenTie: () => dispatch(itemTypeMenTie()),
-    itemTypeMenBoyBelt: () => dispatch(itemTypeMenBelt()),
+    itemTypeMenBelt: () => dispatch(itemTypeMenBelt()),
     itemTypeMenJewellery: () => dispatch(itemTypeMenJewellery()),
     //item - Women
     itemTypeWomenFootWear: () => dispatch(itemTypeWomenFootWear()),  
@@ -262,7 +262,7 @@ const mapDispatchToProps = (dispatch) => ({
     itemTypeWomenUnderWear: () => dispatch(itemTypeWomenUnderWear()),
     itemTypeWomenBag: () => dispatch(itemTypeWomenBag()),
     itemTypeWomenTie: () => dispatch(itemTypeWomenTie()),
-    itemTypeWomenBoyBelt: () => dispatch(itemTypeWomenBelt()),
+    itemTypeWomenBelt: () => dispatch(itemTypeWomenBelt()),
     itemTypeWomenJewellery: () => dispatch(itemTypeWomenJewellery())
 });
 

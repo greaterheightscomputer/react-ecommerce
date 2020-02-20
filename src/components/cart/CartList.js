@@ -1,15 +1,16 @@
 import React from 'react'
 import CartItem from './CartItem';
 
-export const CartList=({cart, value})=>{     
+export const CartList=({cart, addTotals, increment})=>{     
     // console.log(value)     
     console.log(cart)     
     
     return (        
         <div className="container-fluid">  
             {cart.map(item => {                          
-                  return <CartItem key={item.id} item={item}  
-                                   value={value}
+                  return <CartItem key={item.id} item={item}                                     
+                                addTotals={addTotals}
+                                increment={increment}
                   />
                 })                               
             }            

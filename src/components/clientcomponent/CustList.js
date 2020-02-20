@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators} from "redux";
 import { ProductConsumer } from './context';
 import CustListItem from '../../components/clientcomponent/CustListItem';
 import CustTitle from '../../components/clientcomponent/CustTitle';
 import { ecommerces, detailProduct } from '../clientcomponent/data';
-import CustCart from '../cart/CustCart';
 import { addToCartAction } from '../../actions/cart';
+import selectEcommerce from '../../selectors/ecommerces';
 
 export  class CustList extends Component {    
     
@@ -28,33 +27,38 @@ export  class CustList extends Component {
             count: 0,
             total: 0,
             createdAt:1000
-        }
-    ],
-        
-    }
-        
+        }],
+        cartSubTotal: 0,
+        cartTax: 0,
+        cartTotal: 0        
+    };
+    componentDidMount(){
+        this.setProducts();        
+    }            
     setProducts = () => {        
-        let tempProducts = [];                      
+        let tempProducts = [];               
+        // tempProducts = this.props.ecommerces;                  
         tempProducts = ecommerces;                         
         this.setState(() => {
             return { products: tempProducts };
         });
-    };
+    };    
     
     addToCart = (product)=>{
-    // //     // console.log("clicked on Product: ", product);
+     // console.log("clicked on Product: ", product);
+        // let tempProducts = [...this.props.ecommerces]  
         let tempProducts = [...ecommerces]  
         const productIndex = tempProducts.findIndex(p => p.id === product.id);        
         product = tempProducts[productIndex];        
-        product.inCart=true;  
+        // product.inCart=true;  
         product.count=1;
         const price = product.amount;
-        product.total=price;  
+        product.total=price; 
+
         console.log(product);
-        this.props.addToCartAction(product);
-         console.log(this.state.cart);        
+        this.props.addToCartAction(product);                    
     };      
-    
+        
     render() {                  
         
         return (                    
@@ -73,20 +77,20 @@ export  class CustList extends Component {
                     <div className="list-items">
                     <ProductConsumer>
                         {value =>                                                                      
-                            this.props.ecommerces.length === 0 ? (
-                            // ecommerces.length === 0 ? (                                
+                            // this.props.ecommerces.length === 0 ? (
+                            ecommerces.length === 0 ? (                                
                                 // value.products.length === 0 ? (        
                                 <div className="list-item list-item--message">
                                     <span>No Products</span>
                                 </div>
                             ) : 
                                 (
-                                this.props.ecommerces.map((product) =>{
-                                // ecommerces.map((product) =>{
+                                // this.props.ecommerces.map((product) =>{
+                                ecommerces.map((product) =>{
                                     // value.products.map((product) =>{
                                     return <CustListItem
-                                            key={product.id} product={product}                                                                                       
-                                            // addToCart={this.addToCart}                                              
+                                            key={product.id} product={product}                                            
+                                            addToCart={this.addToCart}                                                                                        
                                 />                                                                                                                 
                             }))                                                            
                         }
@@ -100,7 +104,7 @@ export  class CustList extends Component {
 
 const mapStateToProps = (state) => {            
     return {                        
-        ecommerces: state.ecommerces,
+        ecommerces: selectEcommerce(state.ecommerces, state.filters), 
         cart: state.cart        
     };    
 }

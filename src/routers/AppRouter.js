@@ -10,10 +10,8 @@ import SignIn from '../components/SignIn';
 import SignUp from '../components/SignUp';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
-import ProductProvider from '../components/clientcomponent/context';
 import CustDetails from '../components/clientcomponent/CustDetails';
 import CustCart from '../components/cart/CustCart';
-import CartItem from '../components/cart/CartItem';
 
 export const history = createHistory();
 

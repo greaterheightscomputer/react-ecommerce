@@ -8,7 +8,7 @@ export default class CustListItem extends Component {
         
     render() {                                                     
         const { id, description, category, item, amount, image, imageUrl, stock, company, info, inCart, count, total, createdAt } = this.props.product;                                  
-        console.log(inCart);
+        // console.log(inCart);
         
         return (                       
             <div className="col-9 mx-auto col-md-6 col-lg-3 my-3">
@@ -31,15 +31,16 @@ export default class CustListItem extends Component {
                                 // this.props.addToCart({id, description, category, item, amount, image, imageUrl, stock, company, info, count:1, inCart:true, total:amount, createdAt});                                                                
                                 value.addToCart({id, description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt});                                                                
                             }}                            
-                            disabled = { inCart ? true : false}
+                            disabled = { inCart ? true : false}   
                         >
                         {
                             inCart ? (
-                            <p className="text-capitalize mb-0" disabled >                        
+                            <p className="text-capitalize mb-0" >                        
                                 incart
                             </p>
-                            ) : (
-                             <i className="fas fa-cart-plus" disabled />
+                            ) : 
+                            (
+                             <i className="fas fa-cart-plus"  />
                             ) 
                         }
                         </button>                        

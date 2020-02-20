@@ -64,7 +64,7 @@ module.exports = (env) => {
             devtool: isProduction ? 'source-map' : 'inline-source-map',  //we change the source map from cheap-module-eval-source-map to inline-source-map and the first is faster than the later beco's be we need to source-map our css as well for easy debug
             devServer: {
                 contentBase: path.join(__dirname, 'public'),
-                historyApiFallback: true,
+                historyApiFallback: true,  //it return error 404
                 publicPath: '/dist/'      
             }
         };    

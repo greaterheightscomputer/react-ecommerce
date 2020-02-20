@@ -13,7 +13,8 @@ export default class CustProductModal extends Component {
         // // console.log(this.props.modalProduct)      
        return (
         <ProductConsumer>
-            {(value) => {                                
+            {(value) => {              
+                // console.log(value);                  
                 const {modalOpen, closeModal} = value;                                    
                 // const id="-LynLz9jYS05Qm5pktHJ";
                 // const {imageUrl, description, amount} = detailProduct.find((product) =>{ return product.id === id});
