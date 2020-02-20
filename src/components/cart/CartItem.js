@@ -11,10 +11,7 @@ export class CartItem extends Component {
     }
     render() {
         const {id, description, imageUrl, amount, total, count } = this.props.item; //.find((itm)=>{return itm.id === id });
-        // const id = item.id;
-        // const { increment, decrement, removeItem } = value;    
-        console.log(this.props.item);   
-        // console.log(increment); 
+        // console.log(this.props.item);  
         return (                
             <div className="row my-2 text-capitalize text-center">
                 <div className="col-10 mx-auto col-lg-2">

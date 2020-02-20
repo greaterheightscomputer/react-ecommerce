@@ -35,15 +35,15 @@ export class ProductProvider extends Component {
     // };
     setProducts = () => {        
         let tempProducts = [];   
-        // tempProducts = this.props.ecommerces;                       
-        tempProducts = ecommerces;                         
+        tempProducts = this.props.ecommerces;                       
+        // tempProducts = ecommerces;                         
         this.setState(() => {
             return { products: tempProducts };
         });
     };
     getItem = (id) => {
-        // const product = this.props.ecommerces.find((item) => item.id === id); //utility method
-        const product = ecommerces.find((item) => item.id === id); //utility method
+        const product = this.props.ecommerces.find((item) => item.id === id); //utility method
+        // const product = ecommerces.find((item) => item.id === id); //utility method
         return product;        
     };          
     handleDetail = (id) => {
@@ -74,14 +74,14 @@ export class ProductProvider extends Component {
     //     // console.log(`this is add to card ${id}`);
     // };
     addToCart = (product) => {
-        // let tempProducts = [...this.props.ecommerces];
-        let tempProducts = [...ecommerces]  
+        let tempProducts = [...this.props.ecommerces];
+        // let tempProducts = [...ecommerces]  
         const productIndex = tempProducts.findIndex(p => p.id === product.id);        
         product = tempProducts[productIndex];        
         // product.inCart=true;  
         product.count=1;        
         product.total=product.amount;  
-        console.log(product);
+        // console.log(product);
 
         this.props.addToCartAction(product);        
     };
@@ -153,9 +153,9 @@ export class ProductProvider extends Component {
     removeItem = (id) => {
         console.log('item removed function');        
     };
-    // clearCart = (id) => {
-    //    console.log('clear the cart');       
-    // };
+    clearCart = (id) => {
+       console.log('clear the cart');       
+    };
     render() {                
         return (
             <ProductContext.Provider value={{

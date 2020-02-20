@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import { ProductConsumer } from './context';
 import { Link } from 'react-router-dom';
 import numeral from 'numeral';
 import { ecommerces, detailProduct } from '../clientcomponent/data';
@@ -16,13 +15,14 @@ export  class CustDetails extends Component {
         cartTotal: 0        
     };     
     getItem = (id) => { //utility function
-        // const product = this.props.ecommerces.find((item) => item.id === id);
-        const product = ecommerces.find((item) => item.id === id);
+        const product = this.props.ecommerces.find((item) => item.id === id);
+        // const product = ecommerces.find((item) => item.id === id);
         return product;        
     };   
     addToCart = (product)=>{
         // console.log("clicked on Product: ", product);
-           let tempProducts = [...ecommerces]  
+           let tempProducts = [...this.props.ecommerces]  
+        //    let tempProducts = [...ecommerces]  
            const productIndex = tempProducts.findIndex(p => p.id === product.id);        
            product = tempProducts[productIndex];        
         //    product.inCart=true;  
@@ -43,7 +43,7 @@ export  class CustDetails extends Component {
     addTotals = () => {
         let subTotal = 0;
         this.props.cart.map((item) => (subTotal += item.total));
-        console.log(subTotal);
+        // console.log(subTotal);
         const tempTax = subTotal * 0.075; //7.5%
         const tax = parseFloat(tempTax.toFixed(2));
         const total = subTotal + tax;
@@ -58,8 +58,8 @@ export  class CustDetails extends Component {
     render() {                   
         const id =  this.props.match.params.id; //"-LynLz9jYS05Qm5pktIU" //"-LynLz9jYS05Qm5pktHJ"; //this.props.match.params.id; 
         // const {description, amount, imageUrl, inCart, info, company, stock} = detailProduct.find((product) =>{ return product.id === id}); 
-        // const { description, amount, imageUrl, inCart, info, company, stock} = this.props.ecommerces.find((product) =>{ return product.id === id});
-        const { description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt} = ecommerces.find((product) =>{ return product.id === id});                 
+        const { description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt} = this.props.ecommerces.find((product) =>{ return product.id === id});
+        // const { description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt} = ecommerces.find((product) =>{ return product.id === id});                 
         // console.log(inCart);
         return (
             <div className="container py-2">
@@ -100,7 +100,7 @@ export  class CustDetails extends Component {
                                     onClick={() =>{ 
                                         // this.openModal(id);
                                         this.addToCart({id, description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt}); 
-                                        console.log(inCart);
+                                        // console.log(inCart);
                                     }}
                                         disabled={inCart ? true : false}
                                     >
@@ -122,6 +122,6 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => ({    
     addToCartAction: (product) => dispatch(addToCartAction(product))
-    });
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(CustDetails);

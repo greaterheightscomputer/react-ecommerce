@@ -21,7 +21,7 @@ const cartReducer = (state = cartReducerDefaultState, action) => {
     switch (action.type) {        
         case 'ADD_TO_CART': {
             const product = action.payload; 
-            console.log(product);                              
+            // console.log(product);                              
             const cart = state;            
 
             const existingProductIndex = findProductIndex(cart, product.id);       
@@ -35,7 +35,7 @@ const cartReducer = (state = cartReducerDefaultState, action) => {
             // console.log("Remove Cart Id: ", product);                        
             // const cart = state.filter(({id}) =>  id !== productId);  
             const cart = state.filter((item) =>  !item === product);                                           
-            console.log(cart);   
+            // console.log(cart);   
             return cart;               
         }
         case 'REMOVE_ITEM': {                         
@@ -85,7 +85,7 @@ const findProductIndex=(cart, productId)=> {
 };
 const updateProductUnits=(cart, product)=>{
     const productIndex = findProductIndex(cart, product.id);    //find the index
-    console.log('UpdateProduct: ',productIndex)
+    // console.log('UpdateProduct: ',productIndex)
     const cartProduct = [...cart];  //copy all the cart product
     const existingProduct = cartProduct[productIndex]; //return the product with a specific index
     const updatedProduct = {...existingProduct}; //copy exist product 
