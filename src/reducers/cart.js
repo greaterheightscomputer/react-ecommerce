@@ -13,6 +13,7 @@ const cartReducerDefaultState = [
     //     inCart: false,
     //     count: 0,
     //     total: 0,
+    //     size: 0,
     //     createdAt:1000
     // }
  ];
@@ -21,7 +22,7 @@ const cartReducer = (state = cartReducerDefaultState, action) => {
     switch (action.type) {        
         case 'ADD_TO_CART': {
             const product = action.payload; 
-            // console.log(product);                              
+            console.log(product);                              
             const cart = state;            
 
             const existingProductIndex = findProductIndex(cart, product.id);       
@@ -29,7 +30,7 @@ const cartReducer = (state = cartReducerDefaultState, action) => {
                 ? updateProductUnits(cart, product) //override the existing product
                 : [...cart, product];  //else add new product
                 return cartProduct;
-        }
+        }  
         case 'REMOVE_CART': { 
             const product = action.cart;            
             // console.log("Remove Cart Id: ", product);                        
@@ -47,6 +48,15 @@ const cartReducer = (state = cartReducerDefaultState, action) => {
             // return state
             // .map(item => (item.id === action.payload.id ? { ...item, count: item.count - 1 } : item))
             // .filter(item => item.count > 0);            
+        }
+        case 'INCREMENT_SIZE': {                       
+            return state
+            .map(item => (item.id === action.payload.id ? { ...item , size: (item.size + 1)} : item))
+            //.filter(item => item.count > 0);    
+        }
+        case 'DECREMENT_SIZE': {   
+            return state
+            .map(item => (item.id === action.payload.id ? { ...item , size: (item.size - 1)} : item));
         }
         case 'INCREMENT_ITEM': {
             const productAction = action.payload; 

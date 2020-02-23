@@ -29,7 +29,7 @@ export const startAddEcommerce = (ecommerceData = {}) => {
             info='',
             inCart=false,
             count=0,
-            total=0,
+            total=0,            
             createdAt=0
         } = ecommerceData;
         const ecommerce={description, category, item, amount, image, imageUrl, stock, company, info, inCart, count, total, createdAt }

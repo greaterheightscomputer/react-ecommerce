@@ -6,6 +6,15 @@
     padding: $s-size;
 }
 
+.text-input--size{
+    order: 1px solid #cacccd;
+    height: 50px;
+    font-size: $font-size-large;
+    font-weight: 300;
+    width:60px;
+    // padding: $s-size;
+}
+
 .text-input__extend {
     display: flex;
     flex-direction: column;

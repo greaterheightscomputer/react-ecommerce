@@ -37,8 +37,8 @@ export  class CustList extends Component {
     }            
     setProducts = () => {        
         let tempProducts = [];               
-        tempProducts = this.props.ecommerces;                  
-        // tempProducts = ecommerces;                         
+        // tempProducts = this.props.ecommerces;                  
+        tempProducts = ecommerces;                         
         this.setState(() => {
             return { products: tempProducts };
         });
@@ -46,14 +46,14 @@ export  class CustList extends Component {
     
     addToCart = (product)=>{
      // console.log("clicked on Product: ", product);
-        let tempProducts = [...this.props.ecommerces]  
-        // let tempProducts = [...ecommerces]  
+        // let tempProducts = [...this.props.ecommerces]  
+        let tempProducts = [...ecommerces]  
         const productIndex = tempProducts.findIndex(p => p.id === product.id);        
         product = tempProducts[productIndex];        
-        // product.inCart=true;  
-        product.count=1;
-        const price = product.amount;
-        product.total=price; 
+        // product.inCart=true;          
+        product.count=1;        
+        product.total=product.amount;  
+        product.size = product.size;
 
         // console.log(product);
         this.props.addToCartAction(product);                    
@@ -77,16 +77,16 @@ export  class CustList extends Component {
                     <div className="list-items">
                     <ProductConsumer>
                         {value =>                                                                      
-                            this.props.ecommerces.length === 0 ? (
-                            // ecommerces.length === 0 ? (                                
+                            // this.props.ecommerces.length === 0 ? (
+                            ecommerces.length === 0 ? (                                
                                 // value.products.length === 0 ? (        
                                 <div className="list-item list-item--message">
                                     <span>No Products</span>
                                 </div>
                             ) : 
                                 (
-                                this.props.ecommerces.map((product) =>{
-                                // ecommerces.map((product) =>{
+                                // this.props.ecommerces.map((product) =>{
+                                ecommerces.map((product) =>{
                                     // value.products.map((product) =>{
                                     return <CustListItem
                                             key={product.id} product={product}                                            

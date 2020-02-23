@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import numeral from 'numeral';
 import { ecommerces, detailProduct } from '../clientcomponent/data';
-import { addToCartAction } from '../../actions/cart';
+import { addToCartAction, sizeItemAction } from '../../actions/cart';
 
 export  class CustDetails extends Component {    
     state = {                        
@@ -14,15 +14,27 @@ export  class CustDetails extends Component {
         cartTax: 0,
         cartTotal: 0        
     };     
+    onSizeChange = (e) => {
+        const size = e.target.value;
+        console.log(size);
+                
+        // let tempProducts = [...this.props.cart]  
+        // console.log(tempProducts);
+        // // const productIndex = tempProducts.findIndex(p => p.id === product.id);        
+        // // const product = tempProducts[productIndex];        
+        // // product.size= size;     
+        // // console.log(product.size);   
+        this.props.sizeItemAction({size});        
+    };
     getItem = (id) => { //utility function
-        const product = this.props.ecommerces.find((item) => item.id === id);
-        // const product = ecommerces.find((item) => item.id === id);
+        // const product = this.props.ecommerces.find((item) => item.id === id);
+        const product = ecommerces.find((item) => item.id === id);
         return product;        
     };   
     addToCart = (product)=>{
         // console.log("clicked on Product: ", product);
-           let tempProducts = [...this.props.ecommerces]  
-        //    let tempProducts = [...ecommerces]  
+        //    let tempProducts = [...this.props.ecommerces]  
+           let tempProducts = [...ecommerces]  
            const productIndex = tempProducts.findIndex(p => p.id === product.id);        
            product = tempProducts[productIndex];        
         //    product.inCart=true;  
@@ -58,9 +70,8 @@ export  class CustDetails extends Component {
     render() {                   
         const id =  this.props.match.params.id; //"-LynLz9jYS05Qm5pktIU" //"-LynLz9jYS05Qm5pktHJ"; //this.props.match.params.id; 
         // const {description, amount, imageUrl, inCart, info, company, stock} = detailProduct.find((product) =>{ return product.id === id}); 
-        const { description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt} = this.props.ecommerces.find((product) =>{ return product.id === id});
-        // const { description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt} = ecommerces.find((product) =>{ return product.id === id});                 
-        // console.log(inCart);
+        // const { description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt} = this.props.ecommerces.find((product) =>{ return product.id === id});
+        const { description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt} = ecommerces.find((product) =>{ return product.id === id});                         
         return (
             <div className="container py-2">
                         {/* title */}
@@ -89,28 +100,28 @@ export  class CustDetails extends Component {
                                 <p className="text-capitalize font-weight-bold mt-3 mb-0">
                                     some into about product:
                                 </p>
-                                <p className="text-muted lead txt-size--three">{info}</p>
+                                <p className="text-muted lead txt-size--three">{info}</p>                                
                                 {/*buttons*/}
-                                <div>
+                                <div>  
                                     <Link to="/" className="button button__custheader button--link button--detail">
-                                        back to products                                        
-                                    </Link>
-                                 <Link to="/cart"                                   
-                                    className="button button__custheader button--cart"                                    
-                                    onClick={() =>{ 
-                                        // this.openModal(id);
-                                        this.addToCart({id, description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt}); 
-                                        // console.log(inCart);
-                                    }}
-                                        disabled={inCart ? true : false}
-                                    >
-                                        {inCart===true ? "inCart" : "add to cart"}                                    
-                                   </Link>                                                                   
+                                            back to products                                        
+                                        </Link>
+                                        <Link to="/cart"                                   
+                                            className="button button__custheader button--cart"                                    
+                                            onClick={() =>{ 
+                                                // this.openModal(id);
+                                                this.addToCart({id, description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt}); 
+                                                // console.log(inCart);
+                                            }}
+                                                disabled={inCart ? true : false}
+                                            >
+                                                {inCart===true ? "inCart" : "add to cart"}                                    
+                                        </Link>                                   
                                 </div>
                             </div>
                         </div>
                       </div>
-             );
+        );
     }
 }
 
@@ -120,8 +131,39 @@ const mapStateToProps = (state) => {
         cart: state.cart        
     };    
 }
-const mapDispatchToProps = (dispatch) => ({    
-    addToCartAction: (product) => dispatch(addToCartAction(product))
+const mapDispatchToProps = (dispatch) => ({   
+    addToCartAction: (product) => dispatch(addToCartAction(product)),
+    sizeItemAction: ({size}) => dispatch(sizeItemAction({size}))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CustDetails);
+
+
+
+// <form>
+//                                     <div>
+//                                         {/*size*/}                                    
+//                                         <input
+//                                             className= "text-input"
+//                                             type="number"
+//                                             placeholder="Select Size"
+//                                             autoFocus
+//                                             value={this.props.cart.size}                                            
+//                                             onChange={this.onSizeChange}
+//                                         />
+//                                     </div>
+//                                         <Link to="/" className="button button__custheader button--link button--detail">
+//                                             back to products                                        
+//                                         </Link>
+//                                         <Link to="/cart"                                   
+//                                             className="button button__custheader button--cart"                                    
+//                                             onClick={() =>{ 
+//                                                 // this.openModal(id);
+//                                                 this.addToCart({id, description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt}); 
+//                                                 // console.log(inCart);
+//                                             }}
+//                                                 disabled={inCart ? true : false}
+//                                             >
+//                                                 {inCart===true ? "inCart" : "add to cart"}                                    
+//                                         </Link>                                                                                                      
+//                                    </form>
