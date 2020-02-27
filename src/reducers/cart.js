@@ -33,8 +33,7 @@ const cartReducer = (state = cartReducerDefaultState, action) => {
         }  
         case 'REMOVE_CART': { 
             const product = action.cart;            
-            // console.log("Remove Cart Id: ", product);                        
-            // const cart = state.filter(({id}) =>  id !== productId);  
+            // console.log("Remove Cart Id: ", product);                                    
             const cart = state.filter((item) =>  !item === product);                                           
             // console.log(cart);   
             return cart;               

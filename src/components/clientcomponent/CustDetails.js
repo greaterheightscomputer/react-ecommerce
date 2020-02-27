@@ -13,19 +13,7 @@ export  class CustDetails extends Component {
         cartSubTotal: 0,
         cartTax: 0,
         cartTotal: 0        
-    };     
-    onSizeChange = (e) => {
-        const size = e.target.value;
-        console.log(size);
-                
-        // let tempProducts = [...this.props.cart]  
-        // console.log(tempProducts);
-        // // const productIndex = tempProducts.findIndex(p => p.id === product.id);        
-        // // const product = tempProducts[productIndex];        
-        // // product.size= size;     
-        // // console.log(product.size);   
-        this.props.sizeItemAction({size});        
-    };
+    };         
     getItem = (id) => { //utility function
         // const product = this.props.ecommerces.find((item) => item.id === id);
         const product = ecommerces.find((item) => item.id === id);
@@ -138,32 +126,3 @@ const mapDispatchToProps = (dispatch) => ({
 
 export default connect(mapStateToProps, mapDispatchToProps)(CustDetails);
 
-
-
-// <form>
-//                                     <div>
-//                                         {/*size*/}                                    
-//                                         <input
-//                                             className= "text-input"
-//                                             type="number"
-//                                             placeholder="Select Size"
-//                                             autoFocus
-//                                             value={this.props.cart.size}                                            
-//                                             onChange={this.onSizeChange}
-//                                         />
-//                                     </div>
-//                                         <Link to="/" className="button button__custheader button--link button--detail">
-//                                             back to products                                        
-//                                         </Link>
-//                                         <Link to="/cart"                                   
-//                                             className="button button__custheader button--cart"                                    
-//                                             onClick={() =>{ 
-//                                                 // this.openModal(id);
-//                                                 this.addToCart({id, description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt}); 
-//                                                 // console.log(inCart);
-//                                             }}
-//                                                 disabled={inCart ? true : false}
-//                                             >
-//                                                 {inCart===true ? "inCart" : "add to cart"}                                    
-//                                         </Link>                                                                                                      
-//                                    </form>

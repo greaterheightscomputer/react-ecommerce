@@ -57,7 +57,9 @@ module.exports = (env) => {
                     'process.env.FIREBASE_STORAGEBUCKET': JSON.stringify(process.env.FIREBASE_STORAGEBUCKET),
                     'process.env.FIREBASE_MESSAGINGSENDERID': JSON.stringify(process.env.FIREBASE_MESSAGINGSENDERID),
                     'process.env.FIREBASE_APPID': JSON.stringify(process.env.FIREBASE_APPID),
-                    'process.env.FIREBASE_MEASUREMENTID': JSON.stringify(process.env.FIREBASE_MEASUREMENTID)
+                    'process.env.FIREBASE_MEASUREMENTID': JSON.stringify(process.env.FIREBASE_MEASUREMENTID),
+
+                    'process.env.REACT_APP_SANDBOX_APP_ID': JSON.stringify(process.env.REACT_APP_SANDBOX_APP_ID)                    
                 })
             ],
             // devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',  //source-map is good for production and is very slow in rebuilding  while cheap-module-eval-source-map is good for development and the rebuild is very fast

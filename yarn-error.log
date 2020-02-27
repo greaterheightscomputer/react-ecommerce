@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Khadijat\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add .
+  C:\Program Files\nodejs\node.exe C:\Users\Khadijat\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-paystack
 
 PATH: 
   C:\Users\Khadijat\AppData\Roaming\npm;C:\Program Files\nodejs\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_25\bin;C:\Program Files\Java\jre1.8.0_231\bin;C:\xampp\mysql\bin;C:\Users\Khadijat\AppData\Local\Microsoft\WindowsApps;;C:\Users\Khadijat\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Khadijat\AppData\Roaming\npm;C:\Program Files\heroku\bin
@@ -58,6 +58,7 @@ npm manifest:
       "react-dates": "12.3.0",
       "react-dom": "16.5.0",
       "react-modal": "2.2.2",
+      "react-paypal-express-checkout": "^1.0.5",
       "react-redux": "5.0.5",
       "react-router-dom": "4.2.2",
       "redux": "3.7.2",
@@ -1125,7 +1126,7 @@ Lockfile:
       mkdirp "^0.5.1"
       source-map-support "^0.4.15"
   
-  babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
+  babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0, babel-runtime@^6.6.1:
     version "6.26.0"
     resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
     integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -6223,6 +6224,13 @@ Lockfile:
       fbjs "^0.8.4"
       object-assign "^4.1.0"
   
+  react-async-script-loader@^0.3.0:
+    version "0.3.0"
+    resolved "https://registry.yarnpkg.com/react-async-script-loader/-/react-async-script-loader-0.3.0.tgz#c742b3ca25e08ba61ab7eb64371f814027692b86"
+    integrity sha1-x0KzyiXgi6Yat+tkNx+BQCdpK4Y=
+    dependencies:
+      hoist-non-react-statics "^1.0.3"
+  
   react-dates@12.3.0:
     version "12.3.0"
     resolved "https://registry.yarnpkg.com/react-dates/-/react-dates-12.3.0.tgz#430e5736bc655a21d9e40ab24b07b0d17d0df80a"
@@ -6274,6 +6282,15 @@ Lockfile:
     integrity sha512-4h7EuhDMTzQqZ+02KUUO+AVA7PqhbD88yXB740nFpNDyDS/bj9jiPyn2rwr9sa8oDyaE1ByFN9+t5XPyPTmN6g==
     dependencies:
       moment ">=1.6.0"
+  
+  react-paypal-express-checkout@^1.0.5:
+    version "1.0.5"
+    resolved "https://registry.yarnpkg.com/react-paypal-express-checkout/-/react-paypal-express-checkout-1.0.5.tgz#8a2a24dce92551d32daa55a43e6cdcdafb6fec15"
+    integrity sha512-J2s/C9ftuG/ja1/QelGSg4veXij5p9zNhOqr2wTw6ERprWpHbQm/JNx/U43G5aiqAnnoFxlKsFl+t1nAOqbw6w==
+    dependencies:
+      babel-runtime "^6.6.1"
+      prop-types "^15.5.10"
+      react-async-script-loader "^0.3.0"
   
   react-portal@^3.1.0:
     version "3.2.0"

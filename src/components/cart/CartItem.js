@@ -8,19 +8,7 @@ export class CartItem extends Component {
     
     componentDidUpdate(){
         this.props.addTotals();
-    }
-    onSizeChange = (e) => {
-        const size = e.target.value;
-        console.log(size);
-                
-        // let tempProducts = [...this.props.cart]  
-        // console.log(tempProducts);
-        // // const productIndex = tempProducts.findIndex(p => p.id === product.id);        
-        // // const product = tempProducts[productIndex];        
-        // // product.size= size;     
-        // // console.log(product.size);   
-        this.props.sizeItemAction({size});        
-    };
+    }    
     render() {
         const {id, description, imageUrl, amount, total, count, size } = this.props.item; //.find((itm)=>{return itm.id === id });
         console.log(this.props.item);  

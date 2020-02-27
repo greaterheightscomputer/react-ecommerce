@@ -34,25 +34,7 @@ export class CustCart extends Component {
                 }
             })
     };    
-    increment = (id) => {
-
-        // this.props.incrementItemAction(this.props.cart);
-        // console.log('this is increment function');
-        let tempCart = [...this.props.cart];
-        console.log("tempCart: ", tempCart);
-        const selectedProduct = tempCart.find(item => item.id === id);
-        console.log("selectedProduct: ", selectedProduct);
-        const index = tempCart.indexOf(selectedProduct);
-        console.log("index: ", index);
-        const product = tempCart[index];
-        console.log("product: ", product);
-        product.count = product.count + 1;
-        product.total = product.count * product.total;
-        return tempCart;
-    };
-    decrement = (id) => {
-        console.log('this is decrement function');
-    };    
+    
     render() {                
         return (            
             <section> 
@@ -69,10 +51,8 @@ export class CustCart extends Component {
                                 <CartList 
                                     cart={this.props.cart}                                    
                                     addTotals={this.addTotals}
-                                    increment={this.increment}
-                                    
                                 />
-                                <CartTotals cost={this.state} />
+                                <CartTotals cost={this.state} history={this.props.history} />
                              </div>                                                              
                             )        
                         }
