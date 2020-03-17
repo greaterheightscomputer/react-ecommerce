@@ -2,7 +2,7 @@
 export const setTextFilter = (text = '') => ({
     type: 'SET_TEXT_FILTER',
     text
-});
+}); 
 // SORT_BY_DATE
 export const sortByDate = () => ({  
     type: 'SORT_BY_DATE' 
@@ -134,3 +134,8 @@ export const setEndDate = (endDate) => ({
     type: 'SET_END_DATE',
     endDate
 });
+// SET_CARTDB_ID  
+export const setCartDBId = (cartdbId = '') => ({
+    type: 'SET_CARTDB_ID',
+    cartdbId
+}); 

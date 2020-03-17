@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
-    //import the library
-    import PaystackButton from 'react-paystack';
+import { connect } from 'react-redux';
+import PaystackButton from 'react-paystack';
+import { removeCartAction } from '../../actions/cart';
+import { addCartDB } from '../../actions/cartDB';
 
     class App extends Component {
 
     	state = {
-    		key: "pk_test_########################################", //PAYSTACK PUBLIC KEY
-    		email: "foobar@example.com",  // customer email
-    		amount: 10000 //equals NGN100,
+    		key: process.env.REACT_APP_PUBLIC_KEY, //PAYSTACK PUBLIC KEY
+    		email: "greaterheightscomputer@gmail.com",  // customer email
+    		// amount: this.props.total //equals NGN100,
     	}
 
     	callback = (response) => {
-    		console.log(response); // card charged successfully, get reference here
+        console.log(response); // card charged successfully, get reference here
+        this.props.addCartDB(this.props.cart);  //add cart to firebaseDB
+        this.props.removeCartAction(this.props.cart); //clear the cart
+        this.props.history.push('/');    //go back to home page
     	}
 
     	close = () => {
@@ -29,22 +34,22 @@ import React, { Component } from 'react';
     		return text;
     	}
 
-      render() {
+      render() {        
         return (
           <div>
             <p>
-              <PaystackButton
+              <PaystackButton 
                 text="Make Payment"
-                className="payButton"
+                className="payButton button"
                 callback={this.callback}
                 close={this.close}
-                disabled={true} {/*disable payment button*/}
-                embed={true} {/*payment embed in your app instead of a pop up*/}
+                // disabled={true} {/*disable payment button*/}
+                // embed={true} {/*payment embed in your app instead of a pop up*/}
                 reference={this.getReference()}
                 email={this.state.email}
-                amount={this.state.amount}
+                amount={this.props.total}
                 paystackkey={this.state.key}
-                tag="button"{/*it can be button or a or input tag */}
+                // tag="button"{/*it can be button or a or input tag */}
               />
             </p>
           </div>
@@ -52,4 +57,15 @@ import React, { Component } from 'react';
       }
     }
 
-    export default App;
+    const mapStateToProps = (state) => { 
+      return {                             
+          cart: state.cart //.find((cart) => cart === cart)       
+      };    
+  }
+  const mapDispatchToProps = (dispatch) => ({    
+      removeCartAction: (cart) => dispatch(removeCartAction(cart)),    
+      addCartDB: (cart) => dispatch(addCartDB(cart))    
+      });
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(App);
+    

@@ -4,6 +4,7 @@ import ecommercesReducer from '../reducers/ecommerces';
 import filterReducer from '../reducers/filters';
 import authReducer from '../reducers/auth';
 import cartReducer from '../reducers/cart';
+import cartDBReducer from '../reducers/cartDB';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -14,7 +15,8 @@ export default () => {
             ecommerces: ecommercesReducer,            
             filters: filterReducer,
             auth: authReducer,
-            cart: cartReducer            
+            cart: cartReducer,
+            cartDB: cartDBReducer
         }),
         composeEnhancers(applyMiddleware(thunk))
         // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()         

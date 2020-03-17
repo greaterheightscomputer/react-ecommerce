@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import PayPalButton from './PayPalButton';
+// import PayPalButton from './PayPalButton';
+import PayStackButton from './PayStackButton';
 import numeral from 'numeral';
 import { removeCartAction } from '../../actions/cart';
 
@@ -36,7 +37,8 @@ export function CartTotals(props) {
                         <span className="cust-list-product txt-size--three">total : </span>
                         <strong className="txt-size--three">{'₦'+numeral(cartTotal / 100).format('0,0.00')}</strong>
                     </h5>
-                        <PayPalButton total={cartTotal} history={history} />                        
+                        {/*<PayPalButton total={cartTotal} history={history} /> */}
+                        <PayStackButton total={cartTotal} history={history} />                        
                 </div>
             </div>                
         </div>

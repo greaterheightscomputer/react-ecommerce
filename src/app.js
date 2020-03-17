@@ -4,7 +4,8 @@ import { Provider } from 'react-redux';
 import ProductProvider from './components/clientcomponent/context';
 import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
-import { startSetEcommerce } from './actions/ecommerces';
+import { startSetEcommerce } from './actions/ecommerces'; 
+import { fetchCardDB } from './actions/cartDB'; 
 import { loginSucess, loginFail, logout } from './actions/auth';
 import getVisibleExpenses from './selectors/ecommerces';
 import 'normalize.css/normalize.css'
@@ -49,13 +50,14 @@ const renderApp = () => {
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {        
-        store.dispatch(loginSucess(user.uid));
+        store.dispatch(loginSucess(user.uid));        
         store.dispatch(startSetEcommerce()).then(() => { //fetch data from firebase and set or drop it on the redux store
-            renderApp();
+            renderApp();            
             if(history.location.pathname === '/signin') {
                 history.push('/admin_dashboard');
             }          
         });
+        store.dispatch(fetchCardDB());
     }        
     else {
         store.dispatch(logout());

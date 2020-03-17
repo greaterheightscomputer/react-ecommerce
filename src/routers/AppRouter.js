@@ -12,6 +12,8 @@ import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 import CustDetails from '../components/clientcomponent/CustDetails';
 import CustCart from '../components/cart/CustCart';
+import CartDBList from '../components/cart/CartDBList';
+import CartDBListItem from '../components/cart/CartDBListItem';
 
 export const history = createHistory();
 
@@ -27,6 +29,8 @@ const AppRouter = () => (
                 <PrivateRoute path="/signup" component={SignUp} />    
                 <PrivateRoute path="/create" component={AdminAddPage}/>    
                 <PrivateRoute path="/edit/:id" component={AdminEditPage}/>            
+                <PrivateRoute path="/cart_db" component={CartDBList}/>            
+                <PrivateRoute path="/cartdb_id/:id" component={CartDBListItem}/>            
                 <Route component={NotFoundPage}/>
            </Switch>           
         </div>        

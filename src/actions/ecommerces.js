@@ -43,7 +43,6 @@ export const startAddEcommerce = (ecommerceData = {}) => {
                         total
                     },
                     ...ecommerce
-
                 })); 
             });            
     };

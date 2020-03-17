@@ -45,7 +45,6 @@ export const signUp = (newUser) => {
         //         createdAt: newUser.createdAt
         //     })
         // })
-
         .then((resp) => {
             return database.ref(`signUpUsers/${resp.uid}`).set({
                 id: resp.uid, 
@@ -65,6 +64,7 @@ export const signUp = (newUser) => {
         })
     }
 }
+
 // export const startLogin = (credentials) => {
 //     return (dispatch, getState ) => {        
         
