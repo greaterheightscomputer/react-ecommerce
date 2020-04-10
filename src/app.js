@@ -6,7 +6,7 @@ import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { startSetEcommerce } from './actions/ecommerces'; 
 import { fetchCardDB } from './actions/cartDB'; 
-import { loginSucess, loginFail, logout } from './actions/auth';
+import { loginSucess, logout, addTrackEmployee } from './actions/auth';
 import getVisibleExpenses from './selectors/ecommerces';
 import 'normalize.css/normalize.css'
 import './styles/styles.scss';
@@ -15,7 +15,6 @@ import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 
 const store = configureStore();
-
 const jsx = (    
     <Provider store={store}>
     <ProductProvider>
@@ -41,28 +40,35 @@ store.dispatch(startSetEcommerce()).then(() => {    //this will render the produ
 });
 
 let hasRendered = false;    //employee authentication
-const renderApp = () => {
+const renderApp = () => {    
     if (!hasRendered) {
-        ReactDOM.render(jsx, document.getElementById('app'));
+        ReactDOM.render(jsx, document.getElementById('app'));        
         hasRendered = true;
     }
 };
 
-firebase.auth().onAuthStateChanged((user) => {
-    if (user) {        
-        store.dispatch(loginSucess(user.uid));        
-        store.dispatch(startSetEcommerce()).then(() => { //fetch data from firebase and set or drop it on the redux store
-            renderApp();            
-            if(history.location.pathname === '/signin') {
-                history.push('/admin_dashboard');
-            }          
-        });
-        store.dispatch(fetchCardDB());
-    }        
-    else {
+firebase.auth().onAuthStateChanged((user) => {         
+    if (user) {  
+        const userId = user.uid;
+        const email = user.email;
+        const operation = "Login Successfully";
+        // console.log(user)                      
+        store.dispatch(loginSucess(user.uid)); 
+        store.dispatch(startSetEcommerce()).then(() => { //fetch data from firebase and set or drop it on the redux store                                       
+            renderApp();    
+            if(history.location.pathname === '/signin') {     
+                history.push('/admin_dashboard');                 
+                if(user.uid === userId && user.email === email && operation === "Login Successfully"){                    
+                    store.dispatch(addTrackEmployee(userId, email, operation));
+                }
+            }                                               
+        });          
+        store.dispatch(fetchCardDB());  //fetch carts data from firebase and set to CardDB in the redux store         
+    } 
+    else {        
         store.dispatch(logout());
         renderApp();
-        history.push('/')
+        history.push('/') 
     }
 });
 

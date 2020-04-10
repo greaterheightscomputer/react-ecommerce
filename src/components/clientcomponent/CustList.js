@@ -5,7 +5,7 @@ import CustListItem from '../../components/clientcomponent/CustListItem';
 import CustTitle from '../../components/clientcomponent/CustTitle';
 import { ecommerces, detailProduct } from '../clientcomponent/data';
 import { addToCartAction } from '../../actions/cart';
-import selectEcommerce from '../../selectors/ecommerces';
+import selectClientRender from '../../selectors/ecommerces-client-render';
 
 export  class CustList extends Component {    
     
@@ -37,8 +37,8 @@ export  class CustList extends Component {
     }            
     setProducts = () => {        
         let tempProducts = [];               
-        // tempProducts = this.props.ecommerces;                  
-        tempProducts = ecommerces;                         
+        tempProducts = this.props.ecommerces;                  
+        // tempProducts = ecommerces;                         
         this.setState(() => {
             return { products: tempProducts };
         });
@@ -46,8 +46,8 @@ export  class CustList extends Component {
     
     addToCart = (product)=>{
      // console.log("clicked on Product: ", product);
-        // let tempProducts = [...this.props.ecommerces]  
-        let tempProducts = [...ecommerces]  
+        let tempProducts = [...this.props.ecommerces]  
+        // let tempProducts = [...ecommerces]  
         const productIndex = tempProducts.findIndex(p => p.id === product.id);        
         product = tempProducts[productIndex];        
         // product.inCart=true;          
@@ -59,9 +59,9 @@ export  class CustList extends Component {
         this.props.addToCartAction(product);                    
     };      
         
-    render() {                  
-        
-        return (                    
+    render() {                              
+    // console.log(this.props.ecommerces)       
+        return (                                
             <div className="content-container">
             <ul>
                 {/*
@@ -75,26 +75,27 @@ export  class CustList extends Component {
                 <CustTitle name="our" title="products" />
                 <div className="list-body">
                     <div className="list-items">
-                    <ProductConsumer>
-                        {value =>                                                                      
-                            // this.props.ecommerces.length === 0 ? (
-                            ecommerces.length === 0 ? (                                
+                    {/**<ProductConsumer>**/}                   
+                        {
+                            // value =>                                                                      
+                            this.props.ecommerces.length === 0 ? (
+                            // ecommerces.length === 0 ? (                                
                                 // value.products.length === 0 ? (        
                                 <div className="list-item list-item--message">
                                     <span>No Products</span>
                                 </div>
                             ) : 
-                                (
-                                // this.props.ecommerces.map((product) =>{
-                                ecommerces.map((product) =>{
+                                (          
+                                this.props.ecommerces.map((product) =>{                                    
+                                // ecommerces.map((product) =>{
                                     // value.products.map((product) =>{
                                     return <CustListItem
                                             key={product.id} product={product}                                            
                                             addToCart={this.addToCart}                                                                                        
                                 />                                                                                                                 
-                            }))                                                            
-                        }
-                    </ProductConsumer>                                                                         
+                            }))                                                        
+                        } 
+                      {/**</ProductConsumer>**/}
                     </div>                                   
                 </div>                           
             </div>                         
@@ -103,8 +104,9 @@ export  class CustList extends Component {
 }
 
 const mapStateToProps = (state) => {            
-    return {                        
-        ecommerces: selectEcommerce(state.ecommerces, state.filters), 
+    return {    
+        ecommerces: selectClientRender(state.ecommerces, state.filters),
+        // ecommerces: state.ecommerces, 
         cart: state.cart        
     };    
 }

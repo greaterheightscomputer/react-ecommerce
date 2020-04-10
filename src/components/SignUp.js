@@ -48,7 +48,8 @@ export class SignUp extends React.Component {
     }; 
     render() {
         const { authError, auth } = this.props;                  
-        if(!auth) return <Redirect to="/signin"/>
+        // if(!auth) return <Redirect to="/signin"/> //on successful signup return to signin page
+        if(auth===null) return <Redirect to="/signin"/>  //on successful signup return to signin page
         return (            
             <form  onSubmit={this.onSubmitClick} >
                 {this.state.error && <p>{this.state.error}</p>}

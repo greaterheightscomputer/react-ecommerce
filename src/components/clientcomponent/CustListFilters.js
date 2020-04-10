@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setTextFilter, sortByDate, sortByAmount, categoryTypeMen, categoryTypeWomen, categoryTypeBoy, categoryTypeGirl, 
+import { select, setTextFilter, sortByDate, sortByAmount, categoryTypeMen, categoryTypeWomen, categoryTypeBoy, categoryTypeGirl, 
     itemTypeBoyFootWear, itemTypeBoyClothe, itemTypeBoyHeadWear, itemTypeBoyUnderWear, itemTypeBoyBag, itemTypeBoyTie, itemTypeBoyBelt, itemTypeBoyJewellery, 
     itemTypeWomenFootWear, itemTypeWomenClothe, itemTypeWomenHeadWear, itemTypeWomenUnderWear, itemTypeWomenBag, itemTypeWomenTie, itemTypeWomenBelt, itemTypeWomenJewellery,
     itemTypeMenFootWear, itemTypeMenClothe, itemTypeMenHeadWear, itemTypeMenUnderWear, itemTypeMenBag, itemTypeMenTie, itemTypeMenBelt, itemTypeMenJewellery,
-    itemTypeGirlFootWear, itemTypeGirlClothe, itemTypeGirlHeadWear, itemTypeGirlUnderWear, itemTypeGirlBag, itemTypeGirlTie, itemTypeGirlBelt, itemTypeGirlJewellery,
-    setStartDate, setEndDate      
+    itemTypeGirlFootWear, itemTypeGirlClothe, itemTypeGirlHeadWear, itemTypeGirlUnderWear, itemTypeGirlBag, itemTypeGirlTie, itemTypeGirlBelt, itemTypeGirlJewellery
+    // setStartDate, setEndDate      
         } from '../../actions/filters';
 
 export class CustListFilters extends React.Component {    
@@ -20,9 +20,9 @@ export class CustListFilters extends React.Component {
         }
     };
     onCategorTypeChange = (e) => {
-        if (e.target.value === 'amen') {
-            this.props.categoryTypeMen();  
-        } else if (e.target.value === 'women') {
+        if(e.target.value === 'amen') {
+            this.props.categoryTypeMen();
+        }else if (e.target.value === 'women') {
             this.props.categoryTypeWomen();
         } else if (e.target.value === 'boy') {
             this.props.categoryTypeBoy();
@@ -197,11 +197,11 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    setTextFilter: (text) => dispatch(setTextFilter(text)),
+    setTextFilter: (text) => dispatch(setTextFilter(text)),    
     sortByDate: () => dispatch(sortByDate()),
     sortByAmount: () => dispatch(sortByAmount()),
-    setStartDate: (startDate) => dispatch(setStartDate(startDate)),
-    setEndDate: (endDate) => dispatch(setEndDate(endDate)),
+    // setStartDate: (startDate) => dispatch(setStartDate(startDate)),
+    // setEndDate: (endDate) => dispatch(setEndDate(endDate)),
     //category
     categoryTypeMen: () => dispatch(categoryTypeMen()),
     categoryTypeWomen: () => dispatch(categoryTypeWomen()),

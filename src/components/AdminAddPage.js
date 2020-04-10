@@ -2,13 +2,21 @@ import React from 'react';
 import { connect } from 'react-redux';
 import AdminForm from './AdminForm';
 import { startAddEcommerce } from '../actions/ecommerces';
+import { addTrackEmployee } from '../actions/auth';
 
 export class AdminAddPage extends React.Component {
+      
     onSubmit = (ecommerce) => {
         // console.log(ecommerce)
         // props.dispatch(addEcommerce(ecommerce));
+        const { auth } = this.props;
+        // console.log(auth);
+        const email="";
+        const operation= `Insertion of ${ecommerce.description} Product`;
+        
         this.props.startAddEcommerce(ecommerce);
-        this.props.history.push('/admin_dashboard');
+        this.props.addTrackEmployee(auth, email, operation);    
+        this.props.history.push('/admin_dashboard');        
     };
     render() {
         return (
@@ -28,8 +36,15 @@ export class AdminAddPage extends React.Component {
     };
 };
 
+const mapStateToProps = (state) => {
+    return {        
+        auth: state.auth.uid      
+    }
+}
+
 const mapDispatchToProps = (dispatch) => ({
-    startAddEcommerce: (ecommerce) => dispatch(startAddEcommerce(ecommerce))
+    startAddEcommerce: (ecommerce) => dispatch(startAddEcommerce(ecommerce)),
+    addTrackEmployee: (userId, email, operation) => dispatch(addTrackEmployee(userId, email, operation))
 });
 
-export default connect(undefined, mapDispatchToProps)(AdminAddPage);
+export default connect(mapStateToProps, mapDispatchToProps)(AdminAddPage);

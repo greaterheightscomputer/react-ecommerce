@@ -6,7 +6,7 @@ const filterReducerDefaultState = {
     categoryType: '', //men, women, boy, girl
     itemType: '', //men_footwear, men_clothe, men_headwear, men_underwear, men_bag, men_tie, men_belt, men_jewellery 
     startDate: moment().startOf('month'),
-    endDate: moment().endOf('month'),
+    endDate: moment().endOf('month'),    
     cartdbId:''
 };
 const filterReducer = (state = filterReducerDefaultState, action) => {
@@ -17,7 +17,7 @@ const filterReducer = (state = filterReducerDefaultState, action) => {
         case 'SORT_BY_DATE':
             return {...state, sortBy: 'date'};
         case 'SORT_BY_AMOUNT':
-            return {...state, sortBy: 'amount'};        
+            return {...state, sortBy: 'amount'};                
         //category
         case 'CATEGORY_TYPE_MEN':
             return {...state, categoryType: 'amen'};

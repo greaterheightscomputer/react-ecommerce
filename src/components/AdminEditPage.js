@@ -2,50 +2,36 @@ import React from 'react';
 import { connect } from 'react-redux';
 import AdminForm from './AdminForm';
 import { startEditEcommerce, startRemoveEcommerce } from '../actions/ecommerces';
-// import ErrorBoundary from './ErrorBoundary';
-// import AdminRemoveModal from './AdminRemoveModal';
+import { addTrackEmployee } from '../actions/auth';
 
 export class AdminEditPage extends React.Component {
-    // state = {
-    //     selectedRemove: undefined,
-    //     description: ''
-    // };    
+    
     onSubmit = (ecommerce) => {
         // console.log('updated', ecommerce);
+        const { auth } = this.props;
+        // console.log(auth);
+        const email="";
+        const operation= `Edition of ${ecommerce.description} Product`;
+        
         this.props.startEditEcommerce(this.props.ecommerce.id, ecommerce);                
+        this.props.addTrackEmployee(auth, email, operation);
         this.props.history.push('/admin_dashboard');                                     
     };    
     onRemove = () => {     
+        const {ecommerce} = this.props;
         // const removeProduct = this.props.ecommerce.id;           
-        // this.setState({
-        //     selectedRemove: removeProduct,
-        //     description: this.props.ecommerce.description
-        // });         
+            
+        const { auth } = this.props;
+        // console.log(auth);
+        const email="";
+        const operation= `Removal of ${ecommerce.description} Product`;
+
         this.props.startRemoveEcommerce({ id: this.props.ecommerce.id });        
         // console.log(removeProduct);
+        this.props.addTrackEmployee(auth, email, operation);
         this.props.history.push('/admin_dashboard');
     };
-    // onRemove = () => {        
-    //     const removeProduct = this.props.ecommerce.id;           
-    //     const desc = this.props.ecommerce.description;
-    //     this.setState({
-    //         selectedRemove: removeProduct,
-    //         description: desc
-    //     });                             
-    // };
-    // onSelectedRemove = () => {
-    //     this.props.startRemoveEcommerce({ id: this.props.ecommerce.id });
-    //     this.setState(() => ({ selectedRemove: undefined }));
-    //     this.props.history.push('/admin_dashboard');        
-    // };    
-    // onSelectedNotRemove = () => {    
-    //     const id = this.props.ecommerce.id;
-    //     const ecommerce = this.props.ecommerce;
-    //     this.props.startEditEcommerce(id, ecommerce);     
-    //     this.props.history.push(`/edit/${id}`);
-    //     this.setState(() => ({ selectedRemove: undefined }));                                                     
-    // };
-    
+        
     render(){
         return(
             <div className="list-body">
@@ -59,15 +45,7 @@ export class AdminEditPage extends React.Component {
                     ecommerce={this.props.ecommerce}
                     onSubmit={this.onSubmit}
                     />
-                    <button className="button button--secondary" onClick={this.onRemove}>Remove Product</button>
-        {/*<ErrorBoundary>
-                        <AdminRemoveModal 
-                            selectedRemove={this.state.selectedRemove}
-                            // onSelectedRemove={this.onSelectedRemove}
-                            onSelectedNotRemove={this.onSelectedNotRemove}
-                            description={this.state.description}                        
-                        />
-        </ErrorBoundary>*/}
+                    <button className="button button--secondary" onClick={this.onRemove}>Remove Product</button>    
                 </div>
             </div>
         );        
@@ -75,12 +53,14 @@ export class AdminEditPage extends React.Component {
 };
 
 const mapStateToProps = (state, props) => ({
-    ecommerce: state.ecommerces.find((ecommerce) => ecommerce.id === props.match.params.id)
+    ecommerce: state.ecommerces.find((ecommerce) => ecommerce.id === props.match.params.id),
+    auth: state.auth.uid
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
     startEditEcommerce: (id, ecommerce) => dispatch(startEditEcommerce(id, ecommerce)),
-    startRemoveEcommerce: (data) => dispatch(startRemoveEcommerce(data))    
+    startRemoveEcommerce: (data) => dispatch(startRemoveEcommerce(data)),
+    addTrackEmployee: (userId, email, operation) => dispatch(addTrackEmployee(userId, email, operation))    
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AdminEditPage);

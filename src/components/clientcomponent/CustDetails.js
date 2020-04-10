@@ -15,20 +15,20 @@ export  class CustDetails extends Component {
         cartTotal: 0        
     };         
     getItem = (id) => { //utility function
-        // const product = this.props.ecommerces.find((item) => item.id === id);
-        const product = ecommerces.find((item) => item.id === id);
+        const product = this.props.ecommerces.find((item) => item.id === id);
+        // const product = ecommerces.find((item) => item.id === id);
         return product;        
     };   
     addToCart = (product)=>{
         // console.log("clicked on Product: ", product);
-        //    let tempProducts = [...this.props.ecommerces]  
-           let tempProducts = [...ecommerces]  
+           let tempProducts = [...this.props.ecommerces]  
+        //    let tempProducts = [...ecommerces]  
            const productIndex = tempProducts.findIndex(p => p.id === product.id);        
            product = tempProducts[productIndex];        
         //    product.inCart=true;  
-           product.count=1;
+           product.count = 1;
            const price = product.amount;
-           product.total=price;  
+           product.total = price;  
 
         //    console.log(product);   
            this.props.addToCartAction(product);
@@ -58,8 +58,8 @@ export  class CustDetails extends Component {
     render() {                   
         const id =  this.props.match.params.id; //"-LynLz9jYS05Qm5pktIU" //"-LynLz9jYS05Qm5pktHJ"; //this.props.match.params.id; 
         // const {description, amount, imageUrl, inCart, info, company, stock} = detailProduct.find((product) =>{ return product.id === id}); 
-        // const { description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt} = this.props.ecommerces.find((product) =>{ return product.id === id});
-        const { description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt} = ecommerces.find((product) =>{ return product.id === id});                         
+        const { description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt} = this.props.ecommerces.find((product) =>{ return product.id === id});
+        // const { description, category, item, amount, image, imageUrl, stock, company, info, count, inCart, total, createdAt} = ecommerces.find((product) =>{ return product.id === id});                         
         return (
             <div className="container py-2">
                         {/* title */}

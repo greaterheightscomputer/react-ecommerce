@@ -8,7 +8,7 @@ const cartDBReducer = (state = cartDBReducerDefaultState, action) => {
         }  
         case 'FETCH_CART_FROM_DB':{
             return action.cart;       
-         }
+        }
         // case 'REMOVE_CART': { 
         //     const product = action.cart;            
         //     // console.log("Remove Cart Id: ", product);                                    

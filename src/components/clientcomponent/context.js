@@ -35,15 +35,15 @@ export class ProductProvider extends Component {
     // };
     setProducts = () => {        
         let tempProducts = [];   
-        // tempProducts = this.props.ecommerces;                       
-        tempProducts = ecommerces;                         
+        tempProducts = this.props.ecommerces;                       
+        // tempProducts = ecommerces;                         
         this.setState(() => {
             return { products: tempProducts };
         });
     };
     getItem = (id) => {
-        // const product = this.props.ecommerces.find((item) => item.id === id); //utility method
-        const product = ecommerces.find((item) => item.id === id); //utility method
+        const product = this.props.ecommerces.find((item) => item.id === id); //utility method
+        // const product = ecommerces.find((item) => item.id === id); //utility method
         return product;        
     };          
     handleDetail = (id) => {
@@ -76,8 +76,8 @@ export class ProductProvider extends Component {
     addToCart = (product, e) => {
         // const size = e.target.value;
         // console.log(size);
-        // let tempProducts = [...this.props.ecommerces];
-        let tempProducts = [...ecommerces]  
+        let tempProducts = [...this.props.ecommerces];
+        // let tempProducts = [...ecommerces]  
         const productIndex = tempProducts.findIndex(p => p.id === product.id);        
         product = tempProducts[productIndex];        
         // product.inCart=true;  
